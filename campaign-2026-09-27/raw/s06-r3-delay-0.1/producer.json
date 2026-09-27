@@ -1,0 +1,29 @@
+{
+  "exec_id": "s06-r3-delay-0.1",
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 1815138035
+  },
+  "label": "delay-0.1",
+  "t0": 20856.094457998,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0006907648609668873,
+    "p50": 0.0006420013960450888,
+    "p99": 0.0013305416359798991,
+    "max": 0.010966003173962235
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "exec_id": "s08-r3-jitter-0.1",
+  "t0": 22072.94273587,
+  "duration_eff": 386.9399999999987,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.9583333333333333,
+  "exceptions": 0,
+  "n_samples_total": 7515
+}

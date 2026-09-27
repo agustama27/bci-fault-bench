@@ -1,7 +1,7 @@
 {
   "exec_id": "s01-r0-delay-0.25",
-  "t0": 4874.121386204,
-  "duration_eff": 386.9399999999996,
+  "t0": 178.47023023,
+  "duration_eff": 386.94000000000005,
   "n_trials": 24,
   "n_valid": 24,
   "balanced_accuracy": 0.875,

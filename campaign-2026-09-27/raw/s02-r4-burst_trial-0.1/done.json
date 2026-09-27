@@ -1,0 +1,16 @@
+{
+  "exec_id": "s02-r4-burst_trial-0.1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.4,
+  "subject": 2,
+  "run": "4",
+  "fault": {
+    "kind": "burst_trial",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 630760758
+  },
+  "label": "burst_trial-0.1"
+}

@@ -3,14 +3,14 @@
   "status": "ok",
   "producer_rc": 0,
   "consumer_rc": 0,
-  "seconds": 399.0,
+  "seconds": 406.1,
   "subject": 4,
   "run": "1",
   "fault": {
     "kind": "jitter",
     "severity": 0.05,
     "mode": "random",
-    "seed": 1255233609
+    "seed": 1655519900
   },
   "label": "jitter-0.05"
 }

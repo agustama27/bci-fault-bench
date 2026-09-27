@@ -1,0 +1,16 @@
+{
+  "exec_id": "s07-r4-disconnect-0.5",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.2,
+  "subject": 7,
+  "run": "4",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 0.5,
+    "mode": "random",
+    "seed": 1767330014
+  },
+  "label": "disconnect-0.5"
+}

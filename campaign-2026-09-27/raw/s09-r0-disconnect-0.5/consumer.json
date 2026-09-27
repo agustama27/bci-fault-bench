@@ -1,10 +1,10 @@
 {
   "exec_id": "s09-r0-disconnect-0.5",
-  "t0": 12060.077401732,
-  "duration_eff": 386.9400000000005,
+  "t0": 5450.135864383,
+  "duration_eff": 386.9399999999996,
   "n_trials": 24,
   "n_valid": 24,
   "balanced_accuracy": 0.9166666666666666,
   "exceptions": 0,
-  "n_samples_total": 7125
+  "n_samples_total": 6745
 }

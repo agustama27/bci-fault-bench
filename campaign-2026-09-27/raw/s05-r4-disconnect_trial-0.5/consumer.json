@@ -1,0 +1,10 @@
+{
+  "exec_id": "s05-r4-disconnect_trial-0.5",
+  "t0": 26127.280695628,
+  "duration_eff": 386.9399999999987,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.4583333333333333,
+  "exceptions": 0,
+  "n_samples_total": 6055
+}

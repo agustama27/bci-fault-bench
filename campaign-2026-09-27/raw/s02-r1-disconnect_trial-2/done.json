@@ -1,0 +1,16 @@
+{
+  "exec_id": "s02-r1-disconnect_trial-2",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.0,
+  "subject": 2,
+  "run": "1",
+  "fault": {
+    "kind": "disconnect_trial",
+    "severity": 2.0,
+    "mode": "random",
+    "seed": 1589701335
+  },
+  "label": "disconnect_trial-2"
+}

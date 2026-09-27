@@ -1,7 +1,7 @@
 {
   "exec_id": "s05-r0-ref",
-  "t0": 7670.405839668,
-  "duration_eff": 386.9399999999996,
+  "t0": 2612.563230849,
+  "duration_eff": 386.94000000000005,
   "n_trials": 24,
   "n_valid": 24,
   "balanced_accuracy": 0.625,

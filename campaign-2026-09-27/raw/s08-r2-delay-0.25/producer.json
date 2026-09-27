@@ -1,0 +1,29 @@
+{
+  "exec_id": "s08-r2-delay-0.25",
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.25,
+    "mode": "random",
+    "seed": 655759231
+  },
+  "label": "delay-0.25",
+  "t0": 16396.86152649,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0006889557404363861,
+    "p50": 0.0006299997039604932,
+    "p99": 0.001348999903711956,
+    "max": 0.015852001524763182
+  }
+}

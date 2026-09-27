@@ -1,0 +1,16 @@
+{
+  "exec_id": "s05-r2-disconnect-0.5",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 406.0,
+  "subject": 5,
+  "run": "2",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 0.5,
+    "mode": "random",
+    "seed": 1833327042
+  },
+  "label": "disconnect-0.5"
+}

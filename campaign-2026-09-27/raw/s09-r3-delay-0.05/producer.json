@@ -1,0 +1,29 @@
+{
+  "exec_id": "s09-r3-delay-0.05",
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.05,
+    "mode": "random",
+    "seed": 1805270709
+  },
+  "label": "delay-0.05",
+  "t0": 22883.15207915,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0015501566232785076,
+    "p50": 0.0006679983926005661,
+    "p99": 0.0014479992387350649,
+    "max": 7.3721160006243736
+  }
+}

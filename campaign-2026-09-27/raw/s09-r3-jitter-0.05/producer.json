@@ -1,0 +1,29 @@
+{
+  "exec_id": "s09-r3-jitter-0.05",
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "fault": {
+    "kind": "jitter",
+    "severity": 0.05,
+    "mode": "random",
+    "seed": 840020053
+  },
+  "label": "jitter-0.05",
+  "t0": 22478.907103232,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 4.799968959342558,
+    "p50": 0.0008009992598090321,
+    "p99": 69.00403707419176,
+    "max": 133.37714899898856
+  }
+}

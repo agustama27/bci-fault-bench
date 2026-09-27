@@ -1,0 +1,29 @@
+{
+  "exec_id": "s02-r4-delay-0.1",
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 603992457
+  },
+  "label": "delay-0.1",
+  "t0": 24100.522866461,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0008032023323788786,
+    "p50": 0.0006919999577803537,
+    "p99": 0.0014399993233382702,
+    "max": 0.00875100158737041
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "exec_id": "s08-r3-jitter-0.05",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 406.6,
+  "subject": 8,
+  "run": "3",
+  "fault": {
+    "kind": "jitter",
+    "severity": 0.05,
+    "mode": "random",
+    "seed": 516032463
+  },
+  "label": "jitter-0.05"
+}

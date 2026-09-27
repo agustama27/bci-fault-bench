@@ -1,0 +1,20 @@
+kind,severity,label,silent,loud,divergent,kind_es
+burst_trial,0.1,burst_trial-0.1,0.0,0.0,0.0,pérdida contigua en el ensayo
+burst_trial,0.25,burst_trial-0.25,0.0,0.0,0.0,pérdida contigua en el ensayo
+burst_trial,0.4,burst_trial-0.4,0.0,0.07342657342657342,0.08273381294964029,pérdida contigua en el ensayo
+delay,0.05,delay-0.05,0.0,0.0,0.0,retraso
+delay,0.1,delay-0.1,0.0,0.0,0.0,retraso
+delay,0.25,delay-0.25,0.0,0.0,0.0,retraso
+disconnect,0.5,disconnect-0.5,0.0,0.006993006993006993,0.006993006993006993,desconexión
+disconnect,1.0,disconnect-1,0.0,0.006993006993006993,0.006993006993006993,desconexión
+disconnect,3.0,disconnect-3,0.0,0.03470031545741325,0.03785488958990536,desconexión
+disconnect_trial,0.5,disconnect_trial-0.5,0.0,0.08391608391608392,0.08633093525179857,desconexión en el ensayo
+disconnect_trial,1.0,disconnect_trial-1,0.0,0.08391608391608392,0.08633093525179857,desconexión en el ensayo
+disconnect_trial,2.0,disconnect_trial-2,0.0,0.2082018927444795,0.20863309352517986,desconexión en el ensayo
+jitter,0.01,jitter-0.01,0.0,0.0,0.0,jitter
+jitter,0.05,jitter-0.05,0.0,0.0,0.0,jitter
+jitter,0.1,jitter-0.1,0.0,0.0,0.0,jitter
+loss,0.01,loss-random-0.01,0.0,0.0,0.0,pérdida de muestras
+loss,0.05,loss-random-0.05,0.0,0.0,0.0,pérdida de muestras
+loss,0.1,loss-random-0.1,0.0,0.0,0.0,pérdida de muestras
+none,0.0,ref,0.0,0.0,0.0,referencia

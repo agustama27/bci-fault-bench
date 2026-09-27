@@ -1,0 +1,16 @@
+{
+  "exec_id": "s07-r4-delay-0.25",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.0,
+  "subject": 7,
+  "run": "4",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.25,
+    "mode": "random",
+    "seed": 2133688929
+  },
+  "label": "delay-0.25"
+}

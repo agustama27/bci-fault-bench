@@ -1,0 +1,16 @@
+{
+  "exec_id": "s08-r1-disconnect_trial-1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.2,
+  "subject": 8,
+  "run": "1",
+  "fault": {
+    "kind": "disconnect_trial",
+    "severity": 1.0,
+    "mode": "random",
+    "seed": 977473268
+  },
+  "label": "disconnect_trial-1"
+}

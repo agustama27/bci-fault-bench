@@ -1,10 +1,10 @@
 {
   "exec_id": "s04-r1-disconnect-3",
-  "t0": 15653.530732238,
+  "t0": 8287.668571385,
   "duration_eff": 386.9400000000005,
   "n_trials": 24,
-  "n_valid": 22,
-  "balanced_accuracy": 0.575,
+  "n_valid": 24,
+  "balanced_accuracy": 0.5833333333333334,
   "exceptions": 0,
-  "n_samples_total": 6655
+  "n_samples_total": 6625
 }

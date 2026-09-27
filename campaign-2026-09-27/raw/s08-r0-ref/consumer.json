@@ -1,7 +1,7 @@
 {
   "exec_id": "s08-r0-ref",
-  "t0": 10463.499861688,
-  "duration_eff": 386.9400000000005,
+  "t0": 4638.95135063,
+  "duration_eff": 386.9399999999996,
   "n_trials": 24,
   "n_valid": 24,
   "balanced_accuracy": 0.9583333333333333,

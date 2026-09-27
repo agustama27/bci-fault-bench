@@ -1,7 +1,7 @@
 {
   "exec_id": "s01-r1-disconnect-1",
-  "t0": 12859.750740456,
-  "duration_eff": 386.9400000000005,
+  "t0": 6261.132525958,
+  "duration_eff": 386.9399999999996,
   "n_trials": 24,
   "n_valid": 24,
   "balanced_accuracy": 0.875,

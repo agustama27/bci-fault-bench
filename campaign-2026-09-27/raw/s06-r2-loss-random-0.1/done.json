@@ -1,0 +1,16 @@
+{
+  "exec_id": "s06-r2-loss-random-0.1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.4,
+  "subject": 6,
+  "run": "2",
+  "fault": {
+    "kind": "loss",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 492348647
+  },
+  "label": "loss-random-0.1"
+}

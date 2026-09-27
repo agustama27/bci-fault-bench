@@ -1,0 +1,16 @@
+{
+  "exec_id": "s09-r3-loss-random-0.01",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.9,
+  "subject": 9,
+  "run": "3",
+  "fault": {
+    "kind": "loss",
+    "severity": 0.01,
+    "mode": "random",
+    "seed": 276127317
+  },
+  "label": "loss-random-0.01"
+}

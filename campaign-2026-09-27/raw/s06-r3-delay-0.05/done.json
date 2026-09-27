@@ -1,0 +1,16 @@
+{
+  "exec_id": "s06-r3-delay-0.05",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.4,
+  "subject": 6,
+  "run": "3",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.05,
+    "mode": "random",
+    "seed": 1871128579
+  },
+  "label": "delay-0.05"
+}

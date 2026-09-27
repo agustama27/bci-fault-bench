@@ -1,10 +1,10 @@
 {
   "exec_id": "s05-r0-loss-random-0.01",
-  "t0": 7670.069464807,
-  "duration_eff": 386.9399999999996,
+  "t0": 2612.431489328,
+  "duration_eff": 386.94000000000005,
   "n_trials": 24,
   "n_valid": 24,
-  "balanced_accuracy": 0.625,
+  "balanced_accuracy": 0.5833333333333334,
   "exceptions": 0,
-  "n_samples_total": 7432
+  "n_samples_total": 7434
 }

@@ -1,0 +1,16 @@
+{
+  "exec_id": "s06-r2-delay-0.25",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 406.3,
+  "subject": 6,
+  "run": "2",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.25,
+    "mode": "random",
+    "seed": 1067790801
+  },
+  "label": "delay-0.25"
+}

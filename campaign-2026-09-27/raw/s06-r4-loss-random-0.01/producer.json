@@ -1,0 +1,29 @@
+{
+  "exec_id": "s06-r4-loss-random-0.01",
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "fault": {
+    "kind": "loss",
+    "severity": 0.01,
+    "mode": "random",
+    "seed": 986294241
+  },
+  "label": "loss-random-0.01",
+  "t0": 26531.81486148,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 95780,
+  "n_dropped": 955,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0007999473514365746,
+    "p50": 0.0007700000423938036,
+    "p99": 0.001291268745262642,
+    "max": 0.05383999814512208
+  }
+}

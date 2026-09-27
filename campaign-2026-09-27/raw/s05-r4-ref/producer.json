@@ -1,0 +1,29 @@
+{
+  "exec_id": "s05-r4-ref",
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "fault": {
+    "kind": "none",
+    "severity": 0.0,
+    "mode": "random",
+    "seed": 1664172754
+  },
+  "label": "ref",
+  "t0": 25721.570181359,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0006728507049666405,
+    "p50": 0.0006280024535953999,
+    "p99": 0.0012948103176313465,
+    "max": 0.033095002436311916
+  }
+}

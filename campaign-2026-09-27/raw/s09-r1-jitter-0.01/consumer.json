@@ -1,7 +1,7 @@
 {
   "exec_id": "s09-r1-jitter-0.01",
-  "t0": 19250.152098333,
-  "duration_eff": 386.9399999999987,
+  "t0": 11125.49307485,
+  "duration_eff": 386.9400000000005,
   "n_trials": 24,
   "n_valid": 24,
   "balanced_accuracy": 1.0,

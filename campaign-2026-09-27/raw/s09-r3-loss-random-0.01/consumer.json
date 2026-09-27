@@ -1,0 +1,10 @@
+{
+  "exec_id": "s09-r3-loss-random-0.01",
+  "t0": 22478.643432795,
+  "duration_eff": 386.9399999999987,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.875,
+  "exceptions": 0,
+  "n_samples_total": 7431
+}

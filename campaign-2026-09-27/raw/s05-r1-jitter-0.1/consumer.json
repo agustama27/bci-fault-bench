@@ -1,10 +1,10 @@
 {
   "exec_id": "s05-r1-jitter-0.1",
-  "t0": 16053.704853234,
+  "t0": 8693.137535936,
   "duration_eff": 386.9400000000005,
   "n_trials": 24,
   "n_valid": 24,
   "balanced_accuracy": 0.5833333333333334,
   "exceptions": 0,
-  "n_samples_total": 7525
+  "n_samples_total": 7505
 }

@@ -1,0 +1,29 @@
+{
+  "exec_id": "s02-r0-burst_trial-0.25",
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "fault": {
+    "kind": "burst_trial",
+    "severity": 0.25,
+    "mode": "random",
+    "seed": 1202294911
+  },
+  "label": "burst_trial-0.25",
+  "t0": 991.857055831,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 84735,
+  "n_dropped": 12000,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0007112692522369231,
+    "p50": 0.00064299979385396,
+    "p99": 0.00140699996109106,
+    "max": 0.031910999950923724
+  }
+}

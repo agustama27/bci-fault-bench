@@ -1,0 +1,29 @@
+{
+  "exec_id": "s03-r2-burst_trial-0.1",
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "fault": {
+    "kind": "burst_trial",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 2105635558
+  },
+  "label": "burst_trial-0.1",
+  "t0": 13153.566306368,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 91935,
+  "n_dropped": 4800,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0006796023653032808,
+    "p50": 0.0006320005923043936,
+    "p99": 0.0012832701577281118,
+    "max": 0.03192299845977686
+  }
+}

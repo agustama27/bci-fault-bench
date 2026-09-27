@@ -2,7 +2,7 @@
 
 Banco de experimentación **Software-in-the-Loop** para inyección de fallos en pipelines BCI basados en [Lab Streaming Layer (LSL)](https://labstreaminglayer.org).
 
-> *English summary.* Software-in-the-Loop testbed for fault injection in LSL-based brain-computer interface pipelines. It replays public EEG (BCI Competition IV 2a via MOABB) as a real-time LSL stream, injects controlled faults at the transport interface (sample loss, jitter, delay, disconnection), decodes with a frozen CSP+LDA model and logs per-second telemetry plus per-trial decisions. A resumable orchestrator runs full campaigns in parallel with fixed seeds; the analysis scripts produce descriptive and inferential results (Friedman, Wilcoxon + Holm, effect sizes, rolling-window degradation, silent-failure divergence, threshold vs. model detectors with leave-one-subject-out validation). MIT license.
+> *English summary.* Software-in-the-Loop testbed for fault injection in LSL-based brain-computer interface pipelines. It replays public EEG (BCI Competition IV 2a via MOABB) as a real-time LSL stream, injects controlled faults at the transport interface (two families: uniform in time — sample loss, jitter, delay, disconnection — and trial-synchronised — contiguous loss inside the trial window, disconnection at window onset), decodes with a frozen CSP+LDA model, stores the received signal segment of every trial so that any other decoder (here EEGNet) can be evaluated offline on exactly what the pipeline received, and logs per-second telemetry plus per-trial decisions. A resumable orchestrator runs full campaigns in parallel with fixed seeds; the analysis scripts produce descriptive and inferential results (Friedman, Wilcoxon + Holm, effect sizes, rolling-window degradation, silent-failure divergence, threshold vs. model detectors with leave-one-subject-out validation). MIT license.
 
 Instrumento del Trabajo Final de Graduación *Interfaces cerebro-computadora bajo condiciones adversas: del software a la decodificación* (Agustín Tamagusuku, Ingeniería en Software, Universidad Siglo 21, 2026).
 
@@ -108,6 +108,8 @@ flowchart TB
 | Jitter | congestión de red, retransmisiones TCP, planificador del sistema operativo | temporalidad |
 | Retraso | congestión sostenida, búferes grandes, procesamiento que acumula cola | temporalidad |
 | Desconexión | corte del enlace, caída o reinicio del proceso productor; único modelo que ejercita la reconexión que LSL declara | disponibilidad |
+| Pérdida contigua en el ensayo (`burst_trial`, 10/25/40 % de la ventana) | *dropout* breve del enlace inalámbrico durante la tarea | integridad, concentrada en la decisión |
+| Desconexión en el ensayo (`disconnect_trial`, 0,5/1/2 s al inicio de la ventana) | corte del enlace en el momento en que la persona ejecuta la tarea | disponibilidad, sincronizada con la decisión |
 
 LSL transmite sobre TCP: una pérdida de paquetes de red no elimina muestras, las demora. Por eso la pérdida de muestras modela lo que ocurre **antes** de LSL o en un búfer saturado, y solo la desconexión pone a prueba la recuperación del propio LSL.
 
@@ -145,8 +147,9 @@ flowchart LR
 | `data.py` | carga MOABB (BNCI2014_001), eventos desde el canal `STI`, ensayos con artefactos excluidos del desempeño |
 | `decoder.py` | decodificador de referencia CSP(6)+LDA, entrenado una vez por sujeto con la sesión 1 y congelado |
 | `replay.py` | servicio de reproducción: flujo EEG a la tasa original + flujo de marcadores |
-| `injector.py` | modelos de fallo `loss` (random/burst), `jitter`, `delay`, `disconnect`; semilla por ejecución |
-| `consumer.py` | pipeline bajo prueba + recolector de telemetría (`trials.csv`, `telemetry.csv`) |
+| `injector.py` | familia uniforme: `loss` (random/burst), `jitter`, `delay`, `disconnect`; familia estructurada: `burst_trial`, `disconnect_trial`; semilla por ejecución |
+| `consumer.py` | pipeline bajo prueba + recolector de telemetría (`trials.csv`, `telemetry.csv`) + segmentos recibidos por ensayo (`segments.npz`) |
+| `eegnet.py`, `scripts/train_eegnet.py`, `scripts/redecode_segments.py` | segundo decodificador (EEGNet, PyTorch CPU) entrenado por sujeto y evaluado fuera de línea sobre los segmentos guardados |
 | `runner.py` | ejecutor de campañas: bloques, paralelismo, `done.json` reanudable |
 | `metrics.py`, `stats.py`, `scripts/analyze.py` | variables dependientes, ventana móvil, umbral, pruebas, divergencia, detectores, tablas y figuras |
 
@@ -160,12 +163,15 @@ python -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/smoke_run.py --fault loss --severity 0.05 --max-seconds 60
 ```
 
-Campaña completa y análisis:
+Campaña completa (dos familias, cinco corridas, 855 ejecuciones) y análisis con los dos decodificadores:
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m bcibench.runner --plan campana \
-  --subjects 1 2 3 4 5 6 7 8 9 --runs 0 1 --workers 6 --out results/campana
-.venv/bin/python scripts/analyze.py --root results/campana --out results/analysis --window 8 --thr-rule min
+PYTHONPATH=src .venv/bin/python scripts/train_eegnet.py 1 2 3 4 5 6 7 8 9
+PYTHONPATH=src .venv/bin/python -m bcibench.runner --plan campana2 --family all 
+  --subjects 1 2 3 4 5 6 7 8 9 --runs 0 1 2 3 4 --workers 12 --out results/campana2
+PYTHONPATH=src .venv/bin/python scripts/redecode_segments.py --root results/campana2 --models results/models
+.venv/bin/python scripts/analyze.py --root results/campana2 --out results/analysis --window 8 --thr-rule min
+.venv/bin/python scripts/analyze.py --root results/campana2 --out results/analysis-eegnet --window 8 --thr-rule min --trials-file trials_eegnet.csv
 ```
 
 Una campaña interrumpida se relanza con el mismo comando: las ejecuciones con `done.json` se saltean.
@@ -176,7 +182,9 @@ La campaña debe correr en **Linux**: la granularidad del temporizador de Window
 
 ## 9. Salidas por ejecución
 
-`producer.json` (condición, semilla, muestras emitidas/omitidas, cortes, error de temporización) · `fault_log.jsonl` (cortes planificados y efectivos) · `trials.csv` (por ensayo izquierda/derecha: etiqueta, predicción, confianza, muestras, validez, retardo de decisión) · `telemetry.csv` (por segundo nominal: muestras esperadas/recibidas, huecos, latencia, intervalo entre bloques, predicciones, excepciones) · `consumer.json`.
+`producer.json` (condición, semilla, muestras emitidas/omitidas, cortes, error de temporización) · `fault_log.jsonl` (cortes planificados y efectivos) · `trials.csv` (por ensayo izquierda/derecha: etiqueta, predicción, confianza, muestras, validez, retardo de decisión) · `telemetry.csv` (por segundo nominal: muestras esperadas/recibidas, huecos, latencia, intervalo entre bloques, predicciones, excepciones) · `segments.npz` (señal recibida por ensayo, con marcas de tiempo) · `consumer.json` · tras `redecode_segments.py`: `trials_eegnet.csv`, `trials_csp_offline.csv`.
+
+Los datos de la campaña 2026-09-27 (decisiones, telemetría, análisis) están en `campaign-2026-09-27/`; los segmentos (~1,5 GB) se depositan aparte.
 
 ## Licencia
 

@@ -1,0 +1,16 @@
+{
+  "exec_id": "s02-r3-disconnect-3",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.0,
+  "subject": 2,
+  "run": "3",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 3.0,
+    "mode": "random",
+    "seed": 1947335839
+  },
+  "label": "disconnect-3"
+}

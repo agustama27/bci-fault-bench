@@ -1,0 +1,16 @@
+{
+  "exec_id": "s08-r3-delay-0.1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.8,
+  "subject": 8,
+  "run": "3",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 130747790
+  },
+  "label": "delay-0.1"
+}

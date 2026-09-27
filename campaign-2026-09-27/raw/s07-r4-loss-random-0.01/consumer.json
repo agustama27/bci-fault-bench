@@ -1,0 +1,10 @@
+{
+  "exec_id": "s07-r4-loss-random-0.01",
+  "t0": 26938.246440786,
+  "duration_eff": 386.9399999999987,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.6666666666666666,
+  "exceptions": 0,
+  "n_samples_total": 7442
+}

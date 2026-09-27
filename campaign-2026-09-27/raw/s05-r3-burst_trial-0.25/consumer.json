@@ -1,0 +1,10 @@
+{
+  "exec_id": "s05-r3-burst_trial-0.25",
+  "t0": 20450.704747248,
+  "duration_eff": 386.9399999999987,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.5833333333333333,
+  "exceptions": 0,
+  "n_samples_total": 6505
+}

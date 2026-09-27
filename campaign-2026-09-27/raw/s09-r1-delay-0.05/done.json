@@ -3,14 +3,14 @@
   "status": "ok",
   "producer_rc": 0,
   "consumer_rc": 0,
-  "seconds": 399.9,
+  "seconds": 405.3,
   "subject": 9,
   "run": "1",
   "fault": {
     "kind": "delay",
     "severity": 0.05,
     "mode": "random",
-    "seed": 1002681455
+    "seed": 123123431
   },
   "label": "delay-0.05"
 }

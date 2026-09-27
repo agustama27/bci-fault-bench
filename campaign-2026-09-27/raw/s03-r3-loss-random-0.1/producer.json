@@ -1,0 +1,29 @@
+{
+  "exec_id": "s03-r3-loss-random-0.1",
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "fault": {
+    "kind": "loss",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 1476140889
+  },
+  "label": "loss-random-0.1",
+  "t0": 18828.45998373,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 87029,
+  "n_dropped": 9706,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0006824450211722744,
+    "p50": 0.0006439986464101821,
+    "p99": 0.0012429991329554468,
+    "max": 0.04833399725612253
+  }
+}

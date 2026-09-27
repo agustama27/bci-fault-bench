@@ -1,0 +1,16 @@
+{
+  "exec_id": "s06-r4-disconnect-3",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.8,
+  "subject": 6,
+  "run": "4",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 3.0,
+    "mode": "random",
+    "seed": 622949041
+  },
+  "label": "disconnect-3"
+}

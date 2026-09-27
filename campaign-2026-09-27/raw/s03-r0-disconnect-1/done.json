@@ -3,14 +3,14 @@
   "status": "ok",
   "producer_rc": 0,
   "consumer_rc": 0,
-  "seconds": 399.3,
+  "seconds": 405.3,
   "subject": 3,
   "run": "0",
   "fault": {
     "kind": "disconnect",
     "severity": 1.0,
     "mode": "random",
-    "seed": 2045811269
+    "seed": 1798476910
   },
   "label": "disconnect-1"
 }

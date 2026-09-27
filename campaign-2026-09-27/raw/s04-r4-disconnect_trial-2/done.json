@@ -1,0 +1,16 @@
+{
+  "exec_id": "s04-r4-disconnect_trial-2",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 404.6,
+  "subject": 4,
+  "run": "4",
+  "fault": {
+    "kind": "disconnect_trial",
+    "severity": 2.0,
+    "mode": "random",
+    "seed": 192743364
+  },
+  "label": "disconnect_trial-2"
+}

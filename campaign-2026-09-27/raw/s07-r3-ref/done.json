@@ -1,0 +1,16 @@
+{
+  "exec_id": "s07-r3-ref",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.3,
+  "subject": 7,
+  "run": "3",
+  "fault": {
+    "kind": "none",
+    "severity": 0.0,
+    "mode": "random",
+    "seed": 332741355
+  },
+  "label": "ref"
+}

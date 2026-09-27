@@ -1,10 +1,16 @@
 kind,severity,label,silent,loud,divergent,kind_es
+burst_trial,0.1,burst_trial-0.1,0.0,0.0,0.0,pérdida contigua en el ensayo
+burst_trial,0.25,burst_trial-0.25,0.0,0.0,0.0,pérdida contigua en el ensayo
+burst_trial,0.4,burst_trial-0.4,0.0,0.07342657342657342,0.07913669064748201,pérdida contigua en el ensayo
 delay,0.05,delay-0.05,0.0,0.0,0.0,retraso
 delay,0.1,delay-0.1,0.0,0.0,0.0,retraso
 delay,0.25,delay-0.25,0.0,0.0,0.0,retraso
-disconnect,0.5,disconnect-0.5,0.0,0.0064801129469899185,0.0064801129469899185,desconexión
-disconnect,1.0,disconnect-1,0.0,0.008228364695241666,0.008228364695241666,desconexión
-disconnect,3.0,disconnect-3,0.0,0.034319781165207036,0.03606803291345878,desconexión
+disconnect,0.5,disconnect-0.5,0.0,0.006993006993006993,0.006993006993006993,desconexión
+disconnect,1.0,disconnect-1,0.0,0.006993006993006993,0.006993006993006993,desconexión
+disconnect,3.0,disconnect-3,0.0,0.03470031545741325,0.03470031545741325,desconexión
+disconnect_trial,0.5,disconnect_trial-0.5,0.0,0.08517350157728706,0.08633093525179857,desconexión en el ensayo
+disconnect_trial,1.0,disconnect_trial-1,0.0,0.08517350157728706,0.08633093525179857,desconexión en el ensayo
+disconnect_trial,2.0,disconnect_trial-2,0.0,0.2062937062937063,0.20866141732283464,desconexión en el ensayo
 jitter,0.01,jitter-0.01,0.0,0.0,0.0,jitter
 jitter,0.05,jitter-0.05,0.0,0.0,0.0,jitter
 jitter,0.1,jitter-0.1,0.0,0.0,0.0,jitter

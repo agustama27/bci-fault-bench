@@ -1,0 +1,10 @@
+{
+  "exec_id": "s05-r4-delay-0.1",
+  "t0": 26126.032190204,
+  "duration_eff": 386.9399999999987,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.5416666666666666,
+  "exceptions": 0,
+  "n_samples_total": 7505
+}

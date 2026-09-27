@@ -1,10 +1,10 @@
 {
   "exec_id": "s01-r1-disconnect-3",
-  "t0": 12860.923222589,
-  "duration_eff": 386.9400000000005,
+  "t0": 6261.144565713,
+  "duration_eff": 386.9399999999996,
   "n_trials": 24,
-  "n_valid": 22,
-  "balanced_accuracy": 0.875,
+  "n_valid": 23,
+  "balanced_accuracy": 0.8333333333333333,
   "exceptions": 0,
-  "n_samples_total": 7505
+  "n_samples_total": 6625
 }

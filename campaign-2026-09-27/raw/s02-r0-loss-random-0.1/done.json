@@ -3,14 +3,14 @@
   "status": "ok",
   "producer_rc": 0,
   "consumer_rc": 0,
-  "seconds": 398.7,
+  "seconds": 407.4,
   "subject": 2,
   "run": "0",
   "fault": {
     "kind": "loss",
     "severity": 0.1,
     "mode": "random",
-    "seed": 35474900
+    "seed": 335708415
   },
   "label": "loss-random-0.1"
 }

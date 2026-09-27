@@ -1,0 +1,16 @@
+{
+  "exec_id": "s09-r4-jitter-0.1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 406.1,
+  "subject": 9,
+  "run": "4",
+  "fault": {
+    "kind": "jitter",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 1236391513
+  },
+  "label": "jitter-0.1"
+}

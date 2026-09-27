@@ -29,10 +29,11 @@ ap.add_argument("--out", required=True)
 ap.add_argument("--window", type=int, default=8, help="ensayos por ventana móvil (W)")
 ap.add_argument("--q", type=float, default=5.0, help="percentil (rule=percentile) o factor (rule=mad)")
 ap.add_argument("--thr-rule", default="percentile", choices=["percentile", "min", "mad"])
+ap.add_argument("--trials-file", default="trials.csv", help="trials.csv | trials_eegnet.csv | trials_csp_offline.csv")
 a = ap.parse_args()
 os.makedirs(a.out, exist_ok=True)
 
-execs, trials, tele = M.load_campaign(a.root)
+execs, trials, tele = M.load_campaign(a.root, a.trials_file)
 if execs.empty:
     sys.exit("sin ejecuciones en " + a.root)
 execs.to_csv(os.path.join(a.out, "execs.csv"), index=False)
@@ -132,12 +133,19 @@ SEV_LABEL = {
     "jitter": lambda s: f"{s*1000:g} ms".replace(".", ","),
     "delay": lambda s: f"{s*1000:g} ms".replace(".", ","),
     "disconnect": lambda s: f"{s:g} s".replace(".", ","),
+    "burst_trial": lambda s: f"{s*100:g} %",
+    "disconnect_trial": lambda s: f"{s:g} s".replace(".", ","),
 }
 
 
 def fig_by_kind(metric: str, ylabel: str, fname: str):
-    fig, axes = plt.subplots(1, 4, figsize=(10, 3.0), sharey=True)
-    for ax, kind, mk in zip(axes, M.KINDS, markers):
+    kinds = [k for k in M.KINDS if (med.kind == k).any()]
+    ncols = min(4, len(kinds)); nrows = int(np.ceil(len(kinds) / ncols))
+    fig, axes = plt.subplots(nrows, ncols, figsize=(10, 3.0 * nrows), sharey=True, squeeze=False)
+    axes = axes.ravel()
+    for ax in axes[len(kinds):]:
+        ax.axis("off")
+    for ax, kind, mk in zip(axes, kinds, (markers * 2)):
         sub = med[med.kind == kind]
         ref = med[med.kind == "none"][metric].median()
         sevs = sorted(sub.severity.unique())
@@ -152,7 +160,8 @@ def fig_by_kind(metric: str, ylabel: str, fname: str):
         ax.set_title(M.KIND_ES[kind].capitalize(), fontsize=10)
         ax.set_xlabel("Severidad")
         ax.tick_params(axis="x", labelsize=8)
-    axes[0].set_ylabel(ylabel)
+    for r in range(nrows):
+        axes[r * ncols].set_ylabel(ylabel)
     fig.tight_layout()
     fig.savefig(os.path.join(a.out, fname), dpi=300)
     plt.close(fig)
