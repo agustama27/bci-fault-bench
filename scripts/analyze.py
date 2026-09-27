@@ -156,7 +156,8 @@ def fig_by_kind(metric: str, ylabel: str, fname: str):
         ax.errorbar(xs, ys, yerr=[np.array(ys) - np.array(lo), np.array(hi) - np.array(ys)], fmt=f"{mk}-", color="k",
                     ecolor="0.5", capsize=3, lw=1)
         ax.set_xticks(xs)
-        ax.set_xticklabels(["ref."] + [SEV_LABEL[kind](s) for s in sevs])
+        sev_label = SEV_LABEL.get(kind, lambda s: f"×{s:g}".replace(".", ","))
+        ax.set_xticklabels(["ref."] + [sev_label(s) for s in sevs])
         ax.set_title(M.KIND_ES[kind].capitalize(), fontsize=10)
         ax.set_xlabel("Severidad")
         ax.tick_params(axis="x", labelsize=8)

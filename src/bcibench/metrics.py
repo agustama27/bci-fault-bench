@@ -51,8 +51,13 @@ def load_campaign(root: str, trials_file: str = "trials.csv") -> tuple[pd.DataFr
         te = te[te["sec"] < int(np.ceil(p["duration_s"]))].reset_index(drop=True)
         trials[eid], tele[eid] = tr, te
         f = p["fault"]
+        # familia trace: cada traza es su propio "tipo de fallo" (kind = trace:<nombre>);
+        # la severidad es el factor de escala (1 = tal como se midió)
+        kind = f"trace:{p.get('trace', f['mode'].split('@')[0])}" if f["kind"] == "trace" else f["kind"]
+        if kind.startswith("trace:") and kind not in KINDS:
+            KINDS.append(kind); KIND_ES[kind] = "traza " + kind[6:]
         execs.append(dict(
-            exec_id=eid, subject=p["subject"], run=str(p["run"]), kind=f["kind"],
+            exec_id=eid, subject=p["subject"], run=str(p["run"]), kind=kind,
             severity=f["severity"], mode=f["mode"], label=p["label"],
             n_pushed=p["n_pushed"], n_dropped=p["n_dropped"], outages=len(p["outages"]),
             timing_p99_ms=p["timing_err_ms"]["p99"],
