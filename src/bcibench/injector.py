@@ -51,6 +51,11 @@ class FaultSpec:
     mode: str = "random"        # loss: random | burst
     seed: int = 0
 
+    def __post_init__(self):
+        # trace: la severidad es un factor de escala; 0 (valor por defecto de la CLI) significa "tal como se midió"
+        if self.kind == "trace" and self.severity <= 0:
+            self.severity = 1.0
+
     def label(self) -> str:
         if self.kind == "none":
             return "ref"

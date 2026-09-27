@@ -4,6 +4,8 @@ Subcomandos:
   summary <traza>                      estadísticas de una traza (duración, cortes, pérdida, retraso)
   from-timestamps <csv> --sfreq 250    traza a partir de las marcas de tiempo de una grabación real
                                        (huecos entre muestras → pérdida; huecos largos → corte)
+  from-arrivals <csv>                  traza de retraso/jitter a partir del instante de LLEGADA de cada
+                                       muestra (p. ej. exportación de Mind Monitor de un Muse por BLE)
   from-ping <log>                      traza a partir de un registro de ping/RTT (una línea por paquete)
   synth-example                        traza sintética de EJEMPLO para pruebas de humo (no es una medición)
 
@@ -22,6 +24,9 @@ import re
 import sys
 
 import numpy as np
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from bcibench.trace import LinkTrace  # noqa: E402
@@ -90,6 +95,59 @@ def from_timestamps(a):
                        f"corte = hueco > {a.outage_s} s; retraso "
                        + ("estimado de la columna de llegada (base = percentil 1)" if a.arrival else "no observable (0)")))
     write_trace(a.out, t, up, delay_ms, loss, meta, jitter_ms)
+
+
+# ---------------------------------------------------------------- from-arrivals
+def from_arrivals(a):
+    """Instantes de LLEGADA por muestra de una grabación real (p. ej. Mind Monitor: hora del
+    teléfono en que llegó cada muestra del Muse por BLE) → traza de retraso y jitter.
+
+    La grabación no trae el instante nominal de cada muestra: se estima un reloj lineal por
+    mínimos cuadrados sobre (índice, llegada) (tasa efectiva del dispositivo) y el residuo
+    llegada − nominal es el retraso de entrega, referido a su percentil 1 (el retraso base no
+    es observable). Por intervalo: delay_ms = media del residuo, jitter_ms = desvío. La
+    pérdida NO es observable en esta fuente (loss = 0) y no hay cortes (up = 1), salvo que
+    un hueco entre llegadas supere --outage-s. Supuestos declarados en # notes.
+    """
+    import pandas as pd
+    df = pd.read_csv(a.path, usecols=[a.column] + ([a.presence] if a.presence else []))
+    if a.presence:
+        df = df[df[a.presence].notna()]
+    col = df[a.column]
+    if a.datetime:
+        ts = pd.to_datetime(col)
+        arr = (ts - ts.iloc[0]).dt.total_seconds().to_numpy(dtype=float)
+    else:
+        arr = col.to_numpy(dtype=float); arr = arr - arr[0]
+    i = np.arange(len(arr))
+    slope, intercept = np.polyfit(i, arr, 1)
+    res = arr - (intercept + slope * i)
+    base = np.percentile(res, 1)
+    lat = np.maximum(res - base, 0.0)
+    step = a.resolution
+    n_int = int(np.ceil(arr[-1] / step)) + 1
+    t = np.arange(n_int) * step
+    idx = np.minimum((arr / step).astype(int), n_int - 1)
+    cnt = np.bincount(idx, minlength=n_int).astype(float)
+    sums = np.bincount(idx, weights=lat, minlength=n_int)
+    sq = np.bincount(idx, weights=lat ** 2, minlength=n_int)
+    mean = np.where(cnt > 0, sums / np.maximum(cnt, 1), np.nan)
+    std = np.sqrt(np.maximum(np.where(cnt > 0, sq / np.maximum(cnt, 1), 0) - np.nan_to_num(mean) ** 2, 0))
+    # intervalos sin llegadas: heredan el último valor conocido (el enlace sigue entregando tarde)
+    for k in range(1, n_int):
+        if np.isnan(mean[k]):
+            mean[k], std[k] = mean[k - 1], std[k - 1]
+    mean = np.nan_to_num(mean)
+    up = np.ones(n_int, dtype=bool)
+    d = np.diff(arr)
+    for j in np.flatnonzero(d > a.outage_s):
+        up[int(arr[j] / step) + 1: int(np.ceil(arr[j + 1] / step))] = False
+    meta = dict(source=a.source, license=a.license, resolution_s=step,
+                notes=(f"from-arrivals: {len(arr)} llegadas en {arr[-1]:.1f} s; reloj nominal ajustado por mínimos "
+                       f"cuadrados ({1 / slope:.2f} Hz); retraso = residuo llegada - nominal referido a su percentil 1 "
+                       f"({base * 1e3:.1f} ms); jitter = desvío del residuo por intervalo; la pérdida no es observable "
+                       f"en esta fuente (loss = 0); corte = hueco entre llegadas > {a.outage_s} s"))
+    write_trace(a.out, t, up, mean * 1e3, np.zeros(n_int), meta, std * 1e3)
 
 
 # ---------------------------------------------------------------- from-ping
@@ -180,6 +238,13 @@ def main(argv=None):
     s.add_argument("--outage-s", type=float, default=0.5)
     s.add_argument("--out", required=True); s.add_argument("--source", required=True); s.add_argument("--license", required=True)
     s.set_defaults(fn=from_timestamps)
+    s = sub.add_parser("from-arrivals"); s.add_argument("path")
+    s.add_argument("--column", default="TimeStamp", help="columna con el instante de llegada")
+    s.add_argument("--datetime", action="store_true", help="la columna es fecha-hora (no segundos)")
+    s.add_argument("--presence", default=None, help="solo filas con esta columna no vacía (p. ej. RAW_TP9)")
+    s.add_argument("--resolution", type=float, default=0.1); s.add_argument("--outage-s", type=float, default=0.5)
+    s.add_argument("--out", required=True); s.add_argument("--source", required=True); s.add_argument("--license", required=True)
+    s.set_defaults(fn=from_arrivals)
     s = sub.add_parser("from-ping"); s.add_argument("path")
     s.add_argument("--interval", type=float, default=0.2); s.add_argument("--outage-n", type=int, default=3)
     s.add_argument("--subtract-base", action="store_true", default=True)
