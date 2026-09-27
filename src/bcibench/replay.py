@@ -83,7 +83,7 @@ def main(argv=None):
     duration = n_total / sfreq
 
     spec = FaultSpec(a.fault, a.severity, a.mode, a.seed)
-    inj = Injector(spec, sfreq, duration)
+    inj = Injector(spec, sfreq, duration, trial_onsets_samples=ev_samples[ev_samples < n_total])
 
     einfo = _eeg_info(a.exec_id, len(ch_names), sfreq, ch_names)
     outlet = StreamOutlet(einfo, chunk_size=CHUNK)
@@ -137,7 +137,7 @@ def main(argv=None):
             reconnections += 1
             log.write(json.dumps({"event": "outage_end", "t_rel": t_rel}) + "\n")
         chunk = X[i0:i1]
-        keep = inj.keep_mask(len(chunk))
+        keep = inj.keep_mask(len(chunk), i0)
         if keep.any():
             ts = t_nom + np.flatnonzero(keep) / sfreq
             outlet.push_chunk(chunk[keep], timestamp=ts)

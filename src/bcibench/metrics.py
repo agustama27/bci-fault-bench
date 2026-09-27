@@ -19,14 +19,19 @@ import os
 import numpy as np
 import pandas as pd
 
-KINDS = ["loss", "jitter", "delay", "disconnect"]
+KINDS = ["loss", "jitter", "delay", "disconnect", "burst_trial", "disconnect_trial"]
 KIND_ES = {"none": "referencia", "loss": "pérdida de muestras", "jitter": "jitter",
-           "delay": "retraso", "disconnect": "desconexión"}
+           "delay": "retraso", "disconnect": "desconexión",
+           "burst_trial": "pérdida contigua en el ensayo", "disconnect_trial": "desconexión en el ensayo"}
 
 
 # ---------------------------------------------------------------- carga
-def load_campaign(root: str) -> tuple[pd.DataFrame, dict, dict]:
-    """Devuelve (ejecuciones, trials por exec_id, telemetría por exec_id)."""
+def load_campaign(root: str, trials_file: str = "trials.csv") -> tuple[pd.DataFrame, dict, dict]:
+    """Devuelve (ejecuciones, trials por exec_id, telemetría por exec_id).
+
+    trials_file: "trials.csv" (decisiones en línea, CSP+LDA) o "trials_eegnet.csv" /
+    "trials_csp_offline.csv" (re-decodificación fuera de línea de los segmentos guardados).
+    """
     execs, trials, tele = [], {}, {}
     for d in sorted(glob.glob(os.path.join(root, "*"))):
         pj, cj = os.path.join(d, "producer.json"), os.path.join(d, "consumer.json")
@@ -34,7 +39,12 @@ def load_campaign(root: str) -> tuple[pd.DataFrame, dict, dict]:
             continue
         p, c = json.load(open(pj)), json.load(open(cj))
         eid = p["exec_id"]
-        tr = pd.read_csv(os.path.join(d, "trials.csv"))
+        tp = os.path.join(d, trials_file)
+        if not os.path.exists(tp):
+            continue
+        tr = pd.read_csv(tp)
+        if "decision_delay" not in tr.columns:
+            tr["decision_delay"] = np.nan
         te = pd.read_csv(os.path.join(d, "telemetry.csv"))
         # la telemetría termina en la duración real de la corrida (ejecuciones
         # anteriores a la corrección del consumidor escribían hasta el tope)

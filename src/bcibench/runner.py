@@ -34,6 +34,10 @@ DEFAULT_CONDITIONS = [FaultSpec("none")] + [
     FaultSpec("jitter", s) for s in (0.010, 0.050, 0.100)] + [
     FaultSpec("delay", s) for s in (0.050, 0.100, 0.250)] + [
     FaultSpec("disconnect", s) for s in (0.5, 1.0, 3.0)]
+# Familia 2: fallos estructurados, sincronizados con el ensayo (sin referencia: ya existe en la familia 1)
+STRUCTURED_CONDITIONS = [
+    FaultSpec("burst_trial", s) for s in (0.10, 0.25, 0.40)] + [
+    FaultSpec("disconnect_trial", s) for s in (0.5, 1.0, 2.0)]
 
 
 def exec_id(subject: int, run: str, spec: FaultSpec) -> str:
@@ -107,12 +111,14 @@ def main(argv=None):
     ap.add_argument("--models", default=os.path.join(ROOT, "results", "models"))
     ap.add_argument("--severities", default=None, help="JSON: {kind: [sev, ...]} para sobrescribir")
     ap.add_argument("--only", nargs="*", default=None, help="solo estas condiciones (labels)")
+    ap.add_argument("--family", default="uniform", choices=["uniform", "structured", "all"])
     ap.add_argument("--max-seconds", type=float, default=None, help="solo desarrollo")
     ap.add_argument("--duration", type=float, default=RUN_DURATION_S)
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
 
-    conditions = list(DEFAULT_CONDITIONS)
+    conditions = {"uniform": list(DEFAULT_CONDITIONS), "structured": list(STRUCTURED_CONDITIONS),
+                  "all": list(DEFAULT_CONDITIONS) + list(STRUCTURED_CONDITIONS)}[a.family]
     if a.severities:
         sev = json.loads(a.severities)
         conditions = [FaultSpec("none")]
