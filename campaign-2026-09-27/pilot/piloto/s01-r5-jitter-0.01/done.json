@@ -1,0 +1,16 @@
+{
+  "exec_id": "s01-r5-jitter-0.01",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 400.6,
+  "subject": 1,
+  "run": "5",
+  "fault": {
+    "kind": "jitter",
+    "severity": 0.01,
+    "mode": "random",
+    "seed": 2040514150
+  },
+  "label": "jitter-0.01"
+}

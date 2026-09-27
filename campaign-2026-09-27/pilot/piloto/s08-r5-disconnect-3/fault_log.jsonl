@@ -1,0 +1,15 @@
+{"event": "outage_planned", "start": 44.753717963174964, "end": 47.753717963174964}
+{"event": "outage_planned", "start": 73.96532725663087, "end": 76.96532725663087}
+{"event": "outage_planned", "start": 120.36160863792576, "end": 123.36160863792576}
+{"event": "outage_planned", "start": 216.4769975795758, "end": 219.4769975795758}
+{"event": "outage_planned", "start": 352.3564788728828, "end": 355.3564788728828}
+{"event": "outage_start", "t_rel": 44.76}
+{"event": "outage_end", "t_rel": 47.76}
+{"event": "outage_start", "t_rel": 74.0}
+{"event": "outage_end", "t_rel": 77.0}
+{"event": "outage_start", "t_rel": 120.4}
+{"event": "outage_end", "t_rel": 123.4}
+{"event": "outage_start", "t_rel": 216.48}
+{"event": "outage_end", "t_rel": 219.48}
+{"event": "outage_start", "t_rel": 352.36}
+{"event": "outage_end", "t_rel": 355.36}

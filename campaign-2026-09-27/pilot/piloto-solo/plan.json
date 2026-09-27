@@ -1,0 +1,38 @@
+[
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 570302800
+  },
+  "exec_id": "s01-r5-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 139205105
+  },
+  "exec_id": "s05-r5-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 552587026
+  },
+  "exec_id": "s08-r5-ref"
+ }
+]

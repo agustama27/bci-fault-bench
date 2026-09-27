@@ -127,10 +127,16 @@ import matplotlib.pyplot as plt
 
 plt.rcParams.update({"font.family": "serif", "font.size": 10, "axes.spines.top": False, "axes.spines.right": False})
 markers = ["o", "s", "^", "D"]
+SEV_LABEL = {
+    "loss": lambda s: f"{s*100:g} %".replace(".", ","),
+    "jitter": lambda s: f"{s*1000:g} ms".replace(".", ","),
+    "delay": lambda s: f"{s*1000:g} ms".replace(".", ","),
+    "disconnect": lambda s: f"{s:g} s".replace(".", ","),
+}
 
 
 def fig_by_kind(metric: str, ylabel: str, fname: str):
-    fig, axes = plt.subplots(1, 4, figsize=(10, 2.8), sharey=True)
+    fig, axes = plt.subplots(1, 4, figsize=(10, 3.0), sharey=True)
     for ax, kind, mk in zip(axes, M.KINDS, markers):
         sub = med[med.kind == kind]
         ref = med[med.kind == "none"][metric].median()
@@ -142,9 +148,10 @@ def fig_by_kind(metric: str, ylabel: str, fname: str):
         ax.errorbar(xs, ys, yerr=[np.array(ys) - np.array(lo), np.array(hi) - np.array(ys)], fmt=f"{mk}-", color="k",
                     ecolor="0.5", capsize=3, lw=1)
         ax.set_xticks(xs)
-        ax.set_xticklabels(["ref."] + [f"{s:g}" for s in sevs])
+        ax.set_xticklabels(["ref."] + [SEV_LABEL[kind](s) for s in sevs])
         ax.set_title(M.KIND_ES[kind].capitalize(), fontsize=10)
         ax.set_xlabel("Severidad")
+        ax.tick_params(axis="x", labelsize=8)
     axes[0].set_ylabel(ylabel)
     fig.tight_layout()
     fig.savefig(os.path.join(a.out, fname), dpi=300)

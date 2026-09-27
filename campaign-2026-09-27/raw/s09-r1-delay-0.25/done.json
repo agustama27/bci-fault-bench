@@ -1,0 +1,16 @@
+{
+  "exec_id": "s09-r1-delay-0.25",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 398.8,
+  "subject": 9,
+  "run": "1",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.25,
+    "mode": "random",
+    "seed": 1563312888
+  },
+  "label": "delay-0.25"
+}

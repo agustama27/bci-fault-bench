@@ -1,0 +1,16 @@
+{
+  "exec_id": "s05-r5-delay-0.05",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 400.2,
+  "subject": 5,
+  "run": "5",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.05,
+    "mode": "random",
+    "seed": 1204098925
+  },
+  "label": "delay-0.05"
+}

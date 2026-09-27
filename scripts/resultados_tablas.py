@@ -22,7 +22,7 @@ fig_dir = os.path.join(out_src, "fig")
 os.makedirs(fig_dir, exist_ok=True)
 
 KIND_ES = {"none": "Referencia", "loss": "Pérdida de muestras", "jitter": "*Jitter*", "delay": "Retraso", "disconnect": "Desconexión"}
-UNIT = {"loss": lambda s: f"{s*100:g} %", "jitter": lambda s: f"{s*1000:g} ms", "delay": lambda s: f"{s*1000:g} ms", "disconnect": lambda s: f"{s:g} s"}
+UNIT = {"loss": lambda s: f"{s*100:g} %".replace(".", ","), "jitter": lambda s: f"{s*1000:g} ms".replace(".", ","), "delay": lambda s: f"{s*1000:g} ms".replace(".", ","), "disconnect": lambda s: f"{s:g} s".replace(".", ",")}
 
 
 def f(x, d=2):
@@ -55,12 +55,12 @@ for kind in ["loss", "jitter", "delay", "disconnect"]:
 tablas["desempeno"] = dict(
     headers=["Tipo de fallo", "Severidad", "*Balanced accuracy*", "Decisiones válidas", "Diferencia vs. referencia", "*p* (Holm)", "*r*"],
     rows=rows,
-    friedman={k: (float(g.friedman_chi2.iloc[0]), float(g.friedman_p.iloc[0]), int(g.n.iloc[0])) for k, g in t_b.groupby("kind")},
+    friedman={k: (None if np.isnan(g.friedman_chi2.iloc[0]) else float(g.friedman_chi2.iloc[0]), None if np.isnan(g.friedman_p.iloc[0]) else float(g.friedman_p.iloc[0]), int(g.n.iloc[0])) for k, g in t_b.groupby("kind")},
 )
 
 # --- Tabla infraestructura (obj. 2)
 rows = []
-rows.append(["Referencia", "—", f(ref.recv_ratio, 3), f(ref.n_gaps, 0), f(ref.lat_mean_ms, 1), f(ref.ia_std_ms, 1), f(ref.secs_no_data, 0), f(ref.reconnections, 0)])
+rows.append(["Referencia", "—", f(ref.recv_ratio, 3), f(ref.n_gaps, 0), f(ref.lat_mean_ms, 1), f(ref.ia_std_ms, 1), f(ref.secs_no_data, 0)])
 t_i = pd.read_csv(os.path.join(A, "t_infra.csv"))
 for kind in ["loss", "jitter", "delay", "disconnect"]:
     for s in sorted(desc[desc.kind == kind].severity.unique()):
@@ -70,9 +70,9 @@ for kind in ["loss", "jitter", "delay", "disconnect"]:
             return star(float(q.p_holm.iloc[0])) if len(q) else ""
         rows.append([KIND_ES[kind], sev(kind, s), f(d.recv_ratio, 3) + p_of("recv_ratio"), f(d.n_gaps, 0) + p_of("n_gaps"),
                      f(d.lat_mean_ms, 1) + p_of("lat_mean_ms"), f(d.ia_std_ms, 1) + p_of("ia_std_ms"),
-                     f(d.secs_no_data, 0) + p_of("secs_no_data"), f(d.reconnections, 0)])
+                     f(d.secs_no_data, 0) + p_of("secs_no_data")])
 tablas["infra"] = dict(
-    headers=["Tipo de fallo", "Severidad", "Muestras recibidas / esperadas", "Huecos", "Latencia media (ms)", "Desv. intervalo entre bloques (ms)", "Segundos sin datos", "Reconexiones"],
+    headers=["Tipo de fallo", "Severidad", "Muestras recibidas / esperadas", "Huecos", "Latencia media (ms)", "Desv. intervalo entre bloques (ms)", "Segundos sin datos"],
     rows=rows)
 
 # --- Tabla divergencia (obj. 4)

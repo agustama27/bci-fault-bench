@@ -1,0 +1,3 @@
+{"exec_id": "s01-r5-ref", "status": "ok", "producer_rc": 0, "consumer_rc": 0, "seconds": 398.6, "subject": 1, "run": "5", "fault": {"kind": "none", "severity": 0.0, "mode": "random", "seed": 570302800}, "label": "ref"}
+{"exec_id": "s05-r5-ref", "status": "ok", "producer_rc": 0, "consumer_rc": 0, "seconds": 398.6, "subject": 5, "run": "5", "fault": {"kind": "none", "severity": 0.0, "mode": "random", "seed": 139205105}, "label": "ref"}
+{"exec_id": "s08-r5-ref", "status": "ok", "producer_rc": 0, "consumer_rc": 0, "seconds": 398.6, "subject": 8, "run": "5", "fault": {"kind": "none", "severity": 0.0, "mode": "random", "seed": 552587026}, "label": "ref"}

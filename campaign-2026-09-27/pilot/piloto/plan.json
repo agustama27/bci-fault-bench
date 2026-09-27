@@ -1,0 +1,470 @@
+[
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 429612203
+  },
+  "exec_id": "s01-r5-ref"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1413543202
+  },
+  "exec_id": "s01-r5-loss-random-0.01"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 614900955
+  },
+  "exec_id": "s01-r5-loss-random-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 658249298
+  },
+  "exec_id": "s01-r5-loss-random-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 2040514150
+  },
+  "exec_id": "s01-r5-jitter-0.01"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1341210790
+  },
+  "exec_id": "s01-r5-jitter-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1285220246
+  },
+  "exec_id": "s01-r5-jitter-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 279810258
+  },
+  "exec_id": "s01-r5-delay-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 223819714
+  },
+  "exec_id": "s01-r5-delay-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 840441691
+  },
+  "exec_id": "s01-r5-delay-0.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 591568764
+  },
+  "exec_id": "s01-r5-disconnect-0.5"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 1150486229
+  },
+  "exec_id": "s01-r5-disconnect-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 289934080
+  },
+  "exec_id": "s01-r5-disconnect-3"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 882760184
+  },
+  "exec_id": "s05-r5-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1866691183
+  },
+  "exec_id": "s05-r5-loss-random-0.01"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1068048936
+  },
+  "exec_id": "s05-r5-loss-random-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1111397279
+  },
+  "exec_id": "s05-r5-loss-random-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1740062155
+  },
+  "exec_id": "s05-r5-jitter-0.01"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 941419908
+  },
+  "exec_id": "s05-r5-jitter-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 885429364
+  },
+  "exec_id": "s05-r5-jitter-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1204098925
+  },
+  "exec_id": "s05-r5-delay-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1148108381
+  },
+  "exec_id": "s05-r5-delay-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1764730358
+  },
+  "exec_id": "s05-r5-delay-0.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1563475444
+  },
+  "exec_id": "s05-r5-disconnect-0.5"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 2023054022
+  },
+  "exec_id": "s05-r5-disconnect-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1261840760
+  },
+  "exec_id": "s05-r5-disconnect-3"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 633378243
+  },
+  "exec_id": "s08-r5-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1716648129
+  },
+  "exec_id": "s08-r5-loss-random-0.01"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 918005882
+  },
+  "exec_id": "s08-r5-loss-random-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 862015338
+  },
+  "exec_id": "s08-r5-loss-random-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 685359364
+  },
+  "exec_id": "s08-r5-jitter-0.01"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 2034200765
+  },
+  "exec_id": "s08-r5-jitter-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 2077549108
+  },
+  "exec_id": "s08-r5-jitter-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 313815358
+  },
+  "exec_id": "s08-r5-delay-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 257824814
+  },
+  "exec_id": "s08-r5-delay-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 874446791
+  },
+  "exec_id": "s08-r5-delay-0.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 894673691
+  },
+  "exec_id": "s08-r5-disconnect-0.5"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 1354252269
+  },
+  "exec_id": "s08-r5-disconnect-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "5",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 593039007
+  },
+  "exec_id": "s08-r5-disconnect-3"
+ }
+]

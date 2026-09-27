@@ -1,0 +1,16 @@
+{
+  "exec_id": "s07-r0-delay-0.1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 398.9,
+  "subject": 7,
+  "run": "0",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 1477334059
+  },
+  "label": "delay-0.1"
+}

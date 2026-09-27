@@ -1,0 +1,29 @@
+{
+  "exec_id": "s04-r0-jitter-0.1",
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "fault": {
+    "kind": "jitter",
+    "severity": 0.1,
+    "mode": "random",
+    "seed": 898434831
+  },
+  "label": "jitter-0.1",
+  "t0": 7270.433214361,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 26.94568813941217,
+    "p50": 0.0007515786819567438,
+    "p99": 187.70449196004856,
+    "max": 321.8997580006544
+  }
+}

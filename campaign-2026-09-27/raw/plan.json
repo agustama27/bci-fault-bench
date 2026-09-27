@@ -1,0 +1,2810 @@
+[
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1138304355
+  },
+  "exec_id": "s01-r0-ref"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 78668215
+  },
+  "exec_id": "s01-r0-loss-random-0.01"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1526848503
+  },
+  "exec_id": "s01-r0-loss-random-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1470857959
+  },
+  "exec_id": "s01-r0-loss-random-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 447227930
+  },
+  "exec_id": "s01-r0-jitter-0.01"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1796069331
+  },
+  "exec_id": "s01-r0-jitter-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1740078787
+  },
+  "exec_id": "s01-r0-jitter-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 46603646
+  },
+  "exec_id": "s01-r0-delay-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 89951989
+  },
+  "exec_id": "s01-r0-delay-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 706573966
+  },
+  "exec_id": "s01-r0-delay-0.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1946543387
+  },
+  "exec_id": "s01-r0-disconnect-0.5"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 258638317
+  },
+  "exec_id": "s01-r0-disconnect-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1644908703
+  },
+  "exec_id": "s01-r0-disconnect-3"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1680644004
+  },
+  "exec_id": "s02-r0-ref"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 890107691
+  },
+  "exec_id": "s02-r0-loss-random-0.01"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 91465444
+  },
+  "exec_id": "s02-r0-loss-random-0.05"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 35474900
+  },
+  "exec_id": "s02-r0-loss-random-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1743167555
+  },
+  "exec_id": "s02-r0-jitter-0.01"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 944525308
+  },
+  "exec_id": "s02-r0-jitter-0.05"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 987873651
+  },
+  "exec_id": "s02-r0-jitter-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 588943295
+  },
+  "exec_id": "s02-r0-delay-0.05"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 532952751
+  },
+  "exec_id": "s02-r0-delay-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1149574728
+  },
+  "exec_id": "s02-r0-delay-0.25"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 242060501
+  },
+  "exec_id": "s02-r0-disconnect-0.5"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 800977966
+  },
+  "exec_id": "s02-r0-disconnect-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 2087909465
+  },
+  "exec_id": "s02-r0-disconnect-3"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1601397758
+  },
+  "exec_id": "s03-r0-ref"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 2134940994
+  },
+  "exec_id": "s03-r0-loss-random-0.01"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1435637634
+  },
+  "exec_id": "s03-r0-loss-random-0.05"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1379647090
+  },
+  "exec_id": "s03-r0-loss-random-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 421097398
+  },
+  "exec_id": "s03-r0-jitter-0.01"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1769938799
+  },
+  "exec_id": "s03-r0-jitter-0.05"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1813287142
+  },
+  "exec_id": "s03-r0-jitter-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1833776598
+  },
+  "exec_id": "s03-r0-delay-0.05"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1877124941
+  },
+  "exec_id": "s03-r0-delay-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 346263270
+  },
+  "exec_id": "s03-r0-delay-0.25"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1586232691
+  },
+  "exec_id": "s03-r0-disconnect-0.5"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 2045811269
+  },
+  "exec_id": "s03-r0-disconnect-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1185259120
+  },
+  "exec_id": "s03-r0-disconnect-3"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1925385348
+  },
+  "exec_id": "s04-r0-ref"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1384507907
+  },
+  "exec_id": "s04-r0-loss-random-0.01"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 585865660
+  },
+  "exec_id": "s04-r0-loss-random-0.05"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 629214003
+  },
+  "exec_id": "s04-r0-loss-random-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1653728735
+  },
+  "exec_id": "s04-r0-jitter-0.01"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 954425375
+  },
+  "exec_id": "s04-r0-jitter-0.05"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 898434831
+  },
+  "exec_id": "s04-r0-jitter-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1352443338
+  },
+  "exec_id": "s04-r0-delay-0.05"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1296452794
+  },
+  "exec_id": "s04-r0-delay-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1913074771
+  },
+  "exec_id": "s04-r0-delay-0.25"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1910220281
+  },
+  "exec_id": "s04-r0-disconnect-0.5"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 222315211
+  },
+  "exec_id": "s04-r0-disconnect-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1509246710
+  },
+  "exec_id": "s04-r0-disconnect-3"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 837852360
+  },
+  "exec_id": "s05-r0-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1371395596
+  },
+  "exec_id": "s05-r0-loss-random-0.01"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 572753349
+  },
+  "exec_id": "s05-r0-loss-random-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 516762805
+  },
+  "exec_id": "s05-r0-loss-random-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 76971812
+  },
+  "exec_id": "s05-r0-jitter-0.01"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1425813213
+  },
+  "exec_id": "s05-r0-jitter-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1469161556
+  },
+  "exec_id": "s05-r0-jitter-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 165571463
+  },
+  "exec_id": "s05-r0-delay-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 208919806
+  },
+  "exec_id": "s05-r0-delay-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 825541783
+  },
+  "exec_id": "s05-r0-delay-0.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1576287269
+  },
+  "exec_id": "s05-r0-disconnect-0.5"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 2035865847
+  },
+  "exec_id": "s05-r0-disconnect-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1274652585
+  },
+  "exec_id": "s05-r0-disconnect-3"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2051378850
+  },
+  "exec_id": "s06-r0-ref"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1844681573
+  },
+  "exec_id": "s06-r0-loss-random-0.01"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1046039326
+  },
+  "exec_id": "s06-r0-loss-random-0.05"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1089387669
+  },
+  "exec_id": "s06-r0-loss-random-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1260963538
+  },
+  "exec_id": "s06-r0-jitter-0.01"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 561660178
+  },
+  "exec_id": "s06-r0-jitter-0.05"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 505669634
+  },
+  "exec_id": "s06-r0-jitter-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 959678141
+  },
+  "exec_id": "s06-r0-delay-0.05"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 903687597
+  },
+  "exec_id": "s06-r0-delay-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1520309574
+  },
+  "exec_id": "s06-r0-delay-0.25"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1517455084
+  },
+  "exec_id": "s06-r0-disconnect-0.5"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 1977033662
+  },
+  "exec_id": "s06-r0-disconnect-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1116481513
+  },
+  "exec_id": "s06-r0-disconnect-3"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 811721828
+  },
+  "exec_id": "s07-r0-ref"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1834488999
+  },
+  "exec_id": "s07-r0-loss-random-0.01"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1035846752
+  },
+  "exec_id": "s07-r0-loss-random-0.05"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 979856208
+  },
+  "exec_id": "s07-r0-loss-random-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 2103709827
+  },
+  "exec_id": "s07-r0-jitter-0.01"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1305067580
+  },
+  "exec_id": "s07-r0-jitter-0.05"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1348415923
+  },
+  "exec_id": "s07-r0-jitter-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1533324603
+  },
+  "exec_id": "s07-r0-delay-0.05"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1477334059
+  },
+  "exec_id": "s07-r0-delay-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 2093956036
+  },
+  "exec_id": "s07-r0-delay-0.25"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 2039380672
+  },
+  "exec_id": "s07-r0-disconnect-0.5"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 351475602
+  },
+  "exec_id": "s07-r0-disconnect-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1737745988
+  },
+  "exec_id": "s07-r0-disconnect-3"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1172309455
+  },
+  "exec_id": "s08-r0-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 900531841
+  },
+  "exec_id": "s08-r0-loss-random-0.01"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 101889594
+  },
+  "exec_id": "s08-r0-loss-random-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 145237937
+  },
+  "exec_id": "s08-r0-loss-random-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1234833006
+  },
+  "exec_id": "s08-r0-jitter-0.01"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 535529646
+  },
+  "exec_id": "s08-r0-jitter-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 479539102
+  },
+  "exec_id": "s08-r0-jitter-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 599367445
+  },
+  "exec_id": "s08-r0-delay-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 543376901
+  },
+  "exec_id": "s08-r0-delay-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1159998878
+  },
+  "exec_id": "s08-r0-delay-0.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1105423514
+  },
+  "exec_id": "s08-r0-disconnect-0.5"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 1664340979
+  },
+  "exec_id": "s08-r0-disconnect-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 803788830
+  },
+  "exec_id": "s08-r0-disconnect-3"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 690976195
+  },
+  "exec_id": "s09-r0-ref"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1808358467
+  },
+  "exec_id": "s09-r0-loss-random-0.01"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1009716220
+  },
+  "exec_id": "s09-r0-loss-random-0.05"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1053064563
+  },
+  "exec_id": "s09-r0-loss-random-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 2077579295
+  },
+  "exec_id": "s09-r0-jitter-0.01"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1278937048
+  },
+  "exec_id": "s09-r0-jitter-0.05"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1322285391
+  },
+  "exec_id": "s09-r0-jitter-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 118034185
+  },
+  "exec_id": "s09-r0-delay-0.05"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 62043641
+  },
+  "exec_id": "s09-r0-delay-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 678665618
+  },
+  "exec_id": "s09-r0-delay-0.25"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 576472241
+  },
+  "exec_id": "s09-r0-disconnect-0.5"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 1135389706
+  },
+  "exec_id": "s09-r0-disconnect-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 274837557
+  },
+  "exec_id": "s09-r0-disconnect-3"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 48797456
+  },
+  "exec_id": "s01-r1-ref"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1876885477
+  },
+  "exec_id": "s01-r1-loss-random-0.01"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1177582117
+  },
+  "exec_id": "s01-r1-loss-random-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1121591573
+  },
+  "exec_id": "s01-r1-loss-random-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 681800580
+  },
+  "exec_id": "s01-r1-jitter-0.01"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 2030641981
+  },
+  "exec_id": "s01-r1-jitter-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1974651437
+  },
+  "exec_id": "s01-r1-jitter-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 770400231
+  },
+  "exec_id": "s01-r1-delay-0.05"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 813748574
+  },
+  "exec_id": "s01-r1-delay-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1430370551
+  },
+  "exec_id": "s01-r1-delay-0.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 33632389
+  },
+  "exec_id": "s01-r1-disconnect-0.5"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 493210967
+  },
+  "exec_id": "s01-r1-disconnect-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1780142466
+  },
+  "exec_id": "s01-r1-disconnect-3"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 622443918
+  },
+  "exec_id": "s02-r1-ref"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1155987154
+  },
+  "exec_id": "s02-r1-loss-random-0.01"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 357344907
+  },
+  "exec_id": "s02-r1-loss-random-0.05"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 400693250
+  },
+  "exec_id": "s02-r1-loss-random-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1425207982
+  },
+  "exec_id": "s02-r1-jitter-0.01"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 626565735
+  },
+  "exec_id": "s02-r1-jitter-0.05"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 669914078
+  },
+  "exec_id": "s02-r1-jitter-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 49501908
+  },
+  "exec_id": "s02-r1-delay-0.05"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 2140995012
+  },
+  "exec_id": "s02-r1-delay-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 610133341
+  },
+  "exec_id": "s02-r1-delay-0.25"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1850102762
+  },
+  "exec_id": "s02-r1-disconnect-0.5"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 261536579
+  },
+  "exec_id": "s02-r1-disconnect-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1548468078
+  },
+  "exec_id": "s02-r1-disconnect-3"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1835970408
+  },
+  "exec_id": "s03-r1-ref"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1045434095
+  },
+  "exec_id": "s03-r1-loss-random-0.01"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 346130735
+  },
+  "exec_id": "s03-r1-loss-random-0.05"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 290140191
+  },
+  "exec_id": "s03-r1-loss-random-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1314654923
+  },
+  "exec_id": "s03-r1-jitter-0.01"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 615351563
+  },
+  "exec_id": "s03-r1-jitter-0.05"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 559361019
+  },
+  "exec_id": "s03-r1-jitter-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 744269699
+  },
+  "exec_id": "s03-r1-delay-0.05"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 787618042
+  },
+  "exec_id": "s03-r1-delay-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1404240019
+  },
+  "exec_id": "s03-r1-delay-0.25"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1820805341
+  },
+  "exec_id": "s03-r1-disconnect-0.5"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 132900271
+  },
+  "exec_id": "s03-r1-disconnect-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1419831770
+  },
+  "exec_id": "s03-r1-disconnect-3"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1181307669
+  },
+  "exec_id": "s04-r1-ref"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 390771356
+  },
+  "exec_id": "s04-r1-loss-random-0.01"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1739612757
+  },
+  "exec_id": "s04-r1-loss-random-0.05"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1782961100
+  },
+  "exec_id": "s04-r1-loss-random-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1954536969
+  },
+  "exec_id": "s04-r1-jitter-0.01"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1255233609
+  },
+  "exec_id": "s04-r1-jitter-0.05"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1199243065
+  },
+  "exec_id": "s04-r1-jitter-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 89606960
+  },
+  "exec_id": "s04-r1-delay-0.05"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 33616416
+  },
+  "exec_id": "s04-r1-delay-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 650238393
+  },
+  "exec_id": "s04-r1-delay-0.25"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1890207814
+  },
+  "exec_id": "s04-r1-disconnect-0.5"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 301641631
+  },
+  "exec_id": "s04-r1-disconnect-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1588573130
+  },
+  "exec_id": "s04-r1-disconnect-3"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 973086123
+  },
+  "exec_id": "s05-r1-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 701308509
+  },
+  "exec_id": "s05-r1-loss-random-0.01"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 2005149
+  },
+  "exec_id": "s05-r1-loss-random-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 2093498253
+  },
+  "exec_id": "s05-r1-loss-random-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1554368373
+  },
+  "exec_id": "s05-r1-jitter-0.01"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 855065013
+  },
+  "exec_id": "s05-r1-jitter-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 799074469
+  },
+  "exec_id": "s05-r1-jitter-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 400144113
+  },
+  "exec_id": "s05-r1-delay-0.05"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 443492456
+  },
+  "exec_id": "s05-r1-delay-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1060114433
+  },
+  "exec_id": "s05-r1-delay-0.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 152600206
+  },
+  "exec_id": "s05-r1-disconnect-0.5"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 612178784
+  },
+  "exec_id": "s05-r1-disconnect-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1899110283
+  },
+  "exec_id": "s05-r1-disconnect-3"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 961871951
+  },
+  "exec_id": "s06-r1-ref"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1226315360
+  },
+  "exec_id": "s06-r1-loss-random-0.01"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 427673113
+  },
+  "exec_id": "s06-r1-loss-random-0.05"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 471021456
+  },
+  "exec_id": "s06-r1-loss-random-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 1495536188
+  },
+  "exec_id": "s06-r1-jitter-0.01"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 696893941
+  },
+  "exec_id": "s06-r1-jitter-0.05"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 740242284
+  },
+  "exec_id": "s06-r1-jitter-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1194250791
+  },
+  "exec_id": "s06-r1-delay-0.05"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1138260247
+  },
+  "exec_id": "s06-r1-delay-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1754882224
+  },
+  "exec_id": "s06-r1-delay-0.25"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 847367997
+  },
+  "exec_id": "s06-r1-disconnect-0.5"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 1406285462
+  },
+  "exec_id": "s06-r1-disconnect-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 545733313
+  },
+  "exec_id": "s06-r1-disconnect-3"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1535518413
+  },
+  "exec_id": "s07-r1-ref"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 2069061649
+  },
+  "exec_id": "s07-r1-loss-random-0.01"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1270419402
+  },
+  "exec_id": "s07-r1-loss-random-0.05"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1214428858
+  },
+  "exec_id": "s07-r1-loss-random-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 190798829
+  },
+  "exec_id": "s07-r1-jitter-0.01"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1539640230
+  },
+  "exec_id": "s07-r1-jitter-0.05"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1582988573
+  },
+  "exec_id": "s07-r1-jitter-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 863237516
+  },
+  "exec_id": "s07-r1-delay-0.05"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 906585859
+  },
+  "exec_id": "s07-r1-delay-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1523207836
+  },
+  "exec_id": "s07-r1-delay-0.25"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 126469674
+  },
+  "exec_id": "s07-r1-disconnect-0.5"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 586048252
+  },
+  "exec_id": "s07-r1-disconnect-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1972318638
+  },
+  "exec_id": "s07-r1-disconnect-3"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 601561255
+  },
+  "exec_id": "s08-r1-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 616345792
+  },
+  "exec_id": "s08-r1-loss-random-0.01"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1965187193
+  },
+  "exec_id": "s08-r1-loss-random-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 2008535536
+  },
+  "exec_id": "s08-r1-loss-random-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 885566620
+  },
+  "exec_id": "s08-r1-jitter-0.01"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 186263260
+  },
+  "exec_id": "s08-r1-jitter-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 130272716
+  },
+  "exec_id": "s08-r1-jitter-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1657344194
+  },
+  "exec_id": "s08-r1-delay-0.05"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1601353650
+  },
+  "exec_id": "s08-r1-delay-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 70491979
+  },
+  "exec_id": "s08-r1-delay-0.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1310461400
+  },
+  "exec_id": "s08-r1-disconnect-0.5"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 1869378865
+  },
+  "exec_id": "s08-r1-disconnect-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1008826716
+  },
+  "exec_id": "s08-r1-disconnect-3"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1575623465
+  },
+  "exec_id": "s09-r1-ref"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 2109166701
+  },
+  "exec_id": "s09-r1-loss-random-0.01"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1310524454
+  },
+  "exec_id": "s09-r1-loss-random-0.05"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "loss",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1353872797
+  },
+  "exec_id": "s09-r1-loss-random-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.01,
+   "mode": "random",
+   "seed": 230903881
+  },
+  "exec_id": "s09-r1-jitter-0.01"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1579745282
+  },
+  "exec_id": "s09-r1-jitter-0.05"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "jitter",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1623093625
+  },
+  "exec_id": "s09-r1-jitter-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.05,
+   "mode": "random",
+   "seed": 1002681455
+  },
+  "exec_id": "s09-r1-delay-0.05"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 946690911
+  },
+  "exec_id": "s09-r1-delay-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "delay",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1563312888
+  },
+  "exec_id": "s09-r1-delay-0.25"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "random",
+   "seed": 1461119511
+  },
+  "exec_id": "s09-r1-disconnect-0.5"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "random",
+   "seed": 2020036976
+  },
+  "exec_id": "s09-r1-disconnect-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 3.0,
+   "mode": "random",
+   "seed": 1159484827
+  },
+  "exec_id": "s09-r1-disconnect-3"
+ }
+]

@@ -1,0 +1,29 @@
+{
+  "exec_id": "s07-r0-delay-0.05",
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "fault": {
+    "kind": "delay",
+    "severity": 0.05,
+    "mode": "random",
+    "seed": 1533324603
+  },
+  "label": "delay-0.05",
+  "t0": 10064.119921725,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0006317406483018384,
+    "p50": 0.000624000676907599,
+    "p99": 0.0010180010576732457,
+    "max": 0.009755001883604564
+  }
+}

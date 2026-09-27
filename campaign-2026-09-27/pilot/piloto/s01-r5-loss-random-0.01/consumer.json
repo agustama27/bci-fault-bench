@@ -1,0 +1,9 @@
+{
+  "exec_id": "s01-r5-loss-random-0.01",
+  "t0": 475.394847883,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.7083333333333334,
+  "exceptions": 0,
+  "n_samples_total": 7425
+}

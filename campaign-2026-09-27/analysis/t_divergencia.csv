@@ -1,0 +1,14 @@
+kind,severity,label,silent,loud,divergent,kind_es
+delay,0.05,delay-0.05,0.0,0.0,0.0,retraso
+delay,0.1,delay-0.1,0.0,0.0,0.0,retraso
+delay,0.25,delay-0.25,0.0,0.0,0.0,retraso
+disconnect,0.5,disconnect-0.5,0.0,0.0064801129469899185,0.0064801129469899185,desconexión
+disconnect,1.0,disconnect-1,0.0,0.008228364695241666,0.008228364695241666,desconexión
+disconnect,3.0,disconnect-3,0.0,0.034319781165207036,0.03606803291345878,desconexión
+jitter,0.01,jitter-0.01,0.0,0.0,0.0,jitter
+jitter,0.05,jitter-0.05,0.0,0.0,0.0,jitter
+jitter,0.1,jitter-0.1,0.0,0.0,0.0,jitter
+loss,0.01,loss-random-0.01,0.0,0.0,0.0,pérdida de muestras
+loss,0.05,loss-random-0.05,0.0,0.0,0.0,pérdida de muestras
+loss,0.1,loss-random-0.1,0.0,0.0,0.0,pérdida de muestras
+none,0.0,ref,0.0,0.0,0.0,referencia

@@ -1,0 +1,16 @@
+{
+  "exec_id": "s07-r1-disconnect-1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 399.1,
+  "subject": 7,
+  "run": "1",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 1.0,
+    "mode": "random",
+    "seed": 586048252
+  },
+  "label": "disconnect-1"
+}

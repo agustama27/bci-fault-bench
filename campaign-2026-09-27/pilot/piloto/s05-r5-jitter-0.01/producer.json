@@ -1,0 +1,29 @@
+{
+  "exec_id": "s05-r5-jitter-0.01",
+  "subject": 5,
+  "session": "1test",
+  "run": "5",
+  "fault": {
+    "kind": "jitter",
+    "severity": 0.01,
+    "mode": "random",
+    "seed": 1740062155
+  },
+  "label": "jitter-0.01",
+  "t0": 1274.146163954,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0009553369565818801,
+    "p50": 0.0006333017381621175,
+    "p99": 0.0013850283403371588,
+    "max": 1.7860689999906754
+  }
+}
