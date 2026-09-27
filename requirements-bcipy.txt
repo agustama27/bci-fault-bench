@@ -1,0 +1,17 @@
+# Entorno del consumidor alternativo sobre BciPy (capa de adquisición solamente).
+# BciPy 2.0.1 declara Python >3.8,<3.11 y fija numpy 1.24 / scipy 1.10 / PsychoPy, sin
+# ruedas para Python 3.12; se instala SIN dependencias y se agregan a mano las que la
+# capa bcipy.acquisition importa (verificado 2026-09-27; ver Lineas-Futuras/Linea-1-*).
+#   python -m venv .venv-bcipy
+#   .venv-bcipy/bin/pip install -r requirements-bcipy.txt
+#   .venv-bcipy/bin/pip install --no-deps --ignore-requires-python bcipy==2.0.1
+pylsl==1.16.2
+numpy
+pandas
+scipy
+future
+setuptools<81
+psutil
+py-cpuinfo
+pyglet
+torch
