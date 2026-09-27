@@ -30,6 +30,8 @@ ap.add_argument("--window", type=int, default=8, help="ensayos por ventana móvi
 ap.add_argument("--q", type=float, default=5.0, help="percentil (rule=percentile) o factor (rule=mad)")
 ap.add_argument("--thr-rule", default="percentile", choices=["percentile", "min", "mad"])
 ap.add_argument("--trials-file", default="trials.csv", help="trials.csv | trials_eegnet.csv | trials_csp_offline.csv")
+ap.add_argument("--perf-only", action="store_true",
+                help="solo desempeño e infraestructura (sección 1): omite divergencia, detectores y figuras")
 a = ap.parse_args()
 os.makedirs(a.out, exist_ok=True)
 
@@ -71,6 +73,9 @@ t_infra = pd.concat(rows, ignore_index=True)
 t_infra["kind_es"] = t_infra["kind"].map(M.KIND_ES)
 t_infra.to_csv(os.path.join(a.out, "t_infra.csv"), index=False)
 md(t_infra[["metric", "kind_es", "severity", "n", "median_ref", "median_cond", "p_holm", "r"]], os.path.join(a.out, "t_infra.md"))
+
+if a.perf_only:
+    sys.exit(print("listo (solo desempeño):", a.out))
 
 # ---------------------------------------------------------------- 2. ventana móvil, umbral por sujeto, divergencia (obj. 4)
 rolls = {eid: M.rolling_bacc(tr, a.window) for eid, tr in trials.items()}
