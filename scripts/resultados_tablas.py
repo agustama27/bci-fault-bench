@@ -77,6 +77,8 @@ tablas["infra"] = dict(
 
 # --- Tabla divergencia (obj. 4)
 t_d = pd.read_csv(os.path.join(A, "t_divergencia.csv"))
+_order = {"none": 0, "loss": 1, "jitter": 2, "delay": 3, "disconnect": 4}
+t_d = t_d.assign(_o=t_d.kind.map(_order)).sort_values(["_o", "severity"])
 rows = []
 for _, r in t_d.iterrows():
     rows.append([KIND_ES[r.kind], sev(r.kind, r.severity) if r.kind != "none" else "—", f(r.silent, 3), f(r.loud, 3), f(r.divergent, 3)])
