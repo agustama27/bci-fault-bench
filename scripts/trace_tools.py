@@ -203,6 +203,48 @@ def from_ping(a):
     write_trace(a.out, t, up, one_way, loss, meta)
 
 
+# ---------------------------------------------------------------- synth-gilbert-elliott
+def synth_gilbert_elliott(a):
+    """Traza generada por un modelo de Gilbert-Elliott PARAMETRIZADO con mediciones publicadas.
+
+    NO es una medición: es un modelo de dos estados (bueno/malo) con pérdida correlacionada en el
+    tiempo, que reemplaza a la pérdida i.i.d. cuando no se dispone de una traza de pérdida real.
+    Parámetros por defecto y su fuente (ver Lineas-Futuras/_research-trazas.md):
+      --per-bad 0.09 / --per-good 0.02 : PER de BLE con Wi-Fi interfiriendo "fluctúa entre 2 y 9 %"
+                                          (Mahmud et al., 2023, INL/RPT-23-74719, doi 10.2172/2242485)
+      --mean-bad-s 1.0                  : la pérdida en Wi-Fi está correlacionada "hasta al menos 1 s"
+                                          (Aguayo et al., 2004, doi 10.1145/1030194.1015482)
+      --delay-p50/p90/p99 5/20/250 ms   : latencia Wi-Fi de cola larga, p90 ≈ 20 ms y p99 ≈ 250 ms
+                                          (Sui et al., 2016, doi 10.1145/2906388.2906393; ⚠️ solo abstract)
+    El retraso se sortea por intervalo de una lognormal ajustada a esos percentiles (p50 y p99).
+    """
+    rng = np.random.default_rng(a.seed)
+    step = a.resolution
+    n = int(round(a.duration / step))
+    t = np.arange(n) * step
+    # cadena de Markov de dos estados; permanencia media en cada estado en segundos
+    p_gb = step / a.mean_good_s      # bueno → malo
+    p_bg = step / a.mean_bad_s       # malo → bueno
+    bad = np.zeros(n, dtype=bool)
+    state = False
+    for k in range(n):
+        state = (not state) if rng.random() < (p_bg if state else p_gb) else state
+        bad[k] = state
+    loss = np.where(bad, a.per_bad, a.per_good)
+    # lognormal por percentiles: ln(p50) = mu; ln(p99) = mu + 2.326 sigma
+    mu = np.log(a.delay_p50); sigma = max((np.log(a.delay_p99) - mu) / 2.326, 1e-3)
+    delay = rng.lognormal(mu, sigma, n)
+    up = np.ones(n, dtype=bool)
+    meta = dict(source=("MODELO Gilbert-Elliott parametrizado con Mahmud et al. 2023 (doi 10.2172/2242485), "
+                        "Aguayo et al. 2004 (doi 10.1145/1030194.1015482) y Sui et al. 2016 (doi 10.1145/2906388.2906393)"),
+                license="MIT (este repositorio; los parámetros provienen de las fuentes citadas)",
+                resolution_s=step,
+                notes=(f"synth-gilbert-elliott seed={a.seed}: PER bueno {a.per_good:g}, malo {a.per_bad:g}; permanencia media "
+                       f"{a.mean_good_s:g} s / {a.mean_bad_s:g} s; retraso lognormal p50 {a.delay_p50:g} ms, p99 {a.delay_p99:g} ms; "
+                       f"sin cortes. NO ES UNA MEDICION: es un modelo con parametros publicados"))
+    write_trace(a.out, t, up, delay, loss, meta)
+
+
 # ---------------------------------------------------------------- synth-example
 def synth_example(a):
     """Traza sintética de ejemplo (60 s, paso 0,1 s): NO es una medición.
@@ -250,6 +292,14 @@ def main(argv=None):
     s.add_argument("--subtract-base", action="store_true", default=True)
     s.add_argument("--out", required=True); s.add_argument("--source", required=True); s.add_argument("--license", required=True)
     s.set_defaults(fn=from_ping)
+    s = sub.add_parser("synth-gilbert-elliott")
+    s.add_argument("--out", default=os.path.join(ROOT, "traces", "ge-wifi-ble.csv"))
+    s.add_argument("--seed", type=int, default=2026); s.add_argument("--duration", type=float, default=420.0)
+    s.add_argument("--resolution", type=float, default=0.1)
+    s.add_argument("--per-good", type=float, default=0.02); s.add_argument("--per-bad", type=float, default=0.09)
+    s.add_argument("--mean-good-s", type=float, default=5.0); s.add_argument("--mean-bad-s", type=float, default=1.0)
+    s.add_argument("--delay-p50", type=float, default=5.0); s.add_argument("--delay-p99", type=float, default=250.0)
+    s.set_defaults(fn=synth_gilbert_elliott)
     s = sub.add_parser("synth-example"); s.add_argument("--out", default=os.path.join(ROOT, "traces", "ejemplo-sintetico.csv"))
     s.set_defaults(fn=synth_example)
     a = ap.parse_args(argv)
