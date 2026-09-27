@@ -147,6 +147,8 @@ flowchart LR
 | `replay.py` | servicio de reproducción: flujo EEG a la tasa original + flujo de marcadores |
 | `injector.py` | modelos de fallo `loss` (random/burst), `jitter`, `delay`, `disconnect`; semilla por ejecución |
 | `consumer.py` | pipeline bajo prueba + recolector de telemetría (`trials.csv`, `telemetry.csv`) |
+| `consumer_bcipy.py` | mismo contrato que `consumer.py`, con la recepción y el búfer de la capa de adquisición de BciPy (ver §10) |
+| `telemetry.py` | telemetría por segundo nominal, compartida por ambos consumidores |
 | `runner.py` | ejecutor de campañas: bloques, paralelismo, `done.json` reanudable |
 | `metrics.py`, `stats.py`, `scripts/analyze.py` | variables dependientes, ventana móvil, umbral, pruebas, divergencia, detectores, tablas y figuras |
 
@@ -177,6 +179,40 @@ La campaña debe correr en **Linux**: la granularidad del temporizador de Window
 ## 9. Salidas por ejecución
 
 `producer.json` (condición, semilla, muestras emitidas/omitidas, cortes, error de temporización) · `fault_log.jsonl` (cortes planificados y efectivos) · `trials.csv` (por ensayo izquierda/derecha: etiqueta, predicción, confianza, muestras, validez, retardo de decisión) · `telemetry.csv` (por segundo nominal: muestras esperadas/recibidas, huecos, latencia, intervalo entre bloques, predicciones, excepciones) · `consumer.json`.
+
+## 10. Consumidor alternativo sobre BciPy
+
+`src/bcibench/consumer_bcipy.py` reemplaza la recepción propia (`StreamInlet` de mne-lsl + búfer por tiempo) por la **capa de adquisición de BciPy 2.0.1**: `ClientManager` con dos `LslAcquisitionClient` (EEG y marcadores), el inlet que crea BciPy (`max_buflen=365`, `max_chunklen=1`, `recover=True`), su `RingBuffer` de 30 s y la consulta `get_data(start, end)` por marcas de tiempo. Ventanas, filtro, decodificador, reglas de decisión y los cuatro archivos de salida son los mismos, así que `runner.py`, `analyze.py` y `redecode_segments.py` funcionan sin cambios; `consumer.json` agrega `"consumer": "bcipy"`, la versión y el largo del búfer.
+
+Diferencias que son del framework y que se miden, no se corrigen:
+
+- si al vencer el plazo (fin + 3 s) el búfer no cubre la ventana, `get_data` lanza `AssertionError` y el ensayo queda inválido (se cuenta como excepción); el consumidor propio decodifica lo parcial;
+- `get_data` no detecta huecos: un corte que se recupera antes del plazo entrega la ventana con menos muestras;
+- `start_acquisition` descarta la primera muestra de EEG (la usa para `first_sample_time`).
+
+BciPy declara Python < 3.11 y fija versiones viejas de numpy/scipy, por eso vive en un entorno aparte (`.venv-bcipy`); el reproductor sigue en `.venv`. `mne` y `scikit-learn` se fijan a las mismas versiones que `.venv` para que el CSP+LDA serializado cargue idéntico.
+
+```bash
+python3.12 -m venv .venv-bcipy
+.venv-bcipy/bin/pip install -r requirements-bcipy.txt
+.venv-bcipy/bin/pip install --no-deps --ignore-requires-python bcipy==2.0.1
+# prueba de humo (el consumidor corre en .venv-bcipy, el reproductor en .venv)
+.venv/bin/python scripts/smoke_run.py --consumer bcipy --consumer-python .venv-bcipy/bin/python --max-seconds 60
+```
+
+Campaña en la VM (mismas condiciones que la campaña principal, ambas familias):
+
+```bash
+PYTHONPATH=src .venv/bin/python -m bcibench.runner --plan bcipy --subjects 1 2 3 4 5 6 7 8 9   --runs 0 1 2 3 4 --workers 12 --out results/campana-bcipy --family all   --consumer bcipy --consumer-python .venv-bcipy/bin/python
+```
+
+Equivalencia entre consumidores (misma corrida, condición y semilla):
+
+```bash
+.venv/bin/python scripts/compare_consumers.py results/<ejecución-propia> results/<ejecución-bcipy>
+```
+
+Sin fallos (sujeto 1, corrida 0, 120 s) ambos consumidores reciben segmentos idénticos y coinciden en las 11 predicciones.
 
 ## Licencia
 
