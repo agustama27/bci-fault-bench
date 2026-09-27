@@ -119,7 +119,7 @@ def main(argv=None):
         # Un amplificador entrega el bloque cuando adquirió su última muestra:
         # el instante nominal de entrega es el de la última muestra del bloque.
         t_last = t0 + (i1 - 1) / sfreq
-        target = t_last + inj.extra_delay()
+        target = t_last + inj.extra_delay(i0 / sfreq)
         _sleep_until(target)
         timing_err.append(local_clock() - target)
         t_rel = i0 / sfreq
@@ -155,7 +155,7 @@ def main(argv=None):
         "fault": spec.to_dict(), "label": spec.label(), "t0": t0, "sfreq": sfreq,
         "n_channels": len(ch_names), "n_total": n_total, "duration_s": duration,
         "n_pushed": n_pushed, "n_dropped": n_dropped, "outages": inj.outages,
-        "reconnections": reconnections, "n_events": int(ev_i),
+        "reconnections": reconnections, "n_events": int(ev_i), **inj.describe(),
         "timing_err_ms": {"mean": float(te.mean() * 1e3), "p50": float(np.median(te) * 1e3),
                           "p99": float(np.percentile(te, 99) * 1e3), "max": float(te.max() * 1e3)},
     }
