@@ -15,3 +15,7 @@ psutil
 py-cpuinfo
 pyglet
 torch
+# Consumidor alternativo (src/bcibench/consumer_bcipy.py): filtro de MNE y el CSP+LDA
+# serializado. MISMAS versiones que .venv para que el pickle cargue idéntico.
+mne==1.13.2
+scikit-learn==1.9.1
