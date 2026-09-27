@@ -154,6 +154,9 @@ N["recv_disc_nominal"] = lst([1 - 5 * s / float(dur.get(f"disconnect-{s:g}", 387
 ia_max_1, ia_max_3 = cond("disconnect", 1, "ia_max_ms"), cond("disconnect", 3, "ia_max_ms")
 N["ia_max_disc"] = f"{f(ia_max_1, 0)} y {f(ia_max_3, 0)}"
 N["recon_ms"] = f(np.mean([ia_max_1 - 1000, ia_max_3 - 3000]), 0)
+ia_max_05 = cond("disconnect", 0.5, "ia_max_ms")
+N["ia_max_disc3"] = lst([ia_max_05, ia_max_1, ia_max_3], 0)
+N["recon_excess"] = lst([ia_max_05 - 500, ia_max_1 - 1000, ia_max_3 - 3000], 0)
 N["nodata_disc"] = lst([cond("disconnect", s, "secs_no_data") for s in SEV["disconnect"]], 0)
 
 # infraestructura, familia estructurada
@@ -164,6 +167,7 @@ if has_struct:
     N["gaps_burst"] = lst([cond("burst_trial", s, "n_gaps") for s in SEV["burst_trial"]], 0)
     N["recv_disct"] = lst([cond("disconnect_trial", s, "recv_ratio") for s in SEV["disconnect_trial"]])
     N["nodata_disct"] = lst([cond("disconnect_trial", s, "secs_no_data") for s in SEV["disconnect_trial"]], 0)
+    N["ia_max_disct"] = lst([cond("disconnect_trial", s, "ia_max_ms") for s in SEV["disconnect_trial"]], 0)
     N["valid_disct"] = lst([cond("disconnect_trial", s, "valid_rate") for s in SEV["disconnect_trial"]])
     N["valid_burst"] = lst([cond("burst_trial", s, "valid_rate") for s in SEV["burst_trial"]])
     ns = []
