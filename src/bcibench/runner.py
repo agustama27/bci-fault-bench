@@ -111,14 +111,24 @@ def main(argv=None):
     ap.add_argument("--models", default=os.path.join(ROOT, "results", "models"))
     ap.add_argument("--severities", default=None, help="JSON: {kind: [sev, ...]} para sobrescribir")
     ap.add_argument("--only", nargs="*", default=None, help="solo estas condiciones (labels)")
-    ap.add_argument("--family", default="uniform", choices=["uniform", "structured", "all"])
+    ap.add_argument("--family", default="uniform", choices=["uniform", "structured", "all", "trace"])
+    ap.add_argument("--traces", nargs="*", default=[],
+                    help="familia trace: nombres de trazas (traces/<nombre>.csv, opcional @offset_s)")
+    ap.add_argument("--trace-scales", type=float, nargs="*", default=[1.0],
+                    help="familia trace: factores de escala (1 = tal como se midió)")
     ap.add_argument("--max-seconds", type=float, default=None, help="solo desarrollo")
     ap.add_argument("--duration", type=float, default=RUN_DURATION_S)
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
 
+    # Familia 3: trazas reales (referencia incluida: se compara contra la misma corrida sin fallo)
+    trace_conditions = [FaultSpec("none")] + [
+        FaultSpec("trace", sc, name) for name in a.traces for sc in a.trace_scales]
     conditions = {"uniform": list(DEFAULT_CONDITIONS), "structured": list(STRUCTURED_CONDITIONS),
-                  "all": list(DEFAULT_CONDITIONS) + list(STRUCTURED_CONDITIONS)}[a.family]
+                  "all": list(DEFAULT_CONDITIONS) + list(STRUCTURED_CONDITIONS),
+                  "trace": trace_conditions}[a.family]
+    if a.family == "trace" and not a.traces:
+        sys.exit("--family trace requiere --traces <nombre> [...]")
     if a.severities:
         sev = json.loads(a.severities)
         conditions = [FaultSpec("none")]
