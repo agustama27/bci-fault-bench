@@ -1,0 +1,9 @@
+mne
+mne-lsl
+moabb
+scikit-learn
+scipy
+pandas
+numpy
+matplotlib
+tabulate
