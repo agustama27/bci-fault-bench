@@ -1,35 +1,166 @@
 # bci-fault-bench
 
-Software-in-the-Loop testbed for **fault injection in LSL-based BCI pipelines**.
+Banco de experimentación **Software-in-the-Loop** para inyección de fallos en pipelines BCI basados en [Lab Streaming Layer (LSL)](https://labstreaminglayer.org).
 
-It replays public EEG (BCI Competition IV 2a via MOABB) as a real-time [Lab Streaming Layer](https://labstreaminglayer.org) stream, injects controlled faults at the transport interface (sample loss, jitter, delay, disconnection), decodes with a frozen CSP+LDA model, and logs per-second telemetry plus per-trial decisions. An orchestrator runs full campaigns (subjects × runs × conditions) in parallel with fixed seeds and resumable execution; an analysis script produces the descriptive and inferential results (Friedman, Wilcoxon + Holm, effect sizes, rolling-window degradation, silent-failure divergence, threshold vs. model detectors with leave-one-subject-out validation).
+> *English summary.* Software-in-the-Loop testbed for fault injection in LSL-based brain-computer interface pipelines. It replays public EEG (BCI Competition IV 2a via MOABB) as a real-time LSL stream, injects controlled faults at the transport interface (sample loss, jitter, delay, disconnection), decodes with a frozen CSP+LDA model and logs per-second telemetry plus per-trial decisions. A resumable orchestrator runs full campaigns in parallel with fixed seeds; the analysis scripts produce descriptive and inferential results (Friedman, Wilcoxon + Holm, effect sizes, rolling-window degradation, silent-failure divergence, threshold vs. model detectors with leave-one-subject-out validation). MIT license.
 
-Built for the undergraduate thesis *Interfaces cerebro-computadora bajo condiciones adversas: del software a la decodificación* (Agustín Tamagusuku, Software Engineering, Universidad Siglo 21, 2026).
+Instrumento del Trabajo Final de Graduación *Interfaces cerebro-computadora bajo condiciones adversas: del software a la decodificación* (Agustín Tamagusuku, Ingeniería en Software, Universidad Siglo 21, 2026).
 
-## Components (`src/bcibench/`)
+---
 
-| Module | Role |
+## 1. La pregunta que responde
+
+Una BCI en tiempo real es una cadena de software: la señal del cerebro se adquiere, **se transporta** entre programas, se preprocesa, se decodifica y se convierte en una acción. El transporte, en el ecosistema abierto, es casi siempre LSL. Sus autores declaran mecanismos de recuperación ante fallas, pero no reportan cuánto se pierde ni cuánto tarda la recuperación, ni qué le pasa al decodificador aguas abajo.
+
+El banco somete a un pipeline real a fallas controladas y repetibles en la capa de transporte y mide, ensayo por ensayo y segundo por segundo, qué le ocurre al flujo de datos y al decodificador.
+
+## 2. Arquitectura
+
+```mermaid
+flowchart LR
+    subgraph DATA["Señal grabada"]
+        DS[("BCI Competition IV 2a<br/>9 sujetos · 22 canales · 250 Hz<br/>vía MOABB")]
+    end
+
+    subgraph PROD["Proceso emisor (replay.py)"]
+        RP["Servicio de reproducción<br/>bloques de 10 muestras / 40 ms<br/>a la tasa original"]
+        INJ["Inyector de fallos (injector.py)<br/>pérdida · jitter · retraso · desconexión<br/>semilla fija"]
+        RP --> INJ
+    end
+
+    subgraph LSL["Lab Streaming Layer (objeto de estudio)"]
+        EEG[/"flujo EEG<br/>(perturbado)"/]
+        MRK[/"flujo de marcadores<br/>(no perturbado)"/]
+    end
+
+    subgraph CONS["Proceso consumidor (consumer.py)"]
+        BUF["Búfer + recorte del ensayo<br/>[2, 6] s desde el marcador"]
+        FLT["Filtro 8–30 Hz"]
+        DEC["Decodificador congelado<br/>CSP(6) + LDA"]
+        TEL["Recolector de telemetría<br/>por segundo"]
+        BUF --> FLT --> DEC
+        BUF --> TEL
+    end
+
+    subgraph OUT["Salidas por ejecución"]
+        T1[["trials.csv<br/>etiqueta · predicción · confianza<br/>muestras · validez · retardo"]]
+        T2[["telemetry.csv<br/>muestras esperadas/recibidas · huecos<br/>latencia · intervalo entre bloques · excepciones"]]
+        T3[["producer.json · fault_log.jsonl"]]
+    end
+
+    DS --> RP
+    INJ --> EEG
+    RP --> MRK
+    EEG --> BUF
+    MRK --> BUF
+    DEC --> T1
+    TEL --> T2
+    INJ --> T3
+```
+
+**Dos procesos, dos flujos.** El emisor simula al equipo de registro: entrega cada bloque en el instante en que un amplificador habría adquirido su última muestra, con la marca de tiempo nominal de cada muestra. Los marcadores de inicio de ensayo viajan por un flujo LSL separado que **no se perturba**, porque representan al software de presentación de estímulos, no al transporte de señal. El consumidor es el pipeline bajo prueba: no sabe qué falla está ocurriendo; solo ve lo que le llega por LSL.
+
+## 3. Una ejecución, paso a paso
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant R as runner.py
+    participant C as consumer.py
+    participant L as LSL
+    participant P as replay.py + injector
+
+    R->>C: lanza (exec_id, modelo del sujeto)
+    R->>P: lanza (sujeto, corrida, fallo, severidad, semilla)
+    C->>L: resuelve flujos "exec-eeg" y "exec-markers"
+    P->>L: crea outlets y espera consumidor
+    P->>L: marcador 100 = inicio (t0)
+    loop cada bloque de 10 muestras (40 ms)
+        P->>L: marcador de ensayo (código 1–4) a su hora nominal
+        P->>P: inyector: ¿omitir muestras? ¿demorar? ¿cortar el outlet?
+        P->>L: push_chunk(bloque, marcas de tiempo nominales)
+        L-->>C: pull_chunk → búfer + telemetría (llegada, huecos, latencia)
+        C->>C: si cerró la ventana [2, 6] s de un ensayo: filtrar, decodificar, registrar
+    end
+    P->>L: marcador 200 = fin
+    C->>C: escribe trials.csv, telemetry.csv, consumer.json
+    P->>P: escribe producer.json, fault_log.jsonl
+    R->>R: done.json (reanudable)
+```
+
+## 4. Dónde actúa cada modelo de fallo
+
+```mermaid
+flowchart TB
+    subgraph TL["Línea de tiempo de un bloque en el emisor"]
+        direction LR
+        A["muestras del bloque<br/>(contenido)"] --> B["instante nominal de entrega<br/>(tiempo)"] --> Cc["outlet LSL<br/>(transporte)"]
+    end
+    LOSS["Pérdida de muestras<br/>1 % · 5 % · 10 %<br/>aleatoria o en ráfagas de 100 ms"] -.->|omite muestras| A
+    JIT["Jitter<br/>σ = 10 · 50 · 100 ms<br/>demora aleatoria"] -.->|desplaza| B
+    DEL["Retraso<br/>50 · 100 · 250 ms<br/>demora constante"] -.->|desplaza| B
+    DIS["Desconexión<br/>0,5 · 1 · 3 s · 5 cortes por corrida<br/>el outlet se destruye y se recrea"] -.->|corta| Cc
+```
+
+| Modelo | Situación real que representa | Propiedad del flujo que compromete |
+|---|---|---|
+| Pérdida de muestras | casco inalámbrico que pierde paquetes; búfer del consumidor saturado (LSL descarta las más antiguas) | integridad |
+| Jitter | congestión de red, retransmisiones TCP, planificador del sistema operativo | temporalidad |
+| Retraso | congestión sostenida, búferes grandes, procesamiento que acumula cola | temporalidad |
+| Desconexión | corte del enlace, caída o reinicio del proceso productor; único modelo que ejercita la reconexión que LSL declara | disponibilidad |
+
+LSL transmite sobre TCP: una pérdida de paquetes de red no elimina muestras, las demora. Por eso la pérdida de muestras modela lo que ocurre **antes** de LSL o en un búfer saturado, y solo la desconexión pone a prueba la recuperación del propio LSL.
+
+## 5. Diseño de la campaña y análisis
+
+```mermaid
+flowchart LR
+    subgraph PLAN["Plan (runner.py)"]
+        S["9 sujetos"] --> RU["× 2 corridas de evaluación<br/>(corrida 6 reservada al piloto)"] --> CO["× 13 condiciones<br/>1 referencia + 4 fallos × 3 severidades"] --> N["= 234 ejecuciones<br/>6 en paralelo · ~4,2 h"]
+    end
+    N --> ORD["Orden por bloques:<br/>corrida 1 de todos, luego corrida 2<br/>→ una interrupción deja bloques completos"]
+    ORD --> RAW[("results/campana/&lt;exec_id&gt;/")]
+    RAW --> AN["analyze.py"]
+    subgraph ANA["Análisis (metrics.py · stats.py)"]
+        M1["Mediana por sujeto<br/>(unidad estadística = sujeto)"]
+        M2["Friedman por tipo de fallo →<br/>Wilcoxon vs. referencia + Holm → r"]
+        M3["Balanced accuracy móvil (W = 8)<br/>umbral = mínimo de la referencia del sujeto"]
+        M4["Divergencia por segundo:<br/>operativo ∧ degradado (silent failure)"]
+        M5["Detectores: umbrales vs. regresión logística,<br/>random forest, gradient boosting · LOSO"]
+        M1 --> M2
+        M3 --> M4 --> M5
+    end
+    AN --> M1
+    AN --> M3
+    M2 --> OUT1[["tablas APA · figuras"]]
+    M5 --> OUT1
+```
+
+**Comparación apareada.** La misma corrida del mismo sujeto se reproduce las 13 veces con señal idéntica, el mismo decodificador congelado y la misma máquina; lo único que cambia es el inyector. Toda diferencia entre la referencia y una condición se atribuye a la falla. Las corridas de cada sujeto se resumen en una observación por sujeto para evitar pseudorreplicación.
+
+## 6. Componentes (`src/bcibench/`)
+
+| Módulo | Componente de Métodos |
 |---|---|
-| `data.py` | MOABB loader (BNCI2014_001), events from the `STI` channel, artifact-flagged trials excluded from scoring |
-| `decoder.py` | Reference decoder: CSP (6 components) + LDA, trained once per subject on session 1 and frozen |
-| `replay.py` | Replay service: emits one run as an LSL stream at its native rate (blocks of 10 samples / 40 ms) plus a separate, unperturbed marker stream |
-| `injector.py` | Fault models: `loss` (random / burst), `jitter`, `delay`, `disconnect` (the outlet is destroyed and recreated); seeded and repeatable |
-| `consumer.py` | Pipeline under test + telemetry collector → `trials.csv`, `telemetry.csv` |
-| `runner.py` | Campaign executor: block ordering (run-major), parallel workers, `done.json` resume |
-| `metrics.py`, `stats.py` | Dependent variables, rolling balanced accuracy, reference thresholds, divergence, tests, detectors |
-| `scripts/analyze.py` | End-to-end analysis → CSV/Markdown tables and APA-style figures |
+| `data.py` | carga MOABB (BNCI2014_001), eventos desde el canal `STI`, ensayos con artefactos excluidos del desempeño |
+| `decoder.py` | decodificador de referencia CSP(6)+LDA, entrenado una vez por sujeto con la sesión 1 y congelado |
+| `replay.py` | servicio de reproducción: flujo EEG a la tasa original + flujo de marcadores |
+| `injector.py` | modelos de fallo `loss` (random/burst), `jitter`, `delay`, `disconnect`; semilla por ejecución |
+| `consumer.py` | pipeline bajo prueba + recolector de telemetría (`trials.csv`, `telemetry.csv`) |
+| `runner.py` | ejecutor de campañas: bloques, paralelismo, `done.json` reanudable |
+| `metrics.py`, `stats.py`, `scripts/analyze.py` | variables dependientes, ventana móvil, umbral, pruebas, divergencia, detectores, tablas y figuras |
 
-## Quick start
+## 7. Puesta en marcha
 
 ```bash
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
-# train the 9 frozen decoders (downloads the dataset on first use)
+# entrena y guarda los 9 decodificadores (descarga el dataset la primera vez)
 .venv/bin/python scripts/poc1_offline.py 1 2 3 4 5 6 7 8 9
-# 60-second smoke test with 5 % random sample loss
+# prueba de humo de 60 s con 5 % de pérdida de muestras
 .venv/bin/python scripts/smoke_run.py --fault loss --severity 0.05 --max-seconds 60
 ```
 
-Full campaign (9 subjects × evaluation runs 1-2 × 13 conditions = 234 executions, ~4.2 h with 6 workers on an 8-vCPU Linux VM):
+Campaña completa y análisis:
 
 ```bash
 PYTHONPATH=src .venv/bin/python -m bcibench.runner --plan campana \
@@ -37,25 +168,16 @@ PYTHONPATH=src .venv/bin/python -m bcibench.runner --plan campana \
 .venv/bin/python scripts/analyze.py --root results/campana --out results/analysis --window 8 --thr-rule min
 ```
 
-Interrupted campaigns resume with the same command (executions with `done.json` are skipped).
+Una campaña interrumpida se relanza con el mismo comando: las ejecuciones con `done.json` se saltean.
 
-## Fault models
+## 8. Notas de temporización
 
-| Model | Where it acts | Severities (exploratory) | Real-world counterpart |
-|---|---|---|---|
-| Sample loss | stream content (random or 100 ms bursts) | 1 %, 5 %, 10 % | wireless headset dropping samples; consumer buffer overflow |
-| Jitter | block delivery time (Gaussian) | σ = 10, 50, 100 ms | network congestion, OS scheduling |
-| Delay | block delivery time (constant) | 50, 100, 250 ms | sustained congestion, oversized buffers |
-| Disconnection | real transport: outlet closed and recreated (5 events/run) | 0.5, 1, 3 s | link cut, producer crash; exercises LSL's declared recovery |
+La campaña debe correr en **Linux**: la granularidad del temporizador de Windows (~15 ms) es mayor que la severidad mínima de jitter (10 ms). En Ubuntu 24.04 (EC2 c6i.2xlarge, 8 vCPU) el error del instante de entrega del reproductor fue p99 < 1 µs. Seis ejecuciones simultáneas alteraron la latencia y la dispersión entre bloques de la referencia en menos de 0,1 ms (control de paralelismo del piloto).
 
-## Timing notes
+## 9. Salidas por ejecución
 
-Run the campaign on Linux: Windows' default timer granularity (~15 ms) is coarser than the smallest jitter severity (10 ms). On Ubuntu 24.04 (EC2 c6i.2xlarge) the replay's delivery-time error was p99 < 1 µs. Six parallel executions changed reference latency/inter-arrival dispersion by < 0.1 ms.
+`producer.json` (condición, semilla, muestras emitidas/omitidas, cortes, error de temporización) · `fault_log.jsonl` (cortes planificados y efectivos) · `trials.csv` (por ensayo izquierda/derecha: etiqueta, predicción, confianza, muestras, validez, retardo de decisión) · `telemetry.csv` (por segundo nominal: muestras esperadas/recibidas, huecos, latencia, intervalo entre bloques, predicciones, excepciones) · `consumer.json`.
 
-## Outputs per execution
+## Licencia
 
-`producer.json` (condition, seed, samples pushed/dropped, outages, timing error), `fault_log.jsonl`, `trials.csv` (label, prediction, confidence, samples, validity, decision delay), `telemetry.csv` (per nominal second: expected/received samples, gaps, latency, inter-arrival, predictions, exceptions), `consumer.json`.
-
-## Resumen en español
-
-Banco de experimentación *Software-in-the-Loop*: reproduce EEG público como flujo LSL en tiempo real, inyecta fallos controlados en la interfaz de transporte, decodifica con CSP+LDA congelado y registra telemetría por segundo y decisiones por ensayo. Incluye el ejecutor de campañas (semillas fijas, bloques, reanudación) y el análisis completo. Instrumento del Trabajo Final de Graduación citado arriba. Licencia MIT.
+MIT © 2026 Agustín Tamagusuku.
