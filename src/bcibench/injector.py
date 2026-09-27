@@ -19,6 +19,14 @@ burst_trial       contenido del flujo             fracción de la ventana del en
 disconnect_trial  transporte real                 corte que comienza al inicio de la ventana del
                                                   ensayo y dura 0.5/1/2 s; todos los ensayos
 
+Familia 3 (línea futura "trazas reales"): comportamiento MEDIDO de un enlace.
+kind    dónde actúa                                   severidad / modo
+------  --------------------------------------------  ---------------------------------------------
+trace   contenido, instante de entrega y transporte,  mode = nombre de la traza (traces/<nombre>.csv,
+        según lo que la traza diga en cada intervalo  opcional @offset_s); severity = factor de escala
+                                                      sobre retraso y pérdida (1 = tal como se midió)
+Ver trace.py para el formato, el anclaje temporal y la elección del punto de entrada.
+
 Toda aleatoriedad sale de una semilla fija: la realización del fallo es repetible.
 """
 from __future__ import annotations
@@ -26,6 +34,8 @@ from __future__ import annotations
 from dataclasses import dataclass, asdict
 
 import numpy as np
+
+from .trace import LinkTrace, parse_mode
 
 BURST_LEN = 25            # muestras por ráfaga (100 ms a 250 Hz), modelo loss-burst
 N_DISCONNECTS = 5         # cortes por corrida, familia 1
@@ -44,6 +54,10 @@ class FaultSpec:
     def label(self) -> str:
         if self.kind == "none":
             return "ref"
+        if self.kind == "trace":
+            name, off = parse_mode(self.mode)
+            o = f"-o{off:g}" if off is not None else ""
+            return f"trace-{name}{o}-{self.severity:g}"
         m = f"-{self.mode}" if self.kind == "loss" else ""
         return f"{self.kind}{m}-{self.severity:g}"
 
@@ -60,8 +74,16 @@ class Injector:
         self.outages: list[tuple[float, float]] = []   # (inicio, fin) en s relativos a t0
         self.drop_intervals: list[tuple[int, int]] = []  # [i0, i1) en muestras, familia 2
         self._burst_left = 0
+        self.trace: LinkTrace | None = None
+        self.trace_offset = 0.0
         onsets = np.asarray(trial_onsets_samples if trial_onsets_samples is not None else [], dtype=int)
-        if spec.kind == "disconnect":
+        if spec.kind == "trace":
+            name, off = parse_mode(spec.mode)
+            self.trace = LinkTrace.load(name)
+            # punto de entrada: explícito (@offset) o al azar desde la semilla
+            self.trace_offset = float(off) if off is not None else float(self.rng.uniform(0.0, self.trace.duration))
+            self.outages = self.trace.outages_within(duration_s, self.trace_offset)
+        elif spec.kind == "disconnect":
             self.outages = self._plan_outages(duration_s, spec.severity)
         elif spec.kind == "burst_trial":
             win = int(round((TRIAL_TMAX - TRIAL_TMIN) * sfreq))
@@ -114,16 +136,32 @@ class Injector:
                     continue
                 mask[(idx >= a) & (idx < b)] = False
             return mask
+        if k == "trace":
+            # estado del enlace en el instante del bloque (resolución de la traza >= bloque)
+            _, _, loss, _ = self.trace.state_at(i0 / self.sfreq, self.trace_offset)
+            p = min(1.0, loss * self.spec.severity)
+            return self.rng.random(n) >= p if p > 0 else np.ones(n, dtype=bool)
         return np.ones(n, dtype=bool)
 
-    def extra_delay(self) -> float:
-        """Segundos que se suman al instante nominal de entrega del bloque."""
+    def extra_delay(self, t_rel: float = 0.0) -> float:
+        """Segundos que se suman al instante nominal de entrega del bloque emitido en t_rel."""
         k = self.spec.kind
         if k == "delay":
             return self.spec.severity
         if k == "jitter":
             return float(max(0.0, self.rng.normal(0.0, self.spec.severity)))
+        if k == "trace":
+            _, d, _, j = self.trace.state_at(t_rel, self.trace_offset)
+            jit = float(max(0.0, self.rng.normal(0.0, j))) if j > 0 else 0.0
+            return (d + jit) * self.spec.severity
         return 0.0
+
+    def describe(self) -> dict:
+        """Parámetros efectivos (para producer.json)."""
+        if self.spec.kind != "trace":
+            return {}
+        return dict(trace=self.trace.name, trace_offset_s=round(self.trace_offset, 3),
+                    trace_duration_s=self.trace.duration, trace_meta=self.trace.meta)
 
     def in_outage(self, t_rel: float) -> bool:
         return any(a <= t_rel < b for a, b in self.outages)
