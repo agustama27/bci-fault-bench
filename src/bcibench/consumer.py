@@ -126,6 +126,7 @@ def main(argv=None):
     buf_len_s = 30.0
     pending = []                         # (onset_ts, code)
     trials = []
+    segments = {}                        # segmento crudo recibido por ensayo (para re-decodificar fuera de línea)
     t0 = None
     ended_at = None                      # marca de fin nominal enviada por el reproductor
     started_wall = local_clock()
@@ -142,6 +143,7 @@ def main(argv=None):
 
     def _decode(onset: float):
         ts, x = _segment(onset + data.TMIN - PAD_S, onset + data.TMAX + PAD_S)
+        # validez: al menos medio segundo de señal (125 muestras a 250 Hz) en la ventana
         if ts is None or len(ts) < int(0.5 * sfreq):
             return None
         # El flujo viaja en µV; el decodificador se entrenó en V (unidades de MNE).
@@ -198,6 +200,12 @@ def main(argv=None):
                 continue
             res = _decode(onset) if have or timed_out else None
             t_dec = local_clock()
+            # segmento crudo (µV, sin filtrar) de la ventana con relleno, tal como llegó:
+            # permite evaluar cualquier decodificador sobre exactamente lo que recibió el pipeline
+            rts, rx = _segment(onset + data.TMIN - PAD_S, onset + data.TMAX + PAD_S)
+            k = len(trials)
+            segments[f"t{k}_ts"] = (rts - onset).astype(np.float32) if rts is not None else np.empty(0, np.float32)
+            segments[f"t{k}_x"] = rx if rx is not None else np.empty((0, n_ch), np.float32)
             if os.environ.get("BCIBENCH_DEBUG"):
                 allts = np.concatenate(buf_ts) if buf_ts else np.empty(0)
                 print(f"DBG trial onset_rel={onset - (t0 or 0):.3f} have={have} timed_out={timed_out} "
@@ -238,6 +246,9 @@ def main(argv=None):
     else:
         dur_eff = a.duration
     tel.dump(os.path.join(a.outdir, "telemetry.csv"), t0 or started_wall, dur_eff)
+    meta = np.array([[t["onset"], t["label"], t["valid"]] for t in trials], dtype=np.float64).reshape(-1, 3)
+    np.savez_compressed(os.path.join(a.outdir, "segments.npz"), meta=meta, sfreq=np.float64(sfreq),
+                        tmin=np.float64(data.TMIN), tmax=np.float64(data.TMAX), pad=np.float64(PAD_S), **segments)
     valid = [t for t in trials if t["valid"]]
     y = np.array([t["label"] for t in valid]); p = np.array([t["pred"] for t in valid])
     bacc = None
