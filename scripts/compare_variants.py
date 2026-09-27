@@ -6,6 +6,9 @@ Lee <analysis-root>/analysis-<variante>/t_desempeno.csv y medianas_por_sujeto.cs
                             accuracy (cada sujeto = mediana de sus corridas), p_holm y r
                             contra la referencia de la PROPIA variante
   tabla_por_sujeto.csv/.md  sujeto × variante en las condiciones estructuradas (y referencia)
+  tabla_vs_base.csv/.md     diferencia apareada por sujeto de cada variante contra --base
+                            (mediana, ganados/perdidos, Wilcoxon sin corregir) en referencia
+                            y condiciones estructuradas
   tabla_limpia.csv/.md      desempeño sin fallo: ensayos limpios de las ejecuciones "ref"
                             (sesión 2), balanced accuracy agrupada por sujeto
 Uso: python scripts/compare_variants.py --analysis-root results --eval-root results/campana2-eval \
@@ -32,6 +35,7 @@ ap.add_argument("--eval-root", default="results/campana2-eval")
 ap.add_argument("--out", default="results/robustez")
 ap.add_argument("--variants", nargs="+", required=True)
 ap.add_argument("--tag", default="", help="sufijo de los archivos de salida")
+ap.add_argument("--base", default="eegnet", help="variante contra la que se aparean las demás")
 a = ap.parse_args()
 os.makedirs(a.out, exist_ok=True)
 
@@ -87,6 +91,32 @@ PS = PS[[v for v in a.variants]].reset_index()
 PS.to_csv(os.path.join(a.out, f"tabla_por_sujeto{a.tag}.csv"), index=False)
 with open(os.path.join(a.out, f"tabla_por_sujeto{a.tag}.md"), "w", encoding="utf-8") as f:
     f.write(PS.to_markdown(index=False, floatfmt=".3f"))
+
+# ---------------------------------------------------------------- variante vs. base, apareado por sujeto
+from scipy.stats import wilcoxon  # noqa: E402
+
+vs = []
+if a.base in a.variants:
+    B = S[S.variant == a.base].set_index(["condicion", "subject"]).bacc
+    for v in a.variants:
+        if v == a.base:
+            continue
+        V = S[S.variant == v].set_index(["condicion", "subject"]).bacc
+        for cond in S.condicion.unique():
+            d = (V.xs(cond, level=0) - B.xs(cond, level=0)).dropna()
+            if not len(d):
+                continue
+            p = float(wilcoxon(d).pvalue) if (d != 0).any() else 1.0
+            vs.append(dict(condicion=cond, variant=v, n=len(d), diff_median=float(d.median()),
+                           ganados=int((d > 0).sum()), perdidos=int((d < 0).sum()), p_wilcoxon=p))
+VS = pd.DataFrame(vs)
+if len(VS):
+    VS.to_csv(os.path.join(a.out, f"tabla_vs_base{a.tag}.csv"), index=False)
+    VS["cell"] = [f"{m:+.3f} ({g}/{l}; p={p:.3f})" for m, g, l, p in zip(VS.diff_median, VS.ganados, VS.perdidos, VS.p_wilcoxon)]
+    T = VS.pivot_table(index="condicion", columns="variant", values="cell", aggfunc="first", sort=False)
+    with open(os.path.join(a.out, f"tabla_vs_base{a.tag}.md"), "w", encoding="utf-8") as f:
+        f.write(f"Diferencia apareada por sujeto contra {a.base}: mediana (sujetos que mejoran/empeoran; Wilcoxon sin corregir).\n\n")
+        f.write(T.reset_index().to_markdown(index=False))
 
 # ---------------------------------------------------------------- desempeño limpio (ejecuciones ref)
 clean = []
