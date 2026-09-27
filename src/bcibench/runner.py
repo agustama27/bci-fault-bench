@@ -11,6 +11,7 @@ Uso:
   python -m bcibench.runner --plan piloto  --subjects 1 3 8 --runs 5 --workers 4 --out results/piloto
   python -m bcibench.runner --plan campana --subjects 1 2 3 4 5 6 7 8 9 --runs 0 1 --workers 6 --out results/campana
   python -m bcibench.runner --plan campana ... --dry-run     # solo lista
+  python -m bcibench.runner ... --consumer bcipy --consumer-python .venv-bcipy/bin/python
 """
 from __future__ import annotations
 
@@ -26,6 +27,7 @@ from .injector import FaultSpec
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 PY = sys.executable
+CONSUMER_MODULES = {"own": "bcibench.consumer", "bcipy": "bcibench.consumer_bcipy"}
 RUN_DURATION_S = 420.0     # tope de respaldo por ejecución (una corrida dura ≈ 6,5 min); el fin real lo marca el reproductor
 
 # Severidades exploratorias (Tabla 1). El piloto puede fijar otras: --severities JSON.
@@ -60,7 +62,8 @@ def build_plan(subjects, runs, conditions, session="1test"):
     return plan
 
 
-def run_one(item: dict, out_root: str, models_dir: str, duration: float, max_seconds=None) -> dict:
+def run_one(item: dict, out_root: str, models_dir: str, duration: float, max_seconds=None,
+            consumer: str = "own", consumer_python: str = PY) -> dict:
     eid = item["exec_id"]
     outdir = os.path.join(out_root, eid)
     done = os.path.join(outdir, "done.json")
@@ -72,7 +75,7 @@ def run_one(item: dict, out_root: str, models_dir: str, duration: float, max_sec
     logc = open(os.path.join(outdir, "consumer.log"), "w")
     logp = open(os.path.join(outdir, "producer.log"), "w")
     t_start = time.time()
-    cons = subprocess.Popen([PY, "-m", "bcibench.consumer", "--exec-id", eid, "--model", model,
+    cons = subprocess.Popen([consumer_python, "-m", CONSUMER_MODULES[consumer], "--exec-id", eid, "--model", model,
                              "--outdir", outdir, "--duration", str(max_seconds or duration)],
                             env=env, cwd=ROOT, stdout=logc, stderr=subprocess.STDOUT)
     time.sleep(3)
@@ -93,7 +96,7 @@ def run_one(item: dict, out_root: str, models_dir: str, duration: float, max_sec
     ok = prc == 0 and crc == 0 and os.path.exists(os.path.join(outdir, "consumer.json"))
     rec = dict(exec_id=eid, status="ok" if ok else "failed", producer_rc=prc, consumer_rc=crc,
                seconds=round(time.time() - t_start, 1), subject=item["subject"], run=item["run"],
-               fault=sp.to_dict(), label=sp.label())
+               fault=sp.to_dict(), label=sp.label(), consumer=consumer)
     if ok:
         with open(done, "w") as f:
             json.dump(rec, f, indent=2)
@@ -115,7 +118,13 @@ def main(argv=None):
     ap.add_argument("--max-seconds", type=float, default=None, help="solo desarrollo")
     ap.add_argument("--duration", type=float, default=RUN_DURATION_S)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--consumer", default="own", choices=sorted(CONSUMER_MODULES),
+                    help="implementación del consumidor: own (propio) o bcipy (capa de adquisición de BciPy)")
+    ap.add_argument("--consumer-python", default=PY,
+                    help="intérprete del consumidor (el reproductor usa siempre el actual)")
     a = ap.parse_args(argv)
+    if os.path.exists(a.consumer_python):
+        a.consumer_python = os.path.abspath(a.consumer_python)
 
     conditions = {"uniform": list(DEFAULT_CONDITIONS), "structured": list(STRUCTURED_CONDITIONS),
                   "all": list(DEFAULT_CONDITIONS) + list(STRUCTURED_CONDITIONS)}[a.family]
@@ -130,7 +139,7 @@ def main(argv=None):
     plan = build_plan(a.subjects, a.runs, conditions, a.session)
     os.makedirs(a.out, exist_ok=True)
     with open(os.path.join(a.out, "plan.json"), "w") as f:
-        json.dump([dict(p, spec=p["spec"].to_dict()) for p in plan], f, indent=1)
+        json.dump([dict(p, spec=p["spec"].to_dict(), consumer=a.consumer) for p in plan], f, indent=1)
     est_h = len(plan) * (a.max_seconds or a.duration) / 3600 / a.workers
     print(f"plan: {len(plan)} ejecuciones, {a.workers} en paralelo, ~{est_h:.1f} h de reloj", flush=True)
     if a.dry_run:
@@ -140,7 +149,8 @@ def main(argv=None):
     results = []
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=a.workers) as ex:
-        futs = {ex.submit(run_one, p, a.out, a.models, a.duration, a.max_seconds): p for p in plan}
+        futs = {ex.submit(run_one, p, a.out, a.models, a.duration, a.max_seconds,
+                          a.consumer, a.consumer_python): p for p in plan}
         for i, fut in enumerate(as_completed(futs), 1):
             r = fut.result()
             results.append(r)
