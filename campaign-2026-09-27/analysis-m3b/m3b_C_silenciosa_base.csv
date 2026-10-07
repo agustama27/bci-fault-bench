@@ -1,0 +1,16 @@
+grupo,clave,segundos_eval,segundos_silenciosos,ejecuciones_con_silenciosa,ejecuciones
+sujeto,1,25578,30,2,90
+sujeto,2,25578,42,3,90
+sujeto,3,25578,226,6,90
+sujeto,4,24876,457,7,90
+sujeto,5,25578,834,10,90
+sujeto,6,25578,125,5,90
+sujeto,7,25578,221,8,90
+sujeto,8,25578,353,7,90
+sujeto,9,25578,600,9,90
+familia,burst_trial,38250,929,22,135
+familia,delay,38250,0,0,135
+familia,disconnect,38250,143,3,135
+familia,disconnect_trial,38250,1719,30,135
+familia,jitter,38250,0,0,135
+familia,loss,38250,97,2,135

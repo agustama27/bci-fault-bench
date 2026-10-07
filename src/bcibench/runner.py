@@ -39,6 +39,17 @@ STRUCTURED_CONDITIONS = [
     FaultSpec("burst_trial", s) for s in (0.10, 0.25, 0.40)] + [
     FaultSpec("disconnect_trial", s) for s in (0.5, 1.0, 2.0)]
 
+# Familia 3 (Módulo 3, exploratoria): barrido de exposición (cortes de 1 s, K por corrida),
+# repetición de la última muestra en la ventana, y referencia repetida en la misma sesión de máquina.
+M3_CONDITIONS = [FaultSpec("none")] + [
+    FaultSpec("disconnect", 1.0, f"n{k}") for k in (2, 5, 10, 20)] + [
+    FaultSpec("hold_trial", s) for s in (0.10, 0.25, 0.40)]
+# Diagnóstico del piso de reconexión: cortes intermedios (el sujeto no influye: basta una corrida)
+M3_FLOOR = [FaultSpec("disconnect", d, "n5") for d in (1.25, 1.75, 2.25)]
+# Confirmación del mecanismo del piso: mismas condiciones bajo dos valores de tuning.MulticastMinRTT
+# (lsl_api.cfg vía LSLAPICFG). Predicción: hueco = max(1,52; 0,52 + RTT * ceil(d / RTT)).
+M3_RTT = [FaultSpec("disconnect", d, "n5") for d in (0.5, 1.1, 1.25, 1.75)]
+
 
 def exec_id(subject: int, run: str, spec: FaultSpec) -> str:
     return f"s{subject:02d}-r{run}-{spec.label()}"
@@ -111,14 +122,15 @@ def main(argv=None):
     ap.add_argument("--models", default=os.path.join(ROOT, "results", "models"))
     ap.add_argument("--severities", default=None, help="JSON: {kind: [sev, ...]} para sobrescribir")
     ap.add_argument("--only", nargs="*", default=None, help="solo estas condiciones (labels)")
-    ap.add_argument("--family", default="uniform", choices=["uniform", "structured", "all"])
+    ap.add_argument("--family", default="uniform", choices=["uniform", "structured", "all", "m3", "m3floor", "m3rtt"])
     ap.add_argument("--max-seconds", type=float, default=None, help="solo desarrollo")
     ap.add_argument("--duration", type=float, default=RUN_DURATION_S)
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
 
     conditions = {"uniform": list(DEFAULT_CONDITIONS), "structured": list(STRUCTURED_CONDITIONS),
-                  "all": list(DEFAULT_CONDITIONS) + list(STRUCTURED_CONDITIONS)}[a.family]
+                  "all": list(DEFAULT_CONDITIONS) + list(STRUCTURED_CONDITIONS),
+                  "m3": list(M3_CONDITIONS), "m3floor": list(M3_FLOOR), "m3rtt": list(M3_RTT)}[a.family]
     if a.severities:
         sev = json.loads(a.severities)
         conditions = [FaultSpec("none")]

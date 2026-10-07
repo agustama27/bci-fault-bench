@@ -1,0 +1,7 @@
+metric,severidad,n,hold_med_subj,burst_med_subj,dif_med,wilcoxon_p,p_holm,r
+p_silenciosa,0.1,9,0.0,0.0,0.0,,1.0,
+p_silenciosa,0.25,9,0.0,0.0,0.0,1.0,1.0,0.0
+p_silenciosa,0.4,9,0.0,0.0,0.0,,1.0,
+p_degradado,0.1,9,0.0,0.0,0.0,,1.0,
+p_degradado,0.25,9,0.0,0.0,0.0,1.0,1.0,0.0
+p_degradado,0.4,9,0.0,0.0,0.0,,1.0,

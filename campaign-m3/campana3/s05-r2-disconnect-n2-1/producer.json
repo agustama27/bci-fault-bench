@@ -1,0 +1,38 @@
+{
+  "exec_id": "s05-r2-disconnect-n2-1",
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 1.0,
+    "mode": "n2",
+    "seed": 1817378362
+  },
+  "label": "disconnect-n2-1",
+  "t0": 7484.270709608,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96235,
+  "n_dropped": 500,
+  "outages": [
+    [
+      52.14917620976693,
+      53.14917620976693
+    ],
+    [
+      244.59427733904215,
+      245.59427733904215
+    ]
+  ],
+  "reconnections": 2,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.01467499204786624,
+    "p50": 0.0006740001481375657,
+    "p99": 0.0012419995982781984,
+    "max": 55.37489200014534
+  }
+}

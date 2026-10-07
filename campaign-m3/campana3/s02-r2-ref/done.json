@@ -1,0 +1,16 @@
+{
+  "exec_id": "s02-r2-ref",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.8,
+  "subject": 2,
+  "run": "2",
+  "fault": {
+    "kind": "none",
+    "severity": 0.0,
+    "mode": "random",
+    "seed": 1654937565
+  },
+  "label": "ref"
+}

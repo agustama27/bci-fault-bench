@@ -1,0 +1,16 @@
+{
+  "exec_id": "s09-r0-hold_trial-0.25",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.4,
+  "subject": 9,
+  "run": "0",
+  "fault": {
+    "kind": "hold_trial",
+    "severity": 0.25,
+    "mode": "random",
+    "seed": 235538872
+  },
+  "label": "hold_trial-0.25"
+}

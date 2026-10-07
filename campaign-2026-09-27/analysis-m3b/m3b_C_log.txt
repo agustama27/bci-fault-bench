@@ -1,0 +1,324 @@
+umbrales W=8/min reproducen thresholds.json: {1: 0.5, 2: 0.167, 3: 0.667, 4: 0.375, 5: 0.3, 6: 0.3, 7: 0.5, 8: 0.667, 9: 0.625}
+windows.csv reproducido exactamente (operational, rbacc, degraded): True | filas: 330885
+
+== CASO BASE (W=8, mínimo, operativo base) vs t_divergencia.csv
+               label  silent_med  silent_orig  loud_med  loud_orig  silent_pool  n_silent_windows  ok_silent  ok_loud
+                 ref         0.0          0.0    0.0000     0.0000       0.0000                 0       True     True
+    loss-random-0.01         0.0          0.0    0.0000     0.0000       0.0000                 0       True     True
+    loss-random-0.05         0.0          0.0    0.0000     0.0000       0.0044                56       True     True
+     loss-random-0.1         0.0          0.0    0.0000     0.0000       0.0032                41       True     True
+         jitter-0.01         0.0          0.0    0.0000     0.0000       0.0000                 0       True     True
+         jitter-0.05         0.0          0.0    0.0000     0.0000       0.0000                 0       True     True
+          jitter-0.1         0.0          0.0    0.0000     0.0000       0.0000                 0       True     True
+          delay-0.05         0.0          0.0    0.0000     0.0000       0.0000                 0       True     True
+           delay-0.1         0.0          0.0    0.0000     0.0000       0.0000                 0       True     True
+          delay-0.25         0.0          0.0    0.0000     0.0000       0.0000                 0       True     True
+      disconnect-0.5         0.0          0.0    0.0070     0.0070       0.0000                 0       True     True
+        disconnect-1         0.0          0.0    0.0070     0.0070       0.0020                25       True     True
+        disconnect-3         0.0          0.0    0.0347     0.0347       0.0093               118       True     True
+     burst_trial-0.1         0.0          0.0    0.0000     0.0000       0.0097               124       True     True
+    burst_trial-0.25         0.0          0.0    0.0000     0.0000       0.0289               369       True     True
+     burst_trial-0.4         0.0          0.0    0.0734     0.0734       0.0342               436       True     True
+disconnect_trial-0.5         0.0          0.0    0.0852     0.0852       0.0302               385       True     True
+  disconnect_trial-1         0.0          0.0    0.0852     0.0852       0.0302               385       True     True
+  disconnect_trial-2         0.0          0.0    0.2063     0.2063       0.0744               949       True     True
+
+== RESUMEN por combinación (18 condiciones con fallo; 'ref' aparte)
+ W     rule       op  n_cond_silent_med_gt0  max_silent_med  n_cond_silent_pool_gt0  max_silent_pool          peor_cond  silent_pool_18  n_exec_silent_gt0_18  silent_ref_med  silent_ref_pool  n_exec_silent_ref  loud_med_max  loud_pool_18
+ 4      min     base                      0          0.0000                      10           0.0227 disconnect_trial-2          0.0043                    40             0.0           0.0000                  0        0.2111        0.0280
+ 4      min estricto                      0          0.0000                       8           0.0192 disconnect_trial-2          0.0036                    38             0.0           0.0000                  0        1.0000        0.4085
+ 4 min-0.05     base                      0          0.0000                      10           0.0227 disconnect_trial-2          0.0043                    40             0.0           0.0000                  0        0.2111        0.0280
+ 4 min-0.05 estricto                      0          0.0000                       8           0.0192 disconnect_trial-2          0.0036                    38             0.0           0.0000                  0        1.0000        0.4085
+ 4       p5     base                      4          0.0411                      18           0.0980 disconnect_trial-2          0.0426                   337             0.0           0.0287                 15        0.2006        0.0259
+ 4       p5 estricto                      4          0.0352                      13           0.0829 disconnect_trial-2          0.0300                   258             0.0           0.0287                 15        1.0000        0.3945
+ 6      min     base                      0          0.0000                      10           0.0578 disconnect_trial-2          0.0115                    54             0.0           0.0000                  0        0.2086        0.0269
+ 6      min estricto                      0          0.0000                       8           0.0489 disconnect_trial-2          0.0097                    51             0.0           0.0000                  0        1.0000        0.4060
+ 6 min-0.05     base                      0          0.0000                      10           0.0467 disconnect_trial-2          0.0104                    47             0.0           0.0000                  0        0.2086        0.0271
+ 6 min-0.05 estricto                      0          0.0000                       8           0.0394 disconnect_trial-2          0.0089                    44             0.0           0.0000                  0        1.0000        0.4065
+ 6       p5     base                      4          0.0694                      18           0.1364 disconnect_trial-2          0.0579                   305             0.0           0.0415                 14        0.1924        0.0248
+ 6       p5 estricto                      4          0.0599                      13           0.1153 disconnect_trial-2          0.0414                   239             0.0           0.0415                 14        1.0000        0.3892
+ 8      min     base                      0          0.0000                      10           0.0744 disconnect_trial-2          0.0126                    57             0.0           0.0000                  0        0.2063        0.0263
+ 8      min estricto                      0          0.0000                       8           0.0628 disconnect_trial-2          0.0106                    55             0.0           0.0000                  0        1.0000        0.4051
+ 8 min-0.05     base                      0          0.0000                      10           0.0496 disconnect_trial-2          0.0078                    44             0.0           0.0000                  0        0.2063        0.0268
+ 8 min-0.05 estricto                      0          0.0000                       8           0.0419 disconnect_trial-2          0.0064                    42             0.0           0.0000                  0        1.0000        0.4062
+ 8       p5     base                      4          0.1294                      18           0.1808 disconnect_trial-2          0.0694                   300             0.0           0.0442                 13        0.1678        0.0234
+ 8       p5 estricto                      4          0.1084                      13           0.1529 disconnect_trial-2          0.0492                   236             0.0           0.0442                 13        1.0000        0.3841
+12      min     base                      1          0.1429                      11           0.1881 disconnect_trial-2          0.0386                    96             0.0           0.0000                  0        0.1693        0.0242
+12      min estricto                      1          0.1224                       9           0.1593 disconnect_trial-2          0.0321                    92             0.0           0.0000                  0        1.0000        0.3985
+12 min-0.05     base                      1          0.0218                      10           0.1322 disconnect_trial-2          0.0219                    72             0.0           0.0000                  0        0.2052        0.0258
+12 min-0.05 estricto                      1          0.0175                       8           0.1119 disconnect_trial-2          0.0186                    69             0.0           0.0000                  0        1.0000        0.4033
+12       p5     base                      4          0.2116                      18           0.2775 disconnect_trial-2          0.0796                   247             0.0           0.0287                  9        0.1587        0.0218
+12       p5 estricto                      4          0.1799                      13           0.2347 disconnect_trial-2          0.0601                   200             0.0           0.0287                  9        1.0000        0.3831
+
+== combinaciones × condición con silent > 0 (agrupado)
+ W     rule       op                label  silent_med  silent_pool  n_silent_windows  n_windows  n_exec_silent_gt0  n_subj_silent_med_gt0  silent_max_exec
+ 4      min     base     loss-random-0.05      0.0000       0.0020                31      15393                  1                      0           0.0909
+ 4      min     base      loss-random-0.1      0.0000       0.0005                 8      15393                  1                      0           0.0224
+ 4      min     base         disconnect-1      0.0000       0.0027                41      15393                  1                      0           0.1202
+ 4      min     base         disconnect-3      0.0000       0.0010                16      15393                  1                      0           0.0448
+ 4      min     base      burst_trial-0.1      0.0000       0.0032                49      15393                  2                      0           0.1202
+ 4      min     base     burst_trial-0.25      0.0000       0.0149               229      15393                  6                      0           0.1965
+ 4      min     base      burst_trial-0.4      0.0000       0.0131               201      15393                  6                      1           0.1906
+ 4      min     base disconnect_trial-0.5      0.0000       0.0089               137      15393                  5                      0           0.1232
+ 4      min     base   disconnect_trial-1      0.0000       0.0089               137      15393                  5                      0           0.1232
+ 4      min     base   disconnect_trial-2      0.0000       0.0227               350      15393                 12                      3           0.2727
+ 4      min estricto         disconnect-1      0.0000       0.0027                41      15393                  1                      0           0.1202
+ 4      min estricto         disconnect-3      0.0000       0.0010                15      15393                  1                      0           0.0420
+ 4      min estricto      burst_trial-0.1      0.0000       0.0029                44      15393                  2                      0           0.1085
+ 4      min estricto     burst_trial-0.25      0.0000       0.0130               200      15393                  6                      0           0.1730
+ 4      min estricto      burst_trial-0.4      0.0000       0.0112               172      15393                  6                      1           0.1613
+ 4      min estricto disconnect_trial-0.5      0.0000       0.0077               118      15393                  5                      0           0.1060
+ 4      min estricto   disconnect_trial-1      0.0000       0.0077               118      15393                  5                      0           0.1060
+ 4      min estricto   disconnect_trial-2      0.0000       0.0192               296      15393                 12                      3           0.2287
+ 4 min-0.05     base     loss-random-0.05      0.0000       0.0020                31      15393                  1                      0           0.0909
+ 4 min-0.05     base      loss-random-0.1      0.0000       0.0005                 8      15393                  1                      0           0.0224
+ 4 min-0.05     base         disconnect-1      0.0000       0.0027                41      15393                  1                      0           0.1202
+ 4 min-0.05     base         disconnect-3      0.0000       0.0010                16      15393                  1                      0           0.0448
+ 4 min-0.05     base      burst_trial-0.1      0.0000       0.0032                49      15393                  2                      0           0.1202
+ 4 min-0.05     base     burst_trial-0.25      0.0000       0.0149               229      15393                  6                      0           0.1965
+ 4 min-0.05     base      burst_trial-0.4      0.0000       0.0131               201      15393                  6                      1           0.1906
+ 4 min-0.05     base disconnect_trial-0.5      0.0000       0.0089               137      15393                  5                      0           0.1232
+ 4 min-0.05     base   disconnect_trial-1      0.0000       0.0089               137      15393                  5                      0           0.1232
+ 4 min-0.05     base   disconnect_trial-2      0.0000       0.0227               350      15393                 12                      3           0.2727
+ 4 min-0.05 estricto         disconnect-1      0.0000       0.0027                41      15393                  1                      0           0.1202
+ 4 min-0.05 estricto         disconnect-3      0.0000       0.0010                15      15393                  1                      0           0.0420
+ 4 min-0.05 estricto      burst_trial-0.1      0.0000       0.0029                44      15393                  2                      0           0.1085
+ 4 min-0.05 estricto     burst_trial-0.25      0.0000       0.0130               200      15393                  6                      0           0.1730
+ 4 min-0.05 estricto      burst_trial-0.4      0.0000       0.0112               172      15393                  6                      1           0.1613
+ 4 min-0.05 estricto disconnect_trial-0.5      0.0000       0.0077               118      15393                  5                      0           0.1060
+ 4 min-0.05 estricto   disconnect_trial-1      0.0000       0.0077               118      15393                  5                      0           0.1060
+ 4 min-0.05 estricto   disconnect_trial-2      0.0000       0.0192               296      15393                 12                      3           0.2287
+ 4       p5     base     loss-random-0.01      0.0000       0.0273               420      15393                 15                      1           0.2170
+ 4       p5     base     loss-random-0.05      0.0000       0.0312               480      15393                 16                      2           0.3079
+ 4       p5     base      loss-random-0.1      0.0000       0.0228               351      15393                 15                      2           0.1785
+ 4       p5     base          jitter-0.01      0.0000       0.0287               442      15393                 15                      1           0.2170
+ 4       p5     base          jitter-0.05      0.0000       0.0287               442      15393                 15                      1           0.2170
+ 4       p5     base           jitter-0.1      0.0000       0.0287               442      15393                 15                      1           0.2170
+ 4       p5     base           delay-0.05      0.0000       0.0287               442      15393                 15                      1           0.2170
+ 4       p5     base            delay-0.1      0.0000       0.0287               442      15393                 15                      1           0.2170
+ 4       p5     base           delay-0.25      0.0000       0.0287               442      15393                 15                      1           0.2170
+ 4       p5     base       disconnect-0.5      0.0000       0.0299               461      15393                 16                      2           0.2170
+ 4       p5     base         disconnect-1      0.0000       0.0337               518      15393                 17                      2           0.3079
+ 4       p5     base         disconnect-3      0.0000       0.0423               651      15393                 18                      3           0.2903
+ 4       p5     base      burst_trial-0.1      0.0000       0.0437               672      15393                 22                      4           0.3079
+ 4       p5     base     burst_trial-0.25      0.0000       0.0563               867      15393                 22                      4           0.3167
+ 4       p5     base      burst_trial-0.4      0.0287       0.0697              1073      15393                 26                      6           0.4400
+ 4       p5     base disconnect_trial-0.5      0.0176       0.0698              1074      15393                 25                      6           0.4692
+ 4       p5     base   disconnect_trial-1      0.0176       0.0698              1074      15393                 25                      6           0.4692
+ 4       p5     base   disconnect_trial-2      0.0411       0.0980              1509      15393                 30                      7           0.5191
+ 4       p5 estricto     loss-random-0.01      0.0000       0.0023                35      15393                 12                      0           0.0264
+ 4       p5 estricto          jitter-0.01      0.0000       0.0287               442      15393                 15                      1           0.2170
+ 4       p5 estricto          jitter-0.05      0.0000       0.0287               442      15393                 15                      1           0.2170
+ 4       p5 estricto           jitter-0.1      0.0000       0.0233               359      15393                 15                      1           0.1848
+ 4       p5 estricto       disconnect-0.5      0.0000       0.0299               460      15393                 16                      2           0.2141
+ 4       p5 estricto         disconnect-1      0.0000       0.0331               509      15393                 17                      2           0.3021
+ 4       p5 estricto         disconnect-3      0.0000       0.0418               643      15393                 18                      3           0.2845
+ 4       p5 estricto      burst_trial-0.1      0.0000       0.0386               594      15393                 22                      4           0.2698
+ 4       p5 estricto     burst_trial-0.25      0.0000       0.0494               761      15393                 22                      4           0.2786
+ 4       p5 estricto      burst_trial-0.4      0.0258       0.0606               933      15393                 26                      6           0.3785
+ 4       p5 estricto disconnect_trial-0.5      0.0147       0.0604               930      15393                 25                      6           0.4047
+ 4       p5 estricto   disconnect_trial-1      0.0147       0.0604               930      15393                 25                      6           0.4047
+ 4       p5 estricto   disconnect_trial-2      0.0352       0.0829              1276      15393                 30                      7           0.4370
+ 6      min     base     loss-random-0.05      0.0000       0.0046                63      13795                  2                      0           0.1296
+ 6      min     base      loss-random-0.1      0.0000       0.0006                 8      13795                  1                      0           0.0266
+ 6      min     base         disconnect-1      0.0000       0.0030                41      13795                  1                      0           0.1362
+ 6      min     base         disconnect-3      0.0000       0.0035                48      13795                  2                      0           0.1329
+ 6      min     base      burst_trial-0.1      0.0000       0.0154               212      13795                  4                      0           0.2405
+ 6      min     base     burst_trial-0.25      0.0000       0.0323               446      13795                  8                      1           0.3281
+ 6      min     base      burst_trial-0.4      0.0000       0.0262               362      13795                 10                      1           0.4585
+ 6      min     base disconnect_trial-0.5      0.0000       0.0320               441      13795                  7                      0           0.4370
+ 6      min     base   disconnect_trial-1      0.0000       0.0320               441      13795                  7                      0           0.4370
+ 6      min     base   disconnect_trial-2      0.0000       0.0578               798      13795                 12                      2           0.6512
+ 6      min estricto         disconnect-1      0.0000       0.0030                41      13795                  1                      0           0.1362
+ 6      min estricto         disconnect-3      0.0000       0.0034                47      13795                  2                      0           0.1296
+ 6      min estricto      burst_trial-0.1      0.0000       0.0136               187      13795                  4                      0           0.2111
+ 6      min estricto     burst_trial-0.25      0.0000       0.0281               388      13795                  8                      1           0.2839
+ 6      min estricto      burst_trial-0.4      0.0000       0.0228               314      13795                 10                      1           0.4020
+ 6      min estricto disconnect_trial-0.5      0.0000       0.0276               381      13795                  7                      0           0.3783
+ 6      min estricto   disconnect_trial-1      0.0000       0.0276               381      13795                  7                      0           0.3783
+ 6      min estricto   disconnect_trial-2      0.0000       0.0489               675      13795                 12                      2           0.5515
+ 6 min-0.05     base     loss-random-0.05      0.0000       0.0023                32      13795                  2                      0           0.0797
+ 6 min-0.05     base      loss-random-0.1      0.0000       0.0006                 8      13795                  1                      0           0.0266
+ 6 min-0.05     base         disconnect-1      0.0000       0.0030                41      13795                  1                      0           0.1362
+ 6 min-0.05     base         disconnect-3      0.0000       0.0035                48      13795                  2                      0           0.1329
+ 6 min-0.05     base      burst_trial-0.1      0.0000       0.0154               212      13795                  4                      0           0.2405
+ 6 min-0.05     base     burst_trial-0.25      0.0000       0.0306               422      13795                  7                      1           0.3281
+ 6 min-0.05     base      burst_trial-0.4      0.0000       0.0219               302      13795                  6                      0           0.4585
+ 6 min-0.05     base disconnect_trial-0.5      0.0000       0.0320               441      13795                  7                      0           0.4370
+ 6 min-0.05     base   disconnect_trial-1      0.0000       0.0320               441      13795                  7                      0           0.4370
+ 6 min-0.05     base   disconnect_trial-2      0.0000       0.0467               644      13795                 10                      1           0.5449
+ 6 min-0.05 estricto         disconnect-1      0.0000       0.0030                41      13795                  1                      0           0.1362
+ 6 min-0.05 estricto         disconnect-3      0.0000       0.0034                47      13795                  2                      0           0.1296
+ 6 min-0.05 estricto      burst_trial-0.1      0.0000       0.0136               187      13795                  4                      0           0.2111
+ 6 min-0.05 estricto     burst_trial-0.25      0.0000       0.0267               368      13795                  7                      1           0.2839
+ 6 min-0.05 estricto      burst_trial-0.4      0.0000       0.0190               262      13795                  6                      0           0.4020
+ 6 min-0.05 estricto disconnect_trial-0.5      0.0000       0.0276               381      13795                  7                      0           0.3783
+ 6 min-0.05 estricto   disconnect_trial-1      0.0000       0.0276               381      13795                  7                      0           0.3783
+ 6 min-0.05 estricto   disconnect_trial-2      0.0000       0.0394               544      13795                 10                      1           0.4618
+ 6       p5     base     loss-random-0.01      0.0000       0.0303               418      13795                 11                      1           0.2425
+ 6       p5     base     loss-random-0.05      0.0000       0.0324               447      13795                 12                      1           0.3721
+ 6       p5     base      loss-random-0.1      0.0000       0.0273               376      13795                 11                      1           0.3522
+ 6       p5     base          jitter-0.01      0.0000       0.0415               572      13795                 14                      2           0.2425
+ 6       p5     base          jitter-0.05      0.0000       0.0415               572      13795                 14                      2           0.2425
+ 6       p5     base           jitter-0.1      0.0000       0.0415               572      13795                 14                      2           0.2425
+ 6       p5     base           delay-0.05      0.0000       0.0415               572      13795                 14                      2           0.2425
+ 6       p5     base            delay-0.1      0.0000       0.0415               572      13795                 14                      2           0.2425
+ 6       p5     base           delay-0.25      0.0000       0.0415               572      13795                 14                      2           0.2425
+ 6       p5     base       disconnect-0.5      0.0000       0.0427               589      13795                 14                      2           0.2425
+ 6       p5     base         disconnect-1      0.0000       0.0458               632      13795                 14                      2           0.3721
+ 6       p5     base         disconnect-3      0.0000       0.0578               798      13795                 18                      3           0.3548
+ 6       p5     base      burst_trial-0.1      0.0000       0.0575               793      13795                 17                      3           0.3721
+ 6       p5     base     burst_trial-0.25      0.0000       0.0924              1275      13795                 22                      4           0.5110
+ 6       p5     base      burst_trial-0.4      0.0252       0.1097              1514      13795                 30                      7           0.6187
+ 6       p5     base disconnect_trial-0.5      0.0432       0.0801              1105      13795                 23                      6           0.5044
+ 6       p5     base   disconnect_trial-1      0.0432       0.0801              1105      13795                 23                      6           0.5044
+ 6       p5     base   disconnect_trial-2      0.0694       0.1364              1882      13795                 26                      6           0.7590
+ 6       p5 estricto     loss-random-0.01      0.0000       0.0020                27      13795                 10                      1           0.0299
+ 6       p5 estricto          jitter-0.01      0.0000       0.0415               572      13795                 14                      2           0.2425
+ 6       p5 estricto          jitter-0.05      0.0000       0.0415               572      13795                 14                      2           0.2425
+ 6       p5 estricto           jitter-0.1      0.0000       0.0349               482      13795                 14                      2           0.2193
+ 6       p5 estricto       disconnect-0.5      0.0000       0.0423               583      13795                 14                      2           0.2392
+ 6       p5 estricto         disconnect-1      0.0000       0.0455               628      13795                 14                      2           0.3721
+ 6       p5 estricto         disconnect-3      0.0000       0.0570               787      13795                 18                      3           0.3460
+ 6       p5 estricto      burst_trial-0.1      0.0000       0.0506               698      13795                 17                      3           0.3256
+ 6       p5 estricto     burst_trial-0.25      0.0000       0.0808              1115      13795                 22                      4           0.4448
+ 6       p5 estricto      burst_trial-0.4      0.0199       0.0952              1313      13795                 30                      7           0.5288
+ 6       p5 estricto disconnect_trial-0.5      0.0365       0.0694               958      13795                 23                      6           0.4370
+ 6       p5 estricto   disconnect_trial-1      0.0365       0.0694               958      13795                 23                      6           0.4370
+ 6       p5 estricto   disconnect_trial-2      0.0599       0.1153              1590      13795                 26                      6           0.6403
+ 8      min     base     loss-random-0.05      0.0000       0.0044                56      12750                  1                      0           0.1958
+ 8      min     base      loss-random-0.1      0.0000       0.0032                41      12750                  1                      0           0.1434
+ 8      min     base         disconnect-1      0.0000       0.0020                25      12750                  1                      0           0.0874
+ 8      min     base         disconnect-3      0.0000       0.0093               118      12750                  2                      0           0.2208
+ 8      min     base      burst_trial-0.1      0.0000       0.0097               124      12750                  4                      0           0.1830
+ 8      min     base     burst_trial-0.25      0.0000       0.0289               369      12750                 10                      1           0.3813
+ 8      min     base      burst_trial-0.4      0.0000       0.0342               436      12750                  8                      0           0.3531
+ 8      min     base disconnect_trial-0.5      0.0000       0.0302               385      12750                  7                      0           0.3218
+ 8      min     base   disconnect_trial-1      0.0000       0.0302               385      12750                  7                      0           0.3218
+ 8      min     base   disconnect_trial-2      0.0000       0.0744               949      12750                 16                      2           0.6929
+ 8      min estricto         disconnect-1      0.0000       0.0020                25      12750                  1                      0           0.0874
+ 8      min estricto         disconnect-3      0.0000       0.0091               116      12750                  2                      0           0.2177
+ 8      min estricto      burst_trial-0.1      0.0000       0.0086               110      12750                  4                      0           0.1640
+ 8      min estricto     burst_trial-0.25      0.0000       0.0253               323      12750                 10                      1           0.3309
+ 8      min estricto      burst_trial-0.4      0.0000       0.0299               381      12750                  8                      0           0.3112
+ 8      min estricto disconnect_trial-0.5      0.0000       0.0261               333      12750                  7                      0           0.2776
+ 8      min estricto   disconnect_trial-1      0.0000       0.0261               333      12750                  7                      0           0.2776
+ 8      min estricto   disconnect_trial-2      0.0000       0.0628               801      12750                 16                      2           0.5827
+ 8 min-0.05     base     loss-random-0.05      0.0000       0.0044                56      12750                  1                      0           0.1958
+ 8 min-0.05     base      loss-random-0.1      0.0000       0.0026                33      12750                  1                      0           0.1154
+ 8 min-0.05     base         disconnect-1      0.0000       0.0020                25      12750                  1                      0           0.0874
+ 8 min-0.05     base         disconnect-3      0.0000       0.0020                25      12750                  1                      0           0.0874
+ 8 min-0.05     base      burst_trial-0.1      0.0000       0.0020                25      12750                  1                      0           0.0874
+ 8 min-0.05     base     burst_trial-0.25      0.0000       0.0123               157      12750                  7                      0           0.2343
+ 8 min-0.05     base      burst_trial-0.4      0.0000       0.0163               208      12750                  6                      0           0.2517
+ 8 min-0.05     base disconnect_trial-0.5      0.0000       0.0245               313      12750                  7                      0           0.2587
+ 8 min-0.05     base   disconnect_trial-1      0.0000       0.0245               313      12750                  7                      0           0.2587
+ 8 min-0.05     base   disconnect_trial-2      0.0000       0.0496               633      12750                 12                      0           0.6693
+ 8 min-0.05 estricto         disconnect-1      0.0000       0.0020                25      12750                  1                      0           0.0874
+ 8 min-0.05 estricto         disconnect-3      0.0000       0.0020                25      12750                  1                      0           0.0874
+ 8 min-0.05 estricto      burst_trial-0.1      0.0000       0.0017                22      12750                  1                      0           0.0769
+ 8 min-0.05 estricto     burst_trial-0.25      0.0000       0.0107               136      12750                  7                      0           0.2063
+ 8 min-0.05 estricto      burst_trial-0.4      0.0000       0.0142               181      12750                  6                      0           0.2203
+ 8 min-0.05 estricto disconnect_trial-0.5      0.0000       0.0213               271      12750                  7                      0           0.2240
+ 8 min-0.05 estricto   disconnect_trial-1      0.0000       0.0213               271      12750                  7                      0           0.2240
+ 8 min-0.05 estricto   disconnect_trial-2      0.0000       0.0419               534      12750                 12                      0           0.5630
+ 8       p5     base     loss-random-0.01      0.0000       0.0442               564      12750                 14                      1           0.4545
+ 8       p5     base     loss-random-0.05      0.0000       0.0435               554      12750                 12                      0           0.4545
+ 8       p5     base      loss-random-0.1      0.0000       0.0421               537      12750                 11                      1           0.4790
+ 8       p5     base          jitter-0.01      0.0000       0.0442               564      12750                 13                      0           0.4545
+ 8       p5     base          jitter-0.05      0.0000       0.0442               564      12750                 13                      0           0.4545
+ 8       p5     base           jitter-0.1      0.0000       0.0442               564      12750                 13                      0           0.4545
+ 8       p5     base           delay-0.05      0.0000       0.0442               564      12750                 13                      0           0.4545
+ 8       p5     base            delay-0.1      0.0000       0.0442               564      12750                 13                      0           0.4545
+ 8       p5     base           delay-0.25      0.0000       0.0442               564      12750                 13                      0           0.4545
+ 8       p5     base       disconnect-0.5      0.0000       0.0449               573      12750                 14                      1           0.4476
+ 8       p5     base         disconnect-1      0.0000       0.0470               599      12750                 15                      1           0.4476
+ 8       p5     base         disconnect-3      0.0000       0.0675               860      12750                 16                      2           0.5280
+ 8       p5     base      burst_trial-0.1      0.0000       0.0732               933      12750                 19                      2           0.4545
+ 8       p5     base     burst_trial-0.25      0.0000       0.0800              1020      12750                 19                      3           0.6088
+ 8       p5     base      burst_trial-0.4      0.0709       0.1335              1702      12750                 27                      6           0.7063
+ 8       p5     base disconnect_trial-0.5      0.0540       0.1136              1449      12750                 23                      5           0.5394
+ 8       p5     base   disconnect_trial-1      0.0540       0.1136              1449      12750                 23                      5           0.5394
+ 8       p5     base   disconnect_trial-2      0.1294       0.1808              2305      12750                 29                      7           0.7937
+ 8       p5 estricto     loss-random-0.01      0.0000       0.0028                36      12750                 12                      0           0.0280
+ 8       p5 estricto          jitter-0.01      0.0000       0.0442               564      12750                 13                      0           0.4545
+ 8       p5 estricto          jitter-0.05      0.0000       0.0442               564      12750                 13                      0           0.4545
+ 8       p5 estricto           jitter-0.1      0.0000       0.0373               475      12750                 13                      0           0.3811
+ 8       p5 estricto       disconnect-0.5      0.0000       0.0446               569      12750                 14                      1           0.4406
+ 8       p5 estricto         disconnect-1      0.0000       0.0464               591      12750                 15                      1           0.4406
+ 8       p5 estricto         disconnect-3      0.0000       0.0665               848      12750                 16                      2           0.5210
+ 8       p5 estricto      burst_trial-0.1      0.0000       0.0642               818      12750                 19                      2           0.4021
+ 8       p5 estricto     burst_trial-0.25      0.0000       0.0704               898      12750                 19                      3           0.5363
+ 8       p5 estricto      burst_trial-0.4      0.0630       0.1156              1474      12750                 27                      6           0.6154
+ 8       p5 estricto disconnect_trial-0.5      0.0468       0.0986              1257      12750                 23                      5           0.4669
+ 8       p5 estricto   disconnect_trial-1      0.0468       0.0986              1257      12750                 23                      5           0.4669
+ 8       p5 estricto   disconnect_trial-2      0.1084       0.1529              1950      12750                 29                      7           0.6713
+12      min     base     loss-random-0.01      0.0000       0.0017                16       9297                  1                      0           0.0699
+12      min     base     loss-random-0.05      0.0000       0.0098                91       9297                  1                      0           0.4815
+12      min     base      loss-random-0.1      0.0000       0.0176               164       9297                  3                      0           0.5608
+12      min     base         disconnect-1      0.0000       0.0061                57       9297                  2                      0           0.2169
+12      min     base         disconnect-3      0.0000       0.0243               226       9297                  3                      0           0.4236
+12      min     base      burst_trial-0.1      0.0000       0.0264               245       9297                  5                      0           0.4934
+12      min     base     burst_trial-0.25      0.0000       0.0575               535       9297                  8                      1           0.8559
+12      min     base      burst_trial-0.4      0.0000       0.1290              1199       9297                 19                      3           0.8995
+12      min     base disconnect_trial-0.5      0.0000       0.1168              1086       9297                 14                      2           0.8122
+12      min     base   disconnect_trial-1      0.0000       0.1168              1086       9297                 14                      2           0.8122
+12      min     base   disconnect_trial-2      0.1429       0.1881              1749       9297                 26                      6           0.7901
+12      min estricto     loss-random-0.01      0.0000       0.0001                 1       9297                  1                      0           0.0044
+12      min estricto         disconnect-1      0.0000       0.0060                56       9297                  2                      0           0.2169
+12      min estricto         disconnect-3      0.0000       0.0243               226       9297                  3                      0           0.4236
+12      min estricto      burst_trial-0.1      0.0000       0.0232               216       9297                  5                      0           0.4323
+12      min estricto     burst_trial-0.25      0.0000       0.0507               471       9297                  8                      1           0.7511
+12      min estricto      burst_trial-0.4      0.0000       0.1120              1041       9297                 19                      3           0.7778
+12      min estricto disconnect_trial-0.5      0.0000       0.1013               942       9297                 14                      2           0.7031
+12      min estricto   disconnect_trial-1      0.0000       0.1013               942       9297                 14                      2           0.7031
+12      min estricto   disconnect_trial-2      0.1224       0.1593              1481       9297                 26                      6           0.6685
+12 min-0.05     base     loss-random-0.05      0.0000       0.0026                24       9297                  1                      0           0.1270
+12 min-0.05     base      loss-random-0.1      0.0000       0.0062                58       9297                  2                      0           0.1746
+12 min-0.05     base         disconnect-1      0.0000       0.0017                16       9297                  1                      0           0.0847
+12 min-0.05     base         disconnect-3      0.0000       0.0103                96       9297                  3                      0           0.2593
+12 min-0.05     base      burst_trial-0.1      0.0000       0.0052                48       9297                  3                      0           0.1048
+12 min-0.05     base     burst_trial-0.25      0.0000       0.0427               397       9297                  6                      0           0.7725
+12 min-0.05     base      burst_trial-0.4      0.0000       0.0679               631       9297                 14                      1           0.8254
+12 min-0.05     base disconnect_trial-0.5      0.0000       0.0629               585       9297                 10                      1           0.5556
+12 min-0.05     base   disconnect_trial-1      0.0000       0.0629               585       9297                 10                      1           0.5556
+12 min-0.05     base   disconnect_trial-2      0.0218       0.1322              1229       9297                 22                      5           0.7901
+12 min-0.05 estricto         disconnect-1      0.0000       0.0017                16       9297                  1                      0           0.0847
+12 min-0.05 estricto         disconnect-3      0.0000       0.0103                96       9297                  3                      0           0.2593
+12 min-0.05 estricto      burst_trial-0.1      0.0000       0.0046                43       9297                  3                      0           0.0917
+12 min-0.05 estricto     burst_trial-0.25      0.0000       0.0375               349       9297                  6                      0           0.6825
+12 min-0.05 estricto      burst_trial-0.4      0.0000       0.0588               547       9297                 14                      1           0.7143
+12 min-0.05 estricto disconnect_trial-0.5      0.0000       0.0546               508       9297                 10                      1           0.4815
+12 min-0.05 estricto   disconnect_trial-1      0.0000       0.0546               508       9297                 10                      1           0.4815
+12 min-0.05 estricto   disconnect_trial-2      0.0175       0.1119              1040       9297                 22                      5           0.6685
+12       p5     base     loss-random-0.01      0.0000       0.0303               282       9297                  9                      0           0.3386
+12       p5     base     loss-random-0.05      0.0000       0.0395               367       9297                  9                      0           0.6138
+12       p5     base      loss-random-0.1      0.0000       0.0547               509       9297                  9                      1           0.8730
+12       p5     base          jitter-0.01      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5     base          jitter-0.05      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5     base           jitter-0.1      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5     base           delay-0.05      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5     base            delay-0.1      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5     base           delay-0.25      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5     base       disconnect-0.5      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5     base         disconnect-1      0.0000       0.0365               339       9297                 10                      0           0.2646
+12       p5     base         disconnect-3      0.0000       0.0682               634       9297                 13                      1           0.8042
+12       p5     base      burst_trial-0.1      0.0000       0.0742               690       9297                 12                      0           0.5284
+12       p5     base     burst_trial-0.25      0.0000       0.1204              1119       9297                 17                      4           1.0000
+12       p5     base      burst_trial-0.4      0.0776       0.1921              1786       9297                 26                      7           0.9227
+12       p5     base disconnect_trial-0.5      0.0370       0.1692              1573       9297                 24                      6           0.8122
+12       p5     base   disconnect_trial-1      0.0370       0.1692              1573       9297                 24                      6           0.8122
+12       p5     base   disconnect_trial-2      0.2116       0.2775              2580       9297                 31                      7           0.7901
+12       p5 estricto     loss-random-0.01      0.0000       0.0017                16       9297                  7                      0           0.0317
+12       p5 estricto          jitter-0.01      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5 estricto          jitter-0.05      0.0000       0.0287               267       9297                  9                      0           0.3386
+12       p5 estricto           jitter-0.1      0.0000       0.0242               225       9297                  9                      0           0.3122
+12       p5 estricto       disconnect-0.5      0.0000       0.0286               266       9297                  9                      0           0.3386
+12       p5 estricto         disconnect-1      0.0000       0.0357               332       9297                 10                      0           0.2646
+12       p5 estricto         disconnect-3      0.0000       0.0668               621       9297                 13                      1           0.7989
+12       p5 estricto      burst_trial-0.1      0.0000       0.0652               606       9297                 12                      0           0.4672
+12       p5 estricto     burst_trial-0.25      0.0000       0.1063               988       9297                 17                      4           0.8777
+12       p5 estricto      burst_trial-0.4      0.0694       0.1676              1558       9297                 26                      7           0.8011
+12       p5 estricto disconnect_trial-0.5      0.0317       0.1467              1364       9297                 24                      6           0.7031
+12       p5 estricto   disconnect_trial-1      0.0317       0.1467              1364       9297                 24                      6           0.7031
+12       p5 estricto   disconnect_trial-2      0.1799       0.2347              2182       9297                 31                      7           0.6685

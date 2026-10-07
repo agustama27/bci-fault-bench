@@ -99,6 +99,8 @@ def main(argv=None):
     log = open(os.path.join(a.outdir, "fault_log.jsonl"), "w")
     for s, e in inj.outages:
         log.write(json.dumps({"event": "outage_planned", "start": s, "end": e}) + "\n")
+    for i_a, i_b in inj.drop_intervals:
+        log.write(json.dumps({"event": "interval_planned", "start_sample": int(i_a), "end_sample": int(i_b)}) + "\n")
 
     n_pushed = n_dropped = 0
     timing_err = []
@@ -136,7 +138,7 @@ def main(argv=None):
             connected = True
             reconnections += 1
             log.write(json.dumps({"event": "outage_end", "t_rel": t_rel}) + "\n")
-        chunk = X[i0:i1]
+        chunk = inj.transform(X[i0:i1], i0)
         keep = inj.keep_mask(len(chunk), i0)
         if keep.any():
             ts = t_nom + np.flatnonzero(keep) / sfreq

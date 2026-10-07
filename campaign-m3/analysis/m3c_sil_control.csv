@@ -1,0 +1,6 @@
+control,valor
+ref nueva: segundos evaluables / degradados / min(rbacc) - umbral,12750 / 0
+ref nueva: min de la móvil por sujeto (>= umbral),"{1: (0.5, 0.5), 2: (0.167, 0.167), 3: (0.667, 0.667), 4: (0.375, 0.375), 5: (0.3, 0.3), 6: (0.3, 0.3), 7: (0.5, 0.5), 8: (0.667, 0.667), 9: (0.625, 0.625)}"
+ref anterior: segundos evaluables / degradados / min(rbacc) - umbral,12750 / 0
+ref anterior: min de la móvil por sujeto (>= umbral),"{1: (0.5, 0.5), 2: (0.167, 0.167), 3: (0.667, 0.667), 4: (0.375, 0.375), 5: (0.3, 0.3), 6: (0.3, 0.3), 7: (0.5, 0.5), 8: (0.667, 0.667), 9: (0.625, 0.625)}"
+"reproduce windows.csv (anterior, ref+burst): segundos comparados / % degraded idéntico / % operational idéntico",69660 / 100.000 / 100.000

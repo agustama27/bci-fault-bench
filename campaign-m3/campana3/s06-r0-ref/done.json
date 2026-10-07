@@ -1,0 +1,16 @@
+{
+  "exec_id": "s06-r0-ref",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.9,
+  "subject": 6,
+  "run": "0",
+  "fault": {
+    "kind": "none",
+    "severity": 0.0,
+    "mode": "random",
+    "seed": 2075088982
+  },
+  "label": "ref"
+}

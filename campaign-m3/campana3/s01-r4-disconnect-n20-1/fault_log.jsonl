@@ -1,0 +1,60 @@
+{"event": "outage_planned", "start": 25.632083850620354, "end": 26.632083850620354}
+{"event": "outage_planned", "start": 38.25401882882165, "end": 39.25401882882165}
+{"event": "outage_planned", "start": 58.25286120194266, "end": 59.25286120194266}
+{"event": "outage_planned", "start": 73.31589894858485, "end": 74.31589894858485}
+{"event": "outage_planned", "start": 88.40242635511687, "end": 89.40242635511687}
+{"event": "outage_planned", "start": 105.00565072555105, "end": 106.00565072555105}
+{"event": "outage_planned", "start": 133.58468128327715, "end": 134.58468128327715}
+{"event": "outage_planned", "start": 144.72260718758517, "end": 145.72260718758517}
+{"event": "outage_planned", "start": 162.56684444773694, "end": 163.56684444773694}
+{"event": "outage_planned", "start": 178.48349536898115, "end": 179.48349536898115}
+{"event": "outage_planned", "start": 200.00607185167354, "end": 201.00607185167354}
+{"event": "outage_planned", "start": 212.71962303440586, "end": 213.71962303440586}
+{"event": "outage_planned", "start": 229.88077839542595, "end": 230.88077839542595}
+{"event": "outage_planned", "start": 253.08469879091967, "end": 254.08469879091967}
+{"event": "outage_planned", "start": 268.0205394461577, "end": 269.0205394461577}
+{"event": "outage_planned", "start": 294.2729366845789, "end": 295.2729366845789}
+{"event": "outage_planned", "start": 307.08841008469176, "end": 308.08841008469176}
+{"event": "outage_planned", "start": 318.7959298536997, "end": 319.7959298536997}
+{"event": "outage_planned", "start": 337.19351270196194, "end": 338.19351270196194}
+{"event": "outage_planned", "start": 360.61368474135315, "end": 361.61368474135315}
+{"event": "outage_start", "t_rel": 25.64}
+{"event": "outage_end", "t_rel": 26.64}
+{"event": "outage_start", "t_rel": 38.28}
+{"event": "outage_end", "t_rel": 39.28}
+{"event": "outage_start", "t_rel": 58.28}
+{"event": "outage_end", "t_rel": 59.28}
+{"event": "outage_start", "t_rel": 73.32}
+{"event": "outage_end", "t_rel": 74.32}
+{"event": "outage_start", "t_rel": 88.44}
+{"event": "outage_end", "t_rel": 89.44}
+{"event": "outage_start", "t_rel": 105.04}
+{"event": "outage_end", "t_rel": 106.04}
+{"event": "outage_start", "t_rel": 133.6}
+{"event": "outage_end", "t_rel": 134.6}
+{"event": "outage_start", "t_rel": 144.76}
+{"event": "outage_end", "t_rel": 145.76}
+{"event": "outage_start", "t_rel": 162.6}
+{"event": "outage_end", "t_rel": 163.6}
+{"event": "outage_start", "t_rel": 178.52}
+{"event": "outage_end", "t_rel": 179.52}
+{"event": "outage_start", "t_rel": 200.04}
+{"event": "outage_end", "t_rel": 201.04}
+{"event": "outage_start", "t_rel": 212.72}
+{"event": "outage_end", "t_rel": 213.72}
+{"event": "outage_start", "t_rel": 229.92}
+{"event": "outage_end", "t_rel": 230.92}
+{"event": "outage_start", "t_rel": 253.12}
+{"event": "outage_end", "t_rel": 254.12}
+{"event": "outage_start", "t_rel": 268.04}
+{"event": "outage_end", "t_rel": 269.04}
+{"event": "outage_start", "t_rel": 294.28}
+{"event": "outage_end", "t_rel": 295.28}
+{"event": "outage_start", "t_rel": 307.12}
+{"event": "outage_end", "t_rel": 308.12}
+{"event": "outage_start", "t_rel": 318.8}
+{"event": "outage_end", "t_rel": 319.8}
+{"event": "outage_start", "t_rel": 337.2}
+{"event": "outage_end", "t_rel": 338.2}
+{"event": "outage_start", "t_rel": 360.64}
+{"event": "outage_end", "t_rel": 361.64}

@@ -1,0 +1,29 @@
+{
+  "exec_id": "s08-r4-ref",
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "fault": {
+    "kind": "none",
+    "severity": 0.0,
+    "mode": "random",
+    "seed": 33763770
+  },
+  "label": "ref",
+  "t0": 13157.63518567,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0012147339698070103,
+    "p50": 0.0008669994713272899,
+    "p99": 0.0016338094246748382,
+    "max": 2.8277869987505255
+  }
+}

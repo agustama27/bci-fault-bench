@@ -19,6 +19,19 @@ burst_trial       contenido del flujo             fracción de la ventana del en
 disconnect_trial  transporte real                 corte que comienza al inicio de la ventana del
                                                   ensayo y dura 0.5/1/2 s; todos los ensayos
 
+Familia 3 (análisis del Módulo 3, exploratoria):
+kind              dónde actúa                     severidad
+----------------  ------------------------------  ---------------------------------------------
+disconnect, mode  transporte real                 duración de cada corte en s; mode "nK" fija K
+"nK"                                              cortes por corrida, repartidos de forma
+                                                  estratificada (barrido de exposición)
+hold_trial        contenido del flujo             fracción de la ventana del ensayo (0.10/0.25/0.40)
+                                                  en un bloque contiguo ubicado al azar, como
+                                                  burst_trial, pero las muestras no se borran: se
+                                                  reemplazan por la última muestra válida (el
+                                                  receptor de Simeral et al., 2021, repite el
+                                                  último frame válido ante una pérdida)
+
 Toda aleatoriedad sale de una semilla fija: la realización del fallo es repetible.
 """
 from __future__ import annotations
@@ -31,20 +44,20 @@ BURST_LEN = 25            # muestras por ráfaga (100 ms a 250 Hz), modelo loss-
 N_DISCONNECTS = 5         # cortes por corrida, familia 1
 GUARD_S = 15.0            # sin cortes en los primeros/últimos segundos
 TRIAL_TMIN, TRIAL_TMAX = 2.0, 6.0   # ventana de decodificación relativa al inicio del ensayo
-STRUCTURED = ("burst_trial", "disconnect_trial")
+STRUCTURED = ("burst_trial", "disconnect_trial", "hold_trial")
 
 
 @dataclass
 class FaultSpec:
     kind: str = "none"          # none | loss | jitter | delay | disconnect | burst_trial | disconnect_trial
     severity: float = 0.0
-    mode: str = "random"        # loss: random | burst
+    mode: str = "random"        # loss: random | burst; disconnect: random | nK (K cortes, estratificados)
     seed: int = 0
 
     def label(self) -> str:
         if self.kind == "none":
             return "ref"
-        m = f"-{self.mode}" if self.kind == "loss" else ""
+        m = f"-{self.mode}" if self.kind == "loss" or (self.kind == "disconnect" and self.mode.startswith("n")) else ""
         return f"{self.kind}{m}-{self.severity:g}"
 
     def to_dict(self) -> dict:
@@ -60,10 +73,13 @@ class Injector:
         self.outages: list[tuple[float, float]] = []   # (inicio, fin) en s relativos a t0
         self.drop_intervals: list[tuple[int, int]] = []  # [i0, i1) en muestras, familia 2
         self._burst_left = 0
+        self._last = None                                # última muestra válida emitida (hold_trial)
         onsets = np.asarray(trial_onsets_samples if trial_onsets_samples is not None else [], dtype=int)
-        if spec.kind == "disconnect":
+        if spec.kind == "disconnect" and spec.mode.startswith("n"):
+            self.outages = self._plan_outages_stratified(duration_s, spec.severity, int(spec.mode[1:]))
+        elif spec.kind == "disconnect":
             self.outages = self._plan_outages(duration_s, spec.severity)
-        elif spec.kind == "burst_trial":
+        elif spec.kind in ("burst_trial", "hold_trial"):
             win = int(round((TRIAL_TMAX - TRIAL_TMIN) * sfreq))
             length = int(round(spec.severity * win))
             for on in onsets:
@@ -86,6 +102,19 @@ class Injector:
                 break
             out.append((float(s), float(s + dur)))
             last_end = s + dur
+        return out
+
+    def _plan_outages_stratified(self, duration_s: float, dur: float, count: int) -> list[tuple[float, float]]:
+        """K cortes: el intervalo útil se divide en K tramos iguales y cada corte cae al azar
+        dentro de su tramo, dejando al menos 5 s hasta el siguiente. Así entran todos."""
+        lo, hi = GUARD_S, duration_s - GUARD_S
+        seg = (hi - lo) / count
+        if seg < dur + 5.0:
+            raise ValueError(f"no entran {count} cortes de {dur} s en {duration_s:.0f} s")
+        out = []
+        for k in range(count):
+            s = lo + k * seg + float(self.rng.uniform(0.0, seg - dur - 5.0))
+            out.append((s, s + dur))
         return out
 
     # --- aplicación por bloque --------------------------------------------
@@ -115,6 +144,25 @@ class Injector:
                 mask[(idx >= a) & (idx < b)] = False
             return mask
         return np.ones(n, dtype=bool)
+
+    def transform(self, chunk: np.ndarray, i0: int = 0) -> np.ndarray:
+        """Contenido del bloque [i0, i0+n) tal como sale. hold_trial: las muestras dentro de
+        un intervalo se reemplazan por la última muestra válida anterior (muestreo y retención)."""
+        if self.spec.kind != "hold_trial":
+            return chunk
+        out = chunk.copy()
+        idx = np.arange(i0, i0 + len(chunk))
+        held = np.zeros(len(chunk), dtype=bool)
+        for a, b in self.drop_intervals:
+            if b <= i0 or a >= i0 + len(chunk):
+                continue
+            held |= (idx >= a) & (idx < b)
+        for i in range(len(chunk)):
+            if held[i] and self._last is not None:
+                out[i] = self._last
+            else:
+                self._last = out[i].copy()
+        return out
 
     def extra_delay(self) -> float:
         """Segundos que se suman al instante nominal de entrega del bloque."""

@@ -1,0 +1,38 @@
+{
+  "exec_id": "s04-r4-disconnect-n2-1",
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 1.0,
+    "mode": "n2",
+    "seed": 986751254
+  },
+  "label": "disconnect-n2-1",
+  "t0": 12347.257940386,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96235,
+  "n_dropped": 500,
+  "outages": [
+    [
+      116.66596274281605,
+      117.66596274281605
+    ],
+    [
+      280.7948126402914,
+      281.7948126402914
+    ]
+  ],
+  "reconnections": 2,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.017767206141722357,
+    "p50": 0.0009059995136340149,
+    "p99": 0.009989889731514271,
+    "max": 60.93004000103974
+  }
+}

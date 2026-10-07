@@ -1,0 +1,4322 @@
+[
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 309075624
+  },
+  "exec_id": "s01-r0-ref"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 809393855
+  },
+  "exec_id": "s01-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 519008768
+  },
+  "exec_id": "s01-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 2091016560
+  },
+  "exec_id": "s01-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 219085533
+  },
+  "exec_id": "s01-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 165583942
+  },
+  "exec_id": "s01-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 782205919
+  },
+  "exec_id": "s01-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 127657339
+  },
+  "exec_id": "s01-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1151821913
+  },
+  "exec_id": "s02-r0-ref"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1717220481
+  },
+  "exec_id": "s02-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1916059329
+  },
+  "exec_id": "s02-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1340583473
+  },
+  "exec_id": "s02-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1616136094
+  },
+  "exec_id": "s02-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1732395443
+  },
+  "exec_id": "s02-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 201533772
+  },
+  "exec_id": "s02-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1694468840
+  },
+  "exec_id": "s02-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 217864755
+  },
+  "exec_id": "s03-r0-ref"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 783263323
+  },
+  "exec_id": "s03-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 982102171
+  },
+  "exec_id": "s03-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 406626315
+  },
+  "exec_id": "s03-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 682178936
+  },
+  "exec_id": "s03-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1382277321
+  },
+  "exec_id": "s03-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1998899298
+  },
+  "exec_id": "s03-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1344350718
+  },
+  "exec_id": "s03-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1614915316
+  },
+  "exec_id": "s04-r0-ref"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 773070749
+  },
+  "exec_id": "s04-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1824848460
+  },
+  "exec_id": "s04-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1249372604
+  },
+  "exec_id": "s04-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1524925225
+  },
+  "exec_id": "s04-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 48005198
+  },
+  "exec_id": "s04-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 664627175
+  },
+  "exec_id": "s04-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 10078595
+  },
+  "exec_id": "s04-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2086303154
+  },
+  "exec_id": "s05-r0-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1262541836
+  },
+  "exec_id": "s05-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 119217886
+  },
+  "exec_id": "s05-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1790564565
+  },
+  "exec_id": "s05-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 2066117186
+  },
+  "exec_id": "s05-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 618731923
+  },
+  "exec_id": "s05-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1235353900
+  },
+  "exec_id": "s05-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 580805320
+  },
+  "exec_id": "s05-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2075088982
+  },
+  "exec_id": "s06-r0-ref"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 380305552
+  },
+  "exec_id": "s06-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1432083263
+  },
+  "exec_id": "s06-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 856607407
+  },
+  "exec_id": "s06-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1132160028
+  },
+  "exec_id": "s06-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 979319550
+  },
+  "exec_id": "s06-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1595941527
+  },
+  "exec_id": "s06-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 941392947
+  },
+  "exec_id": "s06-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2064896408
+  },
+  "exec_id": "s07-r0-ref"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 482811328
+  },
+  "exec_id": "s07-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 93087354
+  },
+  "exec_id": "s07-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 106174320
+  },
+  "exec_id": "s07-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1187047791
+  },
+  "exec_id": "s07-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 497986290
+  },
+  "exec_id": "s07-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1114608267
+  },
+  "exec_id": "s07-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 460059687
+  },
+  "exec_id": "s07-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1130939250
+  },
+  "exec_id": "s08-r0-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1696337818
+  },
+  "exec_id": "s08-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 553013868
+  },
+  "exec_id": "s08-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 2125021660
+  },
+  "exec_id": "s08-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 253090633
+  },
+  "exec_id": "s08-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 147868168
+  },
+  "exec_id": "s08-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 764490145
+  },
+  "exec_id": "s08-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 109941565
+  },
+  "exec_id": "s08-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2038765876
+  },
+  "exec_id": "s09-r0-ref"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 391600459
+  },
+  "exec_id": "s09-r0-disconnect-n2-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1296421270
+  },
+  "exec_id": "s09-r0-disconnect-n5-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 2063108212
+  },
+  "exec_id": "s09-r0-disconnect-n10-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1095836922
+  },
+  "exec_id": "s09-r0-disconnect-n20-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1766400543
+  },
+  "exec_id": "s09-r0-hold_trial-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 235538872
+  },
+  "exec_id": "s09-r0-hold_trial-0.25"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1728473940
+  },
+  "exec_id": "s09-r0-hold_trial-0.4"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 267754187
+  },
+  "exec_id": "s01-r1-ref"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1351911454
+  },
+  "exec_id": "s01-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 109248617
+  },
+  "exec_id": "s01-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1780595296
+  },
+  "exec_id": "s01-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 2056147917
+  },
+  "exec_id": "s01-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1367086416
+  },
+  "exec_id": "s01-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1983708393
+  },
+  "exec_id": "s01-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1329159813
+  },
+  "exec_id": "s01-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1595000625
+  },
+  "exec_id": "s02-r1-ref"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 2065784092
+  },
+  "exec_id": "s02-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1775399005
+  },
+  "exec_id": "s02-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1199923149
+  },
+  "exec_id": "s02-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1475475770
+  },
+  "exec_id": "s02-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1421974179
+  },
+  "exec_id": "s02-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 2038596156
+  },
+  "exec_id": "s02-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1384047576
+  },
+  "exec_id": "s02-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 661043467
+  },
+  "exec_id": "s03-r1-ref"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1231165821
+  },
+  "exec_id": "s03-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 841441847
+  },
+  "exec_id": "s03-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 365304878
+  },
+  "exec_id": "s03-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 640857499
+  },
+  "exec_id": "s03-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 488017021
+  },
+  "exec_id": "s03-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1104638998
+  },
+  "exec_id": "s03-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 450090418
+  },
+  "exec_id": "s03-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1474254992
+  },
+  "exec_id": "s04-r1-ref"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 410928611
+  },
+  "exec_id": "s04-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 120543524
+  },
+  "exec_id": "s04-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 839612453
+  },
+  "exec_id": "s04-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1115165074
+  },
+  "exec_id": "s04-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1330763310
+  },
+  "exec_id": "s04-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1947385287
+  },
+  "exec_id": "s04-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1292836707
+  },
+  "exec_id": "s04-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1140321980
+  },
+  "exec_id": "s05-r1-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 368281536
+  },
+  "exec_id": "s05-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 77896449
+  },
+  "exec_id": "s05-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1649904241
+  },
+  "exec_id": "s05-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1925456862
+  },
+  "exec_id": "s05-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1772616384
+  },
+  "exec_id": "s05-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 241754713
+  },
+  "exec_id": "s05-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1734689781
+  },
+  "exec_id": "s05-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1081489795
+  },
+  "exec_id": "s06-r1-ref"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 18163414
+  },
+  "exec_id": "s06-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1875261975
+  },
+  "exec_id": "s06-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1299786119
+  },
+  "exec_id": "s06-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 722399877
+  },
+  "exec_id": "s06-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 838659226
+  },
+  "exec_id": "s06-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1455281203
+  },
+  "exec_id": "s06-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 800732623
+  },
+  "exec_id": "s06-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 360591472
+  },
+  "exec_id": "s07-r1-ref"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 342151004
+  },
+  "exec_id": "s07-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 540989852
+  },
+  "exec_id": "s07-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 2112997644
+  },
+  "exec_id": "s07-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 241066617
+  },
+  "exec_id": "s07-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 941165002
+  },
+  "exec_id": "s07-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1557786979
+  },
+  "exec_id": "s07-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 903238399
+  },
+  "exec_id": "s07-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1574117962
+  },
+  "exec_id": "s08-r1-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 702738631
+  },
+  "exec_id": "s08-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 412353544
+  },
+  "exec_id": "s08-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1179040486
+  },
+  "exec_id": "s08-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 112430309
+  },
+  "exec_id": "s08-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1401091516
+  },
+  "exec_id": "s08-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 2017713493
+  },
+  "exec_id": "s08-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1363164913
+  },
+  "exec_id": "s08-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 239845839
+  },
+  "exec_id": "s09-r1-ref"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1324003106
+  },
+  "exec_id": "s09-r1-disconnect-n2-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 934279132
+  },
+  "exec_id": "s09-r1-disconnect-n5-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 458142163
+  },
+  "exec_id": "s09-r1-disconnect-n10-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 2028239569
+  },
+  "exec_id": "s09-r1-disconnect-n20-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 2144498918
+  },
+  "exec_id": "s09-r1-hold_trial-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 613637247
+  },
+  "exec_id": "s09-r1-hold_trial-0.25"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "1",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 2106572315
+  },
+  "exec_id": "s09-r1-hold_trial-0.4"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 812191276
+  },
+  "exec_id": "s01-r2-ref"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 793750808
+  },
+  "exec_id": "s01-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1797910506
+  },
+  "exec_id": "s01-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1321773537
+  },
+  "exec_id": "s01-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1597326158
+  },
+  "exec_id": "s01-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 639164830
+  },
+  "exec_id": "s01-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1255786807
+  },
+  "exec_id": "s01-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 601238227
+  },
+  "exec_id": "s01-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1654937565
+  },
+  "exec_id": "s02-r2-ref"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1367397270
+  },
+  "exec_id": "s02-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 271691333
+  },
+  "exec_id": "s02-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1843699125
+  },
+  "exec_id": "s02-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1266312883
+  },
+  "exec_id": "s02-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1966411268
+  },
+  "exec_id": "s02-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 435549597
+  },
+  "exec_id": "s02-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1928484665
+  },
+  "exec_id": "s02-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2080605529
+  },
+  "exec_id": "s03-r2-ref"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 433440112
+  },
+  "exec_id": "s03-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 143055025
+  },
+  "exec_id": "s03-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 909741967
+  },
+  "exec_id": "s03-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1237015462
+  },
+  "exec_id": "s03-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1032454110
+  },
+  "exec_id": "s03-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1649076087
+  },
+  "exec_id": "s03-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 994527507
+  },
+  "exec_id": "s03-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2118030968
+  },
+  "exec_id": "s04-r2-ref"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 2099590500
+  },
+  "exec_id": "s04-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 956266550
+  },
+  "exec_id": "s04-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 380790694
+  },
+  "exec_id": "s04-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 656343315
+  },
+  "exec_id": "s04-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1356441700
+  },
+  "exec_id": "s04-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1973063677
+  },
+  "exec_id": "s04-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1318515097
+  },
+  "exec_id": "s04-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1736479943
+  },
+  "exec_id": "s05-r2-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1817378362
+  },
+  "exec_id": "s05-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 622333538
+  },
+  "exec_id": "s05-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 46857682
+  },
+  "exec_id": "s05-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1716293975
+  },
+  "exec_id": "s05-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 268908712
+  },
+  "exec_id": "s05-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 885530689
+  },
+  "exec_id": "s05-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 230982109
+  },
+  "exec_id": "s05-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1725265771
+  },
+  "exec_id": "s06-r2-ref"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1706825303
+  },
+  "exec_id": "s06-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 563501353
+  },
+  "exec_id": "s06-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 2135509145
+  },
+  "exec_id": "s06-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 263578118
+  },
+  "exec_id": "s06-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 963676503
+  },
+  "exec_id": "s06-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1580298480
+  },
+  "exec_id": "s06-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 925749900
+  },
+  "exec_id": "s06-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 321189525
+  },
+  "exec_id": "s07-r2-ref"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 132988117
+  },
+  "exec_id": "s07-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1890747791
+  },
+  "exec_id": "s07-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1414610822
+  },
+  "exec_id": "s07-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1690163443
+  },
+  "exec_id": "s07-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 732002115
+  },
+  "exec_id": "s07-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1348624092
+  },
+  "exec_id": "s07-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 694075512
+  },
+  "exec_id": "s07-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 846196376
+  },
+  "exec_id": "s08-r2-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1346514607
+  },
+  "exec_id": "s08-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1056129520
+  },
+  "exec_id": "s08-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 480653664
+  },
+  "exec_id": "s08-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 2050751070
+  },
+  "exec_id": "s08-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1945528605
+  },
+  "exec_id": "s08-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 414666934
+  },
+  "exec_id": "s08-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1907602002
+  },
+  "exec_id": "s08-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1688942665
+  },
+  "exec_id": "s09-r2-ref"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1670502197
+  },
+  "exec_id": "s09-r2-disconnect-n2-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1869341045
+  },
+  "exec_id": "s09-r2-disconnect-n5-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1293865189
+  },
+  "exec_id": "s09-r2-disconnect-n10-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1569417810
+  },
+  "exec_id": "s09-r2-disconnect-n20-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 122032547
+  },
+  "exec_id": "s09-r2-hold_trial-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 738654524
+  },
+  "exec_id": "s09-r2-hold_trial-0.25"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "2",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 84105944
+  },
+  "exec_id": "s09-r2-hold_trial-0.4"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1921569094
+  },
+  "exec_id": "s01-r3-ref"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 828707949
+  },
+  "exec_id": "s01-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 538322862
+  },
+  "exec_id": "s01-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 2110330654
+  },
+  "exec_id": "s01-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 238399627
+  },
+  "exec_id": "s01-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 354658976
+  },
+  "exec_id": "s01-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 971280953
+  },
+  "exec_id": "s01-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 316732373
+  },
+  "exec_id": "s01-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 296011034
+  },
+  "exec_id": "s02-r3-ref"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1671454238
+  },
+  "exec_id": "s02-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1281730264
+  },
+  "exec_id": "s02-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 805593295
+  },
+  "exec_id": "s02-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1081145916
+  },
+  "exec_id": "s02-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 122984588
+  },
+  "exec_id": "s02-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 739606565
+  },
+  "exec_id": "s02-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 85057985
+  },
+  "exec_id": "s02-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 237178849
+  },
+  "exec_id": "s03-r3-ref"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 218738381
+  },
+  "exec_id": "s03-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 2075836942
+  },
+  "exec_id": "s03-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1500361086
+  },
+  "exec_id": "s03-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 922974844
+  },
+  "exec_id": "s03-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 817752379
+  },
+  "exec_id": "s03-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1434374356
+  },
+  "exec_id": "s03-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 779825776
+  },
+  "exec_id": "s03-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1729999758
+  },
+  "exec_id": "s04-r3-ref"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1711559290
+  },
+  "exec_id": "s04-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1421174203
+  },
+  "exec_id": "s04-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 845698347
+  },
+  "exec_id": "s04-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 268312105
+  },
+  "exec_id": "s04-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 163089640
+  },
+  "exec_id": "s04-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 779711617
+  },
+  "exec_id": "s04-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 125163037
+  },
+  "exec_id": "s04-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1521778212
+  },
+  "exec_id": "s05-r3-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 458451831
+  },
+  "exec_id": "s05-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 168066744
+  },
+  "exec_id": "s05-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 934753686
+  },
+  "exec_id": "s05-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1162688294
+  },
+  "exec_id": "s05-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 473626793
+  },
+  "exec_id": "s05-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1090248770
+  },
+  "exec_id": "s05-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 435700190
+  },
+  "exec_id": "s05-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 587821054
+  },
+  "exec_id": "s06-r3-ref"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1252558509
+  },
+  "exec_id": "s06-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1352058470
+  },
+  "exec_id": "s06-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 875921501
+  },
+  "exec_id": "s06-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1151474122
+  },
+  "exec_id": "s06-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1267733471
+  },
+  "exec_id": "s06-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1884355448
+  },
+  "exec_id": "s06-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1229806868
+  },
+  "exec_id": "s06-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2014406379
+  },
+  "exec_id": "s07-r3-ref"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 337706198
+  },
+  "exec_id": "s07-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 47321111
+  },
+  "exec_id": "s07-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1619328903
+  },
+  "exec_id": "s07-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1894881524
+  },
+  "exec_id": "s07-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1841379933
+  },
+  "exec_id": "s07-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 310518262
+  },
+  "exec_id": "s07-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1803453330
+  },
+  "exec_id": "s07-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1050914457
+  },
+  "exec_id": "s08-r3-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1131812876
+  },
+  "exec_id": "s08-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 841427789
+  },
+  "exec_id": "s08-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 265951933
+  },
+  "exec_id": "s08-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1836049339
+  },
+  "exec_id": "s08-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1730826874
+  },
+  "exec_id": "s08-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 199965203
+  },
+  "exec_id": "s08-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1692900271
+  },
+  "exec_id": "s08-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1201572568
+  },
+  "exec_id": "s09-r3-ref"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 477150137
+  },
+  "exec_id": "s09-r3-disconnect-n2-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 87426163
+  },
+  "exec_id": "s09-r3-disconnect-n5-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1659433955
+  },
+  "exec_id": "s09-r3-disconnect-n10-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1181386600
+  },
+  "exec_id": "s09-r3-disconnect-n20-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1881484985
+  },
+  "exec_id": "s09-r3-hold_trial-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 350623314
+  },
+  "exec_id": "s09-r3-hold_trial-0.25"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "3",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1843558382
+  },
+  "exec_id": "s09-r3-hold_trial-0.4"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2115935505
+  },
+  "exec_id": "s01-r4-ref"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1004991111
+  },
+  "exec_id": "s01-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1957429935
+  },
+  "exec_id": "s01-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1481292966
+  },
+  "exec_id": "s01-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1756845587
+  },
+  "exec_id": "s01-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1873104936
+  },
+  "exec_id": "s01-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 342243265
+  },
+  "exec_id": "s01-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1835178333
+  },
+  "exec_id": "s01-r4-hold_trial-0.4"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 442759432
+  },
+  "exec_id": "s02-r4-ref"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 523657851
+  },
+  "exec_id": "s02-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 133933877
+  },
+  "exec_id": "s02-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1805280556
+  },
+  "exec_id": "s02-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1227894314
+  },
+  "exec_id": "s02-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1122671849
+  },
+  "exec_id": "s02-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1739293826
+  },
+  "exec_id": "s02-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1084745246
+  },
+  "exec_id": "s02-r4-hold_trial-0.4"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1236866110
+  },
+  "exec_id": "s03-r4-ref"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1737184341
+  },
+  "exec_id": "s03-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1446799254
+  },
+  "exec_id": "s03-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 871323398
+  },
+  "exec_id": "s03-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 293937156
+  },
+  "exec_id": "s03-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 188714691
+  },
+  "exec_id": "s03-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 805336668
+  },
+  "exec_id": "s03-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 150788088
+  },
+  "exec_id": "s03-r4-hold_trial-0.4"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 2079612399
+  },
+  "exec_id": "s04-r4-ref"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 986751254
+  },
+  "exec_id": "s04-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 597027280
+  },
+  "exec_id": "s04-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 120890311
+  },
+  "exec_id": "s04-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1690987717
+  },
+  "exec_id": "s04-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1807247066
+  },
+  "exec_id": "s04-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 276385395
+  },
+  "exec_id": "s04-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1769320463
+  },
+  "exec_id": "s04-r4-hold_trial-0.4"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 892740524
+  },
+  "exec_id": "s05-r4-ref"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1458139092
+  },
+  "exec_id": "s05-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1656977940
+  },
+  "exec_id": "s05-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1081502084
+  },
+  "exec_id": "s05-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1357054705
+  },
+  "exec_id": "s05-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1473314054
+  },
+  "exec_id": "s05-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 2089936031
+  },
+  "exec_id": "s05-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1435387451
+  },
+  "exec_id": "s05-r4-hold_trial-0.4"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1587508315
+  },
+  "exec_id": "s06-r4-ref"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 524181934
+  },
+  "exec_id": "s06-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1528341632
+  },
+  "exec_id": "s06-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 147544926
+  },
+  "exec_id": "s06-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1327757284
+  },
+  "exec_id": "s06-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 638695783
+  },
+  "exec_id": "s06-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1255317760
+  },
+  "exec_id": "s06-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 600769180
+  },
+  "exec_id": "s06-r4-hold_trial-0.4"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 1355833927
+  },
+  "exec_id": "s07-r4-ref"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 1337393459
+  },
+  "exec_id": "s07-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1047008372
+  },
+  "exec_id": "s07-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 471532516
+  },
+  "exec_id": "s07-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 2140968809
+  },
+  "exec_id": "s07-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 693583546
+  },
+  "exec_id": "s07-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1310205523
+  },
+  "exec_id": "s07-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 655656943
+  },
+  "exec_id": "s07-r4-hold_trial-0.4"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 33763770
+  },
+  "exec_id": "s08-r4-ref"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 534082001
+  },
+  "exec_id": "s08-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 243696914
+  },
+  "exec_id": "s08-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 1815704706
+  },
+  "exec_id": "s08-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1238318464
+  },
+  "exec_id": "s08-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 614337300
+  },
+  "exec_id": "s08-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1230959277
+  },
+  "exec_id": "s08-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 576410697
+  },
+  "exec_id": "s08-r4-hold_trial-0.4"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "none",
+   "severity": 0.0,
+   "mode": "random",
+   "seed": 745864359
+  },
+  "exec_id": "s09-r4-ref"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n2",
+   "seed": 557662951
+  },
+  "exec_id": "s09-r4-disconnect-n2-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n5",
+   "seed": 1510101775
+  },
+  "exec_id": "s09-r4-disconnect-n5-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n10",
+   "seed": 934625919
+  },
+  "exec_id": "s09-r4-disconnect-n10-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.0,
+   "mode": "n20",
+   "seed": 1210178540
+  },
+  "exec_id": "s09-r4-disconnect-n20-1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.1,
+   "mode": "random",
+   "seed": 1156676949
+  },
+  "exec_id": "s09-r4-hold_trial-0.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.25,
+   "mode": "random",
+   "seed": 1773298926
+  },
+  "exec_id": "s09-r4-hold_trial-0.25"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "4",
+  "spec": {
+   "kind": "hold_trial",
+   "severity": 0.4,
+   "mode": "random",
+   "seed": 1118750346
+  },
+  "exec_id": "s09-r4-hold_trial-0.4"
+ }
+]

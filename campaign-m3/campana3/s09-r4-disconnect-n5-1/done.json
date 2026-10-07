@@ -1,0 +1,16 @@
+{
+  "exec_id": "s09-r4-disconnect-n5-1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 404.3,
+  "subject": 9,
+  "run": "4",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 1.0,
+    "mode": "n5",
+    "seed": 1510101775
+  },
+  "label": "disconnect-n5-1"
+}
