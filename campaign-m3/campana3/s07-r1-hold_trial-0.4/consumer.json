@@ -1,0 +1,10 @@
+{
+  "exec_id": "s07-r1-hold_trial-0.4",
+  "t0": 5862.888060479,
+  "duration_eff": 386.9399999999996,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.75,
+  "exceptions": 0,
+  "n_samples_total": 7505
+}

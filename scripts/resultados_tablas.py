@@ -115,10 +115,16 @@ rows = [[KIND_ES[r.kind], sev(r.kind, r.severity) if r.kind != "none" else "—"
 tablas["divergencia"] = dict(headers=["Tipo de fallo", "Severidad", "Operativo y degradado", "No operativo y no degradado", "Total divergentes"], rows=rows)
 
 # --- Tabla detectores (obj. 5)
-t_det = pd.read_csv(os.path.join(A, "t_detectores.csv"))
+# t_detectores_ap.csv (scripts/detectores_ap.py) agrega precisión promedio y prevalencia
+ap_path = os.path.join(A, "t_detectores_ap.csv")
+t_det = pd.read_csv(ap_path if os.path.exists(ap_path) else os.path.join(A, "t_detectores.csv"))
 NAMES = {"umbrales": "Umbrales", "logistic": "Regresión logística", "random_forest": "*Random forest*", "gradient_boosting": "*Gradient boosting*"}
-rows = [[NAMES.get(r.detector, r.detector), f(r.precision, 3), f(r.recall, 3), f(r.f1, 3), f(r.fpr, 3), f(r.detection_delay_s, 1), f"{int(r.episodes_detected)}/{int(r.episodes)}"] for _, r in t_det.iterrows()]
-tablas["detectores"] = dict(headers=["Detector", "Precisión", "Sensibilidad", "F1", "Tasa de falsos positivos", "Retardo de detección (s)", "Episodios detectados"], rows=rows)
+has_ap = "average_precision" in t_det.columns
+rows = [[NAMES.get(r.detector, r.detector), f(r.precision, 3), f(r.recall, 3), f(r.f1, 3), f(r.fpr, 3)]
+        + ([f(r.average_precision, 3)] if has_ap else [])
+        + [f(r.detection_delay_s, 1), f"{int(r.episodes_detected)}/{int(r.episodes)}"] for _, r in t_det.iterrows()]
+tablas["detectores"] = dict(headers=["Detector", "Precisión", "Sensibilidad", "F1", "Tasa de falsos positivos"]
+                            + (["Precisión promedio"] if has_ap else []) + ["Retardo de detección (s)", "Episodios detectados"], rows=rows)
 
 tablas["umbrales"] = json.load(open(os.path.join(A, "thresholds.json")))
 

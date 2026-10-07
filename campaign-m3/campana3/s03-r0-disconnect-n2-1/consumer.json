@@ -1,0 +1,10 @@
+{
+  "exec_id": "s03-r0-disconnect-n2-1",
+  "t0": 2214.479426378,
+  "duration_eff": 386.94000000000005,
+  "n_trials": 24,
+  "n_valid": 24,
+  "balanced_accuracy": 0.875,
+  "exceptions": 0,
+  "n_samples_total": 7125
+}

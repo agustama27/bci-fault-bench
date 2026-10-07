@@ -1,0 +1,31 @@
+campania,condicion,modelo,n,d_nominal,hueco_med,pred,mae_ms,max_abs_ms,pct_dentro_40ms
+campaña nueva,disconnect-n10-1,"lineal max(1,52; d+0,52)",450,1.0,1.52,1.52,0.08888888888888898,40.000000000000036,100.0
+campaña nueva,disconnect-n10-1,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",450,1.0,1.52,1.52,0.08888888888888898,40.000000000000036,100.0
+campaña nueva,disconnect-n2-1,"lineal max(1,52; d+0,52)",90,1.0,1.52,1.52,0.44444444444444486,40.000000000000036,100.0
+campaña nueva,disconnect-n2-1,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",90,1.0,1.52,1.52,0.44444444444444486,40.000000000000036,100.0
+campaña nueva,disconnect-n20-1,"lineal max(1,52; d+0,52)",900,1.0,1.52,1.52,0.04444444444444449,40.000000000000036,100.0
+campaña nueva,disconnect-n20-1,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",900,1.0,1.52,1.52,0.04444444444444449,40.000000000000036,100.0
+campaña nueva,disconnect-n5-1,"lineal max(1,52; d+0,52)",225,1.0,1.52,1.52,0.3555555555555559,40.000000000000036,100.0
+campaña nueva,disconnect-n5-1,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",225,1.0,1.52,1.52,0.3555555555555559,40.000000000000036,100.0
+campaña nueva,disconnect-n5-1.25,"lineal max(1,52; d+0,52)",45,1.25,2.04,1.7699999999999996,269.99999999999994,270.0,0.0
+campaña nueva,disconnect-n5-1.25,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",45,1.25,2.04,2.0199999999999996,20.000000000000018,20.000000000000018,100.0
+campaña nueva,disconnect-n5-1.75,"lineal max(1,52; d+0,52)",45,1.75,2.52,2.2699999999999996,250.0,250.0,0.0
+campaña nueva,disconnect-n5-1.75,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",45,1.75,2.52,2.5199999999999996,0.0,0.0,100.0
+campaña nueva,disconnect-n5-2.25,"lineal max(1,52; d+0,52)",45,2.25,3.04,2.7699999999999996,269.99999999999994,270.0,0.0
+campaña nueva,disconnect-n5-2.25,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",45,2.25,3.04,3.02,20.000000000000018,20.000000000000018,100.0
+campaña nueva,TODAS,"lineal max(1,52; d+0,52)",1800,,1.52,,19.86111111111111,270.0,92.5
+campaña nueva,TODAS,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",1800,,1.52,,1.1111111111111123,40.000000000000036,100.0
+campaña anterior,"('disconnect', 0.5)","lineal max(1,52; d+0,52)",225,0.5,1.52,1.52,0.0,0.0,100.0
+campaña anterior,"('disconnect', 0.5)","escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",225,0.5,1.52,1.52,0.0,0.0,100.0
+campaña anterior,"('disconnect', 1.0)","lineal max(1,52; d+0,52)",224,1.0,1.52,1.52,0.17857142857158734,40.000000000000036,100.0
+campaña anterior,"('disconnect', 1.0)","escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",224,1.0,1.52,1.5199999999999998,0.17857142857142874,40.000000000000036,100.0
+campaña anterior,"('disconnect', 3.0)","lineal max(1,52; d+0,52)",225,3.0,3.52,3.520000000000001,4.622222222222359,40.000000000000036,100.0
+campaña anterior,"('disconnect', 3.0)","escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",225,3.0,3.52,3.520000000000001,4.622222222222226,40.000000000000036,100.0
+campaña anterior,"('disconnect_trial', 0.5)","lineal max(1,52; d+0,52)",2160,0.5,1.52,1.52,0.018518518518518535,40.000000000000036,100.0
+campaña anterior,"('disconnect_trial', 0.5)","escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",2160,0.5,1.52,1.52,0.018518518518518535,40.000000000000036,100.0
+campaña anterior,"('disconnect_trial', 1.0)","lineal max(1,52; d+0,52)",2160,1.0,1.52,1.52,0.05555555555555561,40.000000000000036,100.0
+campaña anterior,"('disconnect_trial', 1.0)","escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",2160,1.0,1.52,1.52,0.05555555555555561,40.000000000000036,100.0
+campaña anterior,"('disconnect_trial', 2.0)","lineal max(1,52; d+0,52)",2160,2.0,2.52,2.5200000000000005,0.12962962962962973,40.000000000000036,100.0
+campaña anterior,"('disconnect_trial', 2.0)","escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",2160,2.0,2.52,2.5200000000000005,0.12962962962962973,40.000000000000036,100.0
+campaña anterior,TODAS,"lineal max(1,52; d+0,52)",7154,,1.52,,0.21246854906347032,40.000000000000036,100.0
+campaña anterior,TODAS,"escalonado max(1,52; 0,52+0,5*ceil(d/0,5))",7154,,1.52,,0.2124685490634612,40.000000000000036,100.0

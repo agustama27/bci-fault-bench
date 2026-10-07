@@ -1,0 +1,16 @@
+{
+  "exec_id": "s01-r0-disconnect-n10-1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 404.6,
+  "subject": 1,
+  "run": "0",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 1.0,
+    "mode": "n10",
+    "seed": 2091016560
+  },
+  "label": "disconnect-n10-1"
+}

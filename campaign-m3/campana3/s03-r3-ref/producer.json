@@ -1,0 +1,29 @@
+{
+  "exec_id": "s03-r3-ref",
+  "subject": 3,
+  "session": "1test",
+  "run": "3",
+  "fault": {
+    "kind": "none",
+    "severity": 0.0,
+    "mode": "random",
+    "seed": 237178849
+  },
+  "label": "ref",
+  "t0": 9509.757692208,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0008612265303294714,
+    "p50": 0.000778998582973145,
+    "p99": 0.0016332696759491232,
+    "max": 0.049415999455959536
+  }
+}

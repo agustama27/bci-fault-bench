@@ -69,7 +69,8 @@ def load(A):
 
 e, desc, t_i, t_b = load(A)
 t_d = pd.read_csv(os.path.join(A, "t_divergencia.csv")).set_index("label")
-t_det = pd.read_csv(os.path.join(A, "t_detectores.csv")).set_index("detector")
+_ap = os.path.join(A, "t_detectores_ap.csv")
+t_det = pd.read_csv(_ap if os.path.exists(_ap) else os.path.join(A, "t_detectores.csv")).set_index("detector")
 thr = json.load(open(os.path.join(A, "thresholds.json")))["thresholds"]
 W = pd.read_csv(os.path.join(A, "windows.csv"))
 off = pd.read_csv(a.offline).set_index("subject")
@@ -230,6 +231,10 @@ if len(t_det):
             N[f"{name}_recall"] = f(t_det.loc[k, "recall"]); N[f"{name}_fpr"] = f(t_det.loc[k, "fpr"])
             N[f"{name}_prec"] = f(t_det.loc[k, "precision"]); N[f"{name}_delay"] = f(t_det.loc[k, "detection_delay_s"], 1)
             N[f"{name}_f1"] = f(t_det.loc[k, "f1"])
+            if "average_precision" in t_det.columns:
+                N[f"{name}_ap"] = f(t_det.loc[k, "average_precision"]); N[f"{name}_lift"] = f(t_det.loc[k, "lift"], 1)
+    if "prevalence" in t_det.columns:
+        N["prevalencia"] = f(t_det.prevalence.iloc[0], 4)
     best = t_det.f1.idxmax()
     N["best_detector"] = {"umbrales": "el detector por umbrales", "logistic": "la regresión logística", "random_forest": "*random forest*", "gradient_boosting": "*gradient boosting*"}[best]
     N["best_f1"] = f(t_det.loc[best, "f1"])

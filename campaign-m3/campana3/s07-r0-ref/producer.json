@@ -1,0 +1,29 @@
+{
+  "exec_id": "s07-r0-ref",
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "fault": {
+    "kind": "none",
+    "severity": 0.0,
+    "mode": "random",
+    "seed": 2064896408
+  },
+  "label": "ref",
+  "t0": 3429.947261695,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0006693469390535805,
+    "p50": 0.0006259999736357713,
+    "p99": 0.0012628098329514627,
+    "max": 0.040813999930833234
+  }
+}

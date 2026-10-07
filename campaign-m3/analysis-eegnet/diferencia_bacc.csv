@@ -1,0 +1,12 @@
+cond,ceros,hold,interp
+disconnect-n10-1,0.0,0.0,0.0
+disconnect-n2-1,0.0,0.0,0.0
+disconnect-n20-1,-0.042,-0.042,-0.042
+disconnect-n5-1,0.0,0.0,0.0
+disconnect-n5-1.25,0.0,0.0,0.0
+disconnect-n5-1.75,0.0,0.0,0.0
+disconnect-n5-2.25,0.0,0.0,0.0
+hold_trial-0.1,0.0,0.0,0.0
+hold_trial-0.25,-0.042,-0.042,-0.042
+hold_trial-0.4,-0.083,-0.083,-0.083
+ref,0.0,0.0,0.0

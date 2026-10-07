@@ -1,0 +1,16 @@
+{
+  "exec_id": "s07-r1-disconnect-n5-1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 405.3,
+  "subject": 7,
+  "run": "1",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 1.0,
+    "mode": "n5",
+    "seed": 540989852
+  },
+  "label": "disconnect-n5-1"
+}

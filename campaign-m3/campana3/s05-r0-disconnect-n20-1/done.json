@@ -1,0 +1,16 @@
+{
+  "exec_id": "s05-r0-disconnect-n20-1",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 407.4,
+  "subject": 5,
+  "run": "0",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 1.0,
+    "mode": "n20",
+    "seed": 2066117186
+  },
+  "label": "disconnect-n20-1"
+}

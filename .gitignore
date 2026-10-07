@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 results/
 *.pkl
+
+# Campañas: se versionan CSV/JSON/JSONL; los segmentos crudos, logs de proceso y archivos comprimidos no
+segments.npz
+campaign-*/**/*.log
+*.tgz

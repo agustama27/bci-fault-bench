@@ -1,0 +1,16 @@
+{
+  "exec_id": "s04-r0-disconnect-n5-1.75",
+  "status": "ok",
+  "producer_rc": 0,
+  "consumer_rc": 0,
+  "seconds": 404.9,
+  "subject": 4,
+  "run": "0",
+  "fault": {
+    "kind": "disconnect",
+    "severity": 1.75,
+    "mode": "n5",
+    "seed": 647617818
+  },
+  "label": "disconnect-n5-1.75"
+}

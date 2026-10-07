@@ -1,0 +1,3 @@
+decoder,ejecuciones,ensayos,identicas,pct_identicas,ejec_con_alguna_diferencia,peor_ejecucion_pct,n_samples_iguales_pct,dif_proba_abs_media,dif_proba_abs_max_ejec,pct_identicas_por_sujeto
+CSP+LDA,45,1080,1080,100.0,0,100.0,99.9074074074074,0.0003642592592592588,0.001295833333333334,"{1: 100.0, 2: 100.0, 3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0, 9: 100.0}"
+EEGNet,45,1080,1080,100.0,0,100.0,100.0,0.0,0.0,"{1: 100.0, 2: 100.0, 3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0, 9: 100.0}"

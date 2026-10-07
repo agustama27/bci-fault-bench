@@ -1,0 +1,29 @@
+{
+  "exec_id": "s02-r4-ref",
+  "subject": 2,
+  "session": "1test",
+  "run": "4",
+  "fault": {
+    "kind": "none",
+    "severity": 0.0,
+    "mode": "random",
+    "seed": 442759432
+  },
+  "label": "ref",
+  "t0": 11536.893828976,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0008538876417740544,
+    "p50": 0.0007319995347643271,
+    "p99": 0.0016742678781156432,
+    "max": 0.039246000596904196
+  }
+}

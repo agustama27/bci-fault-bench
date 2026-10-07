@@ -1,0 +1,29 @@
+{
+  "exec_id": "s04-r1-hold_trial-0.4",
+  "subject": 4,
+  "session": "1test",
+  "run": "1",
+  "fault": {
+    "kind": "hold_trial",
+    "severity": 0.4,
+    "mode": "random",
+    "seed": 1292836707
+  },
+  "label": "hold_trial-0.4",
+  "t0": 5052.114871931,
+  "sfreq": 250.0,
+  "n_channels": 22,
+  "n_total": 96735,
+  "duration_s": 386.94,
+  "n_pushed": 96735,
+  "n_dropped": 0,
+  "outages": [],
+  "reconnections": 0,
+  "n_events": 48,
+  "timing_err_ms": {
+    "mean": 0.0009292175384105906,
+    "p50": 0.0008784995770838577,
+    "p99": 0.0016362691894755703,
+    "max": 0.04190499930700753
+  }
+}

@@ -1,0 +1,6 @@
+{"event": "outage_planned", "start": 16.98748449815507, "end": 17.98748449815507}
+{"event": "outage_planned", "start": 255.96021290946229, "end": 256.96021290946226}
+{"event": "outage_start", "t_rel": 17.0}
+{"event": "outage_end", "t_rel": 18.0}
+{"event": "outage_start", "t_rel": 256.0}
+{"event": "outage_end", "t_rel": 257.0}

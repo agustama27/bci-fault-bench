@@ -1,0 +1,434 @@
+[
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 1980716127
+  },
+  "exec_id": "s01-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 860963368
+  },
+  "exec_id": "s01-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 996129720
+  },
+  "exec_id": "s01-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 1,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 56605624
+  },
+  "exec_id": "s01-r0-disconnect-n5-1.75"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 1749041739
+  },
+  "exec_id": "s02-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 529950093
+  },
+  "exec_id": "s02-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 665116445
+  },
+  "exec_id": "s02-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 2,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 1873075997
+  },
+  "exec_id": "s02-r0-disconnect-n5-1.75"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 296325882
+  },
+  "exec_id": "s03-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 1324056771
+  },
+  "exec_id": "s03-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 1459223123
+  },
+  "exec_id": "s03-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 3,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 519699027
+  },
+  "exec_id": "s03-r0-disconnect-n5-1.75"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 1139072171
+  },
+  "exec_id": "s04-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 2067464173
+  },
+  "exec_id": "s04-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 55146877
+  },
+  "exec_id": "s04-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 4,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 1263106429
+  },
+  "exec_id": "s04-r0-disconnect-n5-1.75"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 1680264132
+  },
+  "exec_id": "s05-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 461172486
+  },
+  "exec_id": "s05-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 596338838
+  },
+  "exec_id": "s05-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 5,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 1804298390
+  },
+  "exec_id": "s05-r0-disconnect-n5-1.75"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 746306974
+  },
+  "exec_id": "s06-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 1674698976
+  },
+  "exec_id": "s06-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 1809865328
+  },
+  "exec_id": "s06-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 6,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 870341232
+  },
+  "exec_id": "s06-r0-disconnect-n5-1.75"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 2073553412
+  },
+  "exec_id": "s07-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 953800653
+  },
+  "exec_id": "s07-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 1088967005
+  },
+  "exec_id": "s07-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 7,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 149442909
+  },
+  "exec_id": "s07-r0-disconnect-n5-1.75"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 1209400377
+  },
+  "exec_id": "s08-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 2137792379
+  },
+  "exec_id": "s08-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 125475083
+  },
+  "exec_id": "s08-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 8,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 1333434635
+  },
+  "exec_id": "s08-r0-disconnect-n5-1.75"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 0.5,
+   "mode": "n5",
+   "seed": 1952807779
+  },
+  "exec_id": "s09-r0-disconnect-n5-0.5"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.1,
+   "mode": "n5",
+   "seed": 833055020
+  },
+  "exec_id": "s09-r0-disconnect-n5-1.1"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.25,
+   "mode": "n5",
+   "seed": 968221372
+  },
+  "exec_id": "s09-r0-disconnect-n5-1.25"
+ },
+ {
+  "subject": 9,
+  "session": "1test",
+  "run": "0",
+  "spec": {
+   "kind": "disconnect",
+   "severity": 1.75,
+   "mode": "n5",
+   "seed": 28697276
+  },
+  "exec_id": "s09-r0-disconnect-n5-1.75"
+ }
+]
